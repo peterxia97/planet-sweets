@@ -24,9 +24,6 @@ export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
 
         {/* Actions */}
         <div className="flex items-center gap-2 flex-shrink-0">
-
-        {/* Actions */}
-        <div className="flex items-center gap-2 flex-shrink-0">
           <button
             onClick={onContactOpen}
             className="flex items-center justify-center w-9 h-9 rounded-full text-rose-600 hover:bg-rose-50 transition-colors"
