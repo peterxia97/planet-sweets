@@ -269,7 +269,7 @@ export const cakes: Cake[] = [
     name: '原味莓果奶油巴斯克',
     description: '混合莓果，香甜浓郁',
     price6: 70, price8: 80,
-    image: '/yuanweimeiguonaiyoubasike.PNG',
+    image: '/yuanweimeiguonaiyoubasike.jpg',
   },
   {
     id: 308,
@@ -338,7 +338,7 @@ export const cakes: Cake[] = [
     name: '柠檬酸奶慕斯',
     description: '柠檬清香，酸甜可口',
     price6: 65, price8: 75,
-    image: '/ningmengsuannaimusi.PNG',
+    image: '/ningmengsuannaimusi.jpg',
   },
 
   // ──────────────────────────────────────
@@ -362,7 +362,7 @@ export const cakes: Cake[] = [
     name: '丝带蝴蝶结蛋糕',
     description: '丝带蝴蝶结装饰，优雅大方',
     price6: 70, price8: 85,
-    image: '/sidaihudiejiedangao.JPG',
+    image: '/sidaihudiejiedangao.jpg',
   },
   {
     id: 603,
@@ -370,7 +370,7 @@ export const cakes: Cake[] = [
     name: '复古裱花蛋糕',
     description: '复古裱花工艺，精致典雅',
     price6: 85, price8: 95,
-    image: '/fugubiaohuadangao.JPG',
+    image: '/fugubiaohuadangao.jpg',
     tag: '高价',
   },
   {
@@ -534,7 +534,7 @@ export const cakes: Cake[] = [
     description: '一层蛋糕胚',
     price6: 0, price8: 0,
     singlePrice: 5,
-    image: '/jiajiagao.JPG',
+    image: '/jiagao.jpg',
   },
 
   // ──────────────────────────────────────
@@ -589,7 +589,7 @@ export const cakes: Cake[] = [
     description: '翻糖装饰，每件$15',
     price6: 0, price8: 0,
     singlePrice: 15,
-    image: '/fansu.JPG',
+    image: '/fantang.jpg',
   },
   {
     id: 1103,
