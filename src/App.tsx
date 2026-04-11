@@ -30,35 +30,18 @@ function Main() {
         onContactOpen={() => setContactOpen(true)}
       />
 
-      {/* 遮罩层（手机端） */}
-      {menuOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-40 lg:hidden"
-          onClick={() => setMenuOpen(false)}
-        />
-      )}
-
-      {/* 左侧导航栏 */}
+      {/* 左侧导航栏 - 固定展开 */}
       <aside
-        className={`fixed top-0 left-0 h-full w-52 bg-white shadow-xl z-50 transform transition-transform duration-300 overflow-y-auto
-          ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
-          lg:translate-x-0 lg:static lg:shadow-none lg:border-r lg:border-gray-100`}
+        className="fixed top-0 left-0 h-full w-44 bg-white shadow-xl z-50 overflow-y-auto
+          lg:static lg:shadow-none lg:border-r lg:border-gray-100"
       >
-        {/* 侧边栏头部（手机端） */}
-        <div className="flex items-center justify-between px-4 h-14 border-b border-gray-100 lg:hidden">
-          <div className="flex items-center gap-2">
-            <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain" />
-            <div>
-              <h2 className="text-sm font-bold text-rose-600 leading-tight">多糖星球</h2>
-              <p className="text-[10px] text-gray-400">Planet Sweets</p>
-            </div>
+        {/* Logo区域 */}
+        <div className="flex items-center gap-2 px-3 py-4 border-b border-gray-100">
+          <img src="/logo.jpg" alt="Planet Sweets" className="w-9 h-9 object-contain" />
+          <div>
+            <h2 className="text-sm font-bold text-rose-600 leading-tight">多糖星球</h2>
+            <p className="text-[10px] text-gray-400">Planet Sweets</p>
           </div>
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:bg-gray-100"
-          >
-            <X className="w-5 h-5" />
-          </button>
         </div>
 
         {/* Logo区域（桌面端） */}
@@ -103,7 +86,7 @@ function Main() {
       </aside>
 
       {/* 主内容区 */}
-      <div className="lg:ml-52 pt-14 min-h-screen flex flex-col">
+      <div className="ml-44 lg:ml-52 pt-14 min-h-screen flex flex-col">
         {/* 横幅（仅手机端） */}
         <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-pink-500 px-5 py-5 relative lg:hidden">
           <img src="/logo.jpg" alt="" className="absolute right-3 bottom-3 w-20 h-20 object-contain opacity-20" />
