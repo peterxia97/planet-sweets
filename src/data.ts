@@ -8,7 +8,7 @@ export const categories: Category[] = [
   { id: 1,  name: '水果奶油裱花蛋糕', icon: '🍓', description: '新鲜水果搭配轻盈奶油' },
   { id: 2,  name: '口味蛋糕',          icon: '🍮', description: '多种口味 丰富夹心' },
   { id: 3,  name: '巴斯克',           icon: '🧀', description: '焦香浓郁 绵密丝滑' },
-  { id: 4,  name: '水果蛋糕',         icon: '🍓', description: '新鲜水果 时令搭配' },
+  { id: 4,  name: '裸蛋糕',           icon: '🍓', description: '简约清新 水果本味' },
   { id: 5,  name: '慕斯蛋糕',         icon: '🍨', description: '丝滑慕斯 入口即化' },
   { id: 6,  name: '特定造型',         icon: '🎂', description: '定制造型 独一无二' },
   { id: 7,  name: '童趣款',           icon: '🧸', description: '可爱有趣 儿童最爱' },
@@ -483,7 +483,7 @@ export const cakes: Cake[] = [
     name: '黑糖珍珠',
     description: '4小时内食用完',
     price6: 0, price8: 0,
-    singlePrice: 5,
+    singlePrice: 10,
     image: '/heitangzhenzhu.JPG',
   },
 
@@ -506,7 +506,7 @@ export const cakes: Cake[] = [
     name: '方形',
     description: '方形造型',
     price6: 0, price8: 0,
-    singlePrice: 5,
+    singlePrice: 10,
     image: '/fangxing.JPG',
   },
   {
@@ -515,7 +515,7 @@ export const cakes: Cake[] = [
     name: '不规则蝴蝶',
     description: '不规则蝴蝶造型',
     price6: 0, price8: 0,
-    singlePrice: 5,
+    singlePrice: 10,
     image: '/buguizehudie.JPG',
   },
   {
