@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import type { Cake } from './types';
 
-export type CakeWithSize = Cake & { selectedSize?: '6' | '8' };
+export type CakeWithSize = Cake & { selectedSize?: '6' | '8' | 'single' };
 
 interface CartItem {
   cake: CakeWithSize;

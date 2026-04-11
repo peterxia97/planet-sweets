@@ -1,4 +1,4 @@
-import { X, Plus, Minus, Trash2, ShoppingBag, ChevronRight, Copy, CheckCircle } from 'lucide-react';
+import { X, Plus, Minus, Trash2, ShoppingBag, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../CartContext';
 
