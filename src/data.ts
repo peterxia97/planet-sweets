@@ -1,7 +1,7 @@
 import type { Category, Cake } from './types';
 
 // ═══════════════════════════════════════════
-//  多糖星球 Planet Sweets — 11 大类
+//  多糖星球 Planet Sweets — 12 大类
 // ═══════════════════════════════════════════
 
 export const categories: Category[] = [
@@ -10,12 +10,13 @@ export const categories: Category[] = [
   { id: 3,  name: '巴斯克',           icon: '🧀', description: '焦香浓郁 绵密丝滑' },
   { id: 4,  name: '裸蛋糕',           icon: '🍓', description: '简约清新 水果本味' },
   { id: 5,  name: '慕斯蛋糕',         icon: '🍨', description: '丝滑慕斯 入口即化' },
+  { id: 12, name: '来图定制',         icon: '📷', description: '请把你喜欢的网图发给我哦~' },
   { id: 6,  name: '特定造型',         icon: '🎂', description: '定制造型 独一无二' },
   { id: 7,  name: '童趣款',           icon: '🧸', description: '可爱有趣 儿童最爱' },
   { id: 8,  name: '夹心加料（一层）', icon: '🍮', description: '自选夹心 增添风味' },
   { id: 9,  name: '异形加收',         icon: '✨', description: '特殊造型 额外加收' },
   { id: 10, name: '蛋糕配件',         icon: '🎁', description: '精致配件 生日必备' },
-  { id: 11, name: '特殊工艺',         icon: '📷', description: '特殊工艺 个性定制' },
+  { id: 11, name: '特殊工艺',         icon: '🎨', description: '特殊工艺 个性定制' },
 ];
 
 // ═══════════════════════════════════════════
@@ -339,6 +340,20 @@ export const cakes: Cake[] = [
     description: '柠檬清香，酸甜可口',
     price6: 65, price8: 75,
     image: '/ningmengsuannaimusi.jpg',
+  },
+
+  // ──────────────────────────────────────
+  // 大类12：来图定制
+  // 请把喜欢的网图发给客服微信
+  // ──────────────────────────────────────
+  {
+    id: 1201,
+    categoryId: 12,
+    name: '来图定制',
+    description: '请把你喜欢的网图发给我哦~',
+    price6: 0, price8: 0,
+    singlePrice: 0,
+    image: '/laitudingzhi.jpg',
   },
 
   // ──────────────────────────────────────
