@@ -359,9 +359,11 @@ export const cakes: Cake[] = [
   // ──────────────────────────────────────
   // 大类6：特定造型
   // 极简：6寸=$65 / 8寸=$75
-  // 插件/花篮：6寸=$70 / 8寸=$80
+  // 插件/花篮/花瓣红粉：6寸=$65 / 8寸=$75
   // 丝带蝴蝶结：6寸=$70 / 8寸=$85
   // 复古裱花：6寸=$85 / 8寸=$95
+  // 母亲节蛋糕：6寸=$75 / 8寸=$85
+  // 花瓣红粉：自选应季水果夹心
   // ──────────────────────────────────────
   {
     id: 601,
@@ -403,6 +405,22 @@ export const cakes: Cake[] = [
     description: '花篮造型，精美别致',
     price6: 70, price8: 80,
     image: '/hualandangao.JPG',
+  },
+  {
+    id: 606,
+    categoryId: 6,
+    name: '花瓣红粉',
+    description: '自选应季水果夹心',
+    price6: 65, price8: 75,
+    image: '/huabanhongfen.jpg',
+  },
+  {
+    id: 607,
+    categoryId: 6,
+    name: '母亲节蛋糕',
+    description: '温馨献礼，感恩母爱',
+    price6: 75, price8: 85,
+    image: '/muqinjiedangao.JPG',
   },
 
   // ──────────────────────────────────────
@@ -500,6 +518,15 @@ export const cakes: Cake[] = [
     price6: 0, price8: 0,
     singlePrice: 10,
     image: '/heitangzhenzhu.JPG',
+  },
+  {
+    id: 807,
+    categoryId: 8,
+    name: '伯爵红茶奶冻',
+    description: '伯爵红茶口味奶冻',
+    price6: 0, price8: 0,
+    singlePrice: 5,
+    image: '/bojuehongchanaidong.JPG',
   },
 
   // ──────────────────────────────────────
