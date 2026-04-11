@@ -531,7 +531,7 @@ export const cakes: Cake[] = [
     id: 905,
     categoryId: 9,
     name: '加高',
-    description: '蛋糕加高',
+    description: '一层蛋糕胚',
     price6: 0, price8: 0,
     singlePrice: 5,
     image: '/jiajiagao.JPG',
