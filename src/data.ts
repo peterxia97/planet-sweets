@@ -379,7 +379,7 @@ export const cakes: Cake[] = [
     name: '丝带蝴蝶结蛋糕',
     description: '丝带蝴蝶结装饰，优雅大方',
     price6: 70, price8: 85,
-    image: '/sidaihudiejiedangao.jpg',
+    image: '/sidaihudiejiedangao.JPG',
   },
   {
     id: 603,
@@ -387,7 +387,7 @@ export const cakes: Cake[] = [
     name: '复古裱花蛋糕',
     description: '复古裱花工艺，精致典雅',
     price6: 85, price8: 95,
-    image: '/fugubiaohuadangao.jpg',
+    image: '/fugubiaohuadangao.JPG',
     tag: '高价',
   },
   {
