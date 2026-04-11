@@ -5,13 +5,12 @@ import Header from './components/Header';
 import CakeCard from './components/CakeCard';
 import CartDrawer from './components/CartDrawer';
 import ContactModal from './components/ContactModal';
-import { ShoppingCart, X } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 function Main() {
   const [activeCategoryId, setActiveCategoryId] = useState(1);
   const [cartOpen, setCartOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const { totalItems, totalPrice } = useCart();
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
@@ -19,13 +18,11 @@ function Main() {
 
   const handleCategorySelect = (id: number) => {
     setActiveCategoryId(id);
-    setMenuOpen(false);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header
-        onMenuOpen={() => setMenuOpen(true)}
         onCartOpen={() => setCartOpen(true)}
         onContactOpen={() => setContactOpen(true)}
       />

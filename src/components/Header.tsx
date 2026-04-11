@@ -1,36 +1,29 @@
-import { ShoppingCart, Menu } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../CartContext';
 
 interface HeaderProps {
-  onMenuOpen: () => void;
   onCartOpen: () => void;
   onContactOpen: () => void;
-  menuOpen?: boolean;
 }
 
-export default function Header({ onMenuOpen, onCartOpen, onContactOpen }: HeaderProps) {
+export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
   const { totalItems } = useCart();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
+    <header className="fixed top-0 left-44 lg:left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
       <div className="flex items-center justify-between px-4 h-14">
-        {/* Logo + Menu Button */}
-        <div className="flex items-center gap-2">
-          <button
-            onClick={onMenuOpen}
-            className="flex items-center justify-center w-9 h-9 rounded-full text-rose-600 hover:bg-rose-50 transition-colors"
-          >
-            <Menu className="w-5 h-5" />
-          </button>
-
-          <div className="flex items-center gap-2 min-w-0">
-            <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
-            <div className="min-w-0">
-              <h1 className="text-base font-bold text-rose-600 leading-tight truncate">多糖星球</h1>
-              <p className="text-[10px] text-gray-400 leading-tight">Planet Sweets</p>
-            </div>
+        {/* Logo */}
+        <div className="flex items-center gap-2 min-w-0 lg:hidden">
+          <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
+          <div className="min-w-0">
+            <h1 className="text-base font-bold text-rose-600 leading-tight truncate">多糖星球</h1>
+            <p className="text-[10px] text-gray-400 leading-tight">Planet Sweets</p>
           </div>
         </div>
+        <div className="hidden lg:block" /> {/* 占位，保持右侧对齐 */}
+
+        {/* Actions */}
+        <div className="flex items-center gap-2 flex-shrink-0">
 
         {/* Actions */}
         <div className="flex items-center gap-2 flex-shrink-0">
