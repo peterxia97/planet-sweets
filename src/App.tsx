@@ -11,6 +11,7 @@ function Main() {
   const [activeCategoryId, setActiveCategoryId] = useState(1);
   const [cartOpen, setCartOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { totalItems, totalPrice } = useCart();
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
@@ -18,6 +19,7 @@ function Main() {
 
   const handleCategorySelect = (id: number) => {
     setActiveCategoryId(id);
+    setMenuOpen(false); // 手机端选择后关闭侧边栏
   };
 
   return (
@@ -25,13 +27,25 @@ function Main() {
       <Header
         onCartOpen={() => setCartOpen(true)}
         onContactOpen={() => setContactOpen(true)}
+        onMenuOpen={() => setMenuOpen(true)}
       />
 
-      {/* 左侧导航栏 - 固定展开 */}
+      {/* 左侧导航栏 - 手机隐藏，点击显示；桌面静态 */}
       <aside
-        className="fixed top-0 left-0 h-full w-44 bg-white shadow-xl z-50 overflow-y-auto
-          lg:static lg:shadow-none lg:border-r lg:border-gray-100"
+        className={`
+          fixed top-0 left-0 h-full w-44 bg-white shadow-xl z-50 overflow-y-auto
+          transform transition-transform duration-300 ease-in-out
+          lg:static lg:shadow-none lg:border-r lg:border-gray-100 lg:transform-none
+          ${menuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        `}
       >
+        {/* 手机端遮罩层 */}
+        {menuOpen && (
+          <div
+            className="fixed inset-0 bg-black/30 z-[-1] lg:hidden"
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
         {/* Logo区域 */}
         <div className="flex items-center gap-2 px-3 py-4 border-b border-gray-100">
           <img src="/logo.jpg" alt="Planet Sweets" className="w-9 h-9 object-contain" />
@@ -74,7 +88,7 @@ function Main() {
       </aside>
 
       {/* 主内容区 */}
-      <div className="ml-44 lg:ml-52 pt-14 min-h-screen flex flex-col">
+      <div className="pt-14 min-h-screen flex flex-col lg:ml-52">
         {/* 横幅（仅手机端） */}
         <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-pink-500 px-5 py-5 relative lg:hidden">
           <img src="/logo.jpg" alt="" className="absolute right-3 bottom-3 w-20 h-20 object-contain opacity-20" />

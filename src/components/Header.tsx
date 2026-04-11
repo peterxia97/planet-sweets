@@ -4,23 +4,34 @@ import { useCart } from '../CartContext';
 interface HeaderProps {
   onCartOpen: () => void;
   onContactOpen: () => void;
+  onMenuOpen: () => void;
 }
 
-export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
+export default function Header({ onCartOpen, onContactOpen, onMenuOpen }: HeaderProps) {
   const { totalItems } = useCart();
 
   return (
-    <header className="fixed top-0 left-44 lg:left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
+    <header className="fixed top-0 left-0 lg:left-52 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
       <div className="flex items-center justify-between px-4 h-14">
-        {/* Logo */}
-        <div className="flex items-center gap-2 min-w-0 lg:hidden">
+        {/* 左侧：菜单按钮 + Logo */}
+        <div className="flex items-center gap-2 min-w-0">
+          {/* 菜单按钮（手机端） */}
+          <button
+            onClick={onMenuOpen}
+            className="flex items-center justify-center w-9 h-9 rounded-full text-gray-600 hover:bg-gray-100 transition-colors lg:hidden"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          </button>
+
+          {/* Logo */}
           <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
           <div className="min-w-0">
             <h1 className="text-base font-bold text-rose-600 leading-tight truncate">多糖星球</h1>
             <p className="text-[10px] text-gray-400 leading-tight">Planet Sweets</p>
           </div>
         </div>
-        <div className="hidden lg:block" /> {/* 占位，保持右侧对齐 */}
 
         {/* Actions */}
         <div className="flex items-center gap-2 flex-shrink-0">
