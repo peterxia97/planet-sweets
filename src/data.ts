@@ -188,7 +188,7 @@ export const cakes: Cake[] = [
     id: 210,
     categoryId: 2,
     name: '巧克力可可',
-    description: '夹心：黑巧奶油+黄油薄脆',
+    description: '夹心：巧克力奶冻+黄油薄脆',
     price6: 75, price8: 85,
     image: '/qiaokelikeke.JPG',
   },
