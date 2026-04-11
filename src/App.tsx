@@ -100,7 +100,7 @@ function Main() {
         {/* 温馨提示（仅手机端） */}
         <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 lg:hidden">
           <p className="text-amber-700 text-xs font-medium leading-relaxed">
-            ⚠️ <span className="font-bold">温馨提示</span>：图片仅供参考，样式默认除特定款式外自由发挥。特殊工艺因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
+            ⚠️ <span className="font-bold">温馨提示</span>：图片仅供参考，样式默认除特定款式外自由发挥。来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
           </p>
         </div>
 
