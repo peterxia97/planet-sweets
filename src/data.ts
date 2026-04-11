@@ -346,7 +346,7 @@ export const cakes: Cake[] = [
   // 极简：6寸=$65 / 8寸=$75
   // 插件/花篮：6寸=$70 / 8寸=$80
   // 丝带蝴蝶结：6寸=$70 / 8寸=$85
-  // 复古裱花：6寸=$80起 / 8寸=$90起
+  // 复古裱花：6寸=$85 / 8寸=$95
   // ──────────────────────────────────────
   {
     id: 601,
@@ -369,7 +369,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '复古裱花蛋糕',
     description: '复古裱花工艺，精致典雅',
-    price6: 80, price8: 90,
+    price6: 85, price8: 95,
     image: '/fugubiaohuadangao.JPG',
     tag: '高价',
   },
