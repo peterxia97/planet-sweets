@@ -44,15 +44,6 @@ function Main() {
           </div>
         </div>
 
-        {/* Logo区域（桌面端） */}
-        <div className="hidden lg:flex items-center gap-2 px-4 py-5 border-b border-gray-100">
-          <img src="/logo.jpg" alt="Planet Sweets" className="w-10 h-10 object-contain" />
-          <div>
-            <h2 className="text-base font-bold text-rose-600 leading-tight">多糖星球</h2>
-            <p className="text-xs text-gray-400">Planet Sweets</p>
-          </div>
-        </div>
-
         {/* 温馨提示（桌面端） */}
         <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5 hidden lg:block">
           <p className="text-amber-700 text-[11px] font-medium leading-relaxed">
