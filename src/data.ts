@@ -195,8 +195,8 @@ export const cakes: Cake[] = [
   {
     id: 211,
     categoryId: 2,
-    name: '紫薯泥蛋糕',
-    description: '夹心：奶香紫薯泥（限定食材，建议提前3天预定）',
+    name: '紫薯芋泥蛋糕',
+    description: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）',
     price6: 75, price8: 85,
     image: '/zishunidangao.JPG',
   },
