@@ -57,9 +57,21 @@ function Main() {
 
         {/* 温馨提示（桌面端） */}
         <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5 hidden lg:block">
-          <p className="text-amber-700 text-[11px] font-medium leading-relaxed">
-            图片仅供参考，样式默认除特定款式外自由发挥。特殊工艺因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
-          </p>
+          <p className="text-amber-700 text-[11px] font-bold mb-2">📋 下单须知</p>
+          <div className="space-y-2">
+            <div className="flex gap-1.5">
+              <span className="text-[11px] mt-0.5 flex-shrink-0">🎂</span>
+              <p className="text-amber-700 text-[11px] leading-relaxed">
+                除指定款式外，口味自选，盲盒样式噢～
+              </p>
+            </div>
+            <div className="flex gap-1.5">
+              <span className="text-[11px] mt-0.5 flex-shrink-0">🎨</span>
+              <p className="text-amber-700 text-[11px] leading-relaxed">
+                来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* 分类列表 */}
@@ -99,9 +111,21 @@ function Main() {
 
         {/* 温馨提示（仅手机端） */}
         <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 lg:hidden">
-          <p className="text-amber-700 text-xs font-medium leading-relaxed">
-            ⚠️ <span className="font-bold">温馨提示</span>：图片仅供参考，样式默认除特定款式外自由发挥。来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
-          </p>
+          <p className="text-amber-700 text-xs font-bold mb-2">📋 下单须知</p>
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <span className="text-xs mt-0.5 flex-shrink-0">🎂</span>
+              <p className="text-amber-700 text-xs leading-relaxed">
+                除指定款式外，口味自选，盲盒样式噢～
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-xs mt-0.5 flex-shrink-0">🎨</span>
+              <p className="text-amber-700 text-xs leading-relaxed">
+                来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* 当前分类标题 */}
