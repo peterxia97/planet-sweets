@@ -180,7 +180,7 @@ export const cakes: Cake[] = [
   {
     id: 209,
     categoryId: 2,
-    name: '黑糖波波',
+    name: '黑糖珍珠奶茶蛋糕',
     description: '因珍珠特性建议当天食用完',
     price6: 70, price8: 80,
     image: '/heitangbobo.JPG',
