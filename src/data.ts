@@ -36,7 +36,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '草莓奶油裱花蛋糕',
     description: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/caomei.JPG',
     tag: '热销',
   },
@@ -45,7 +45,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '蓝莓奶油裱花蛋糕',
     description: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/lanmei.PNG',
   },
   {
@@ -53,7 +53,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '芒果奶油裱花蛋糕',
     description: '金黄芒果果肉铺满蛋糕，香甜浓郁，热带风情。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/mangguo.PNG',
   },
   {
@@ -61,7 +61,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '黑莓奶油裱花蛋糕',
     description: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/heimei.PNG',
   },
   {
@@ -69,7 +69,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '葡萄奶油裱花蛋糕',
     description: '饱满葡萄果肉均匀铺陈，清甜多汁，精致美观。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/putao.JPG',
   },
   {
@@ -77,7 +77,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '青提奶油裱花蛋糕',
     description: '清爽青提果肉，翠绿悦目，清甜不腻，夏日首选。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/qingti.JPG',
   },
   {
@@ -85,7 +85,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '树莓奶油裱花蛋糕',
     description: '进口树莓点缀，小巧红艳，酸甜口感，精致优雅。',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/shumei.jpg',
   },
   {
@@ -93,7 +93,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '荔枝奶油裱花蛋糕',
     description: '罐头荔枝果肉，清甜水润，独特风味。',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/lizhi.JPG',
     tag: '人气',
   },
@@ -102,7 +102,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '榴莲奶油裱花蛋糕',
     description: '泰国金枕榴莲果肉，浓郁香气，爱榴莲人士不可错过。',
-    price6: 85, price8: 95,
+    price6: 85, price8: 105,
     image: '/liulian.JPG',
     tag: '爆款',
   },
@@ -118,7 +118,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '伯爵红茶',
     description: '夹心：特调红茶奶油+红茶奶冻',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/bojuehongcha.JPG',
   },
   {
@@ -126,7 +126,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '抹茶',
     description: '夹心：抹茶奶油+抹茶奶冻',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/mocha.JPG',
   },
   {
@@ -134,7 +134,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '桂花',
     description: '夹心：桂花酱+桂花奶冻',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/guihua.JPG',
   },
   {
@@ -142,7 +142,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '原味奥利奥',
     description: '夹心：奥利奥碎',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/yuanweiaoliao.PNG',
   },
   {
@@ -150,7 +150,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '海盐奥利奥',
     description: '夹心：奥利奥碎',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/haiyanaoliao.JPG',
   },
   {
@@ -158,7 +158,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '玫瑰荔枝',
     description: '夹心：荔枝果肉+荔枝特调奶油',
-    price6: 80, price8: 90,
+    price6: 80, price8: 100,
     image: '/meiguilizhi.JPG',
   },
   {
@@ -166,7 +166,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '焦糖香蕉',
     description: '夹心：香蕉泥+焦糖奶冻',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/jiaotangxiangjiao.JPG',
   },
   {
@@ -174,7 +174,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '开心果',
     description: '夹心：奶冻+开心果碎',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/kaixinguo.jpg',
   },
   {
@@ -182,7 +182,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '黑糖珍珠奶茶蛋糕',
     description: '因珍珠特性建议当天食用完',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/heitangbobo.JPG',
   },
   {
@@ -190,7 +190,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '巧克力可可',
     description: '夹心：巧克力奶冻+黄油薄脆',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/qiaokelikeke.JPG',
   },
   {
@@ -198,7 +198,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '紫薯芋泥蛋糕',
     description: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/zishunidangao.JPG',
   },
   {
@@ -206,7 +206,7 @@ export const cakes: Cake[] = [
     categoryId: 2,
     name: '焦糖杏仁草莓',
     description: '甜中带咸的焦糖与草莓完美搭配',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/jiaotangxingrencaomei.JPG',
   },
 
@@ -221,7 +221,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '原味芒果酸奶巴斯克',
     description: '芒果酸奶香气，焦香外皮',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/yuanweimangguosuannaibasike.JPG',
   },
   {
@@ -229,7 +229,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '原味草莓酸奶巴斯克',
     description: '草莓酸奶香气，酸甜可口',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/yuanweicaomeisuannaibasike.JPG',
   },
   {
@@ -237,7 +237,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '原味蓝莓酸奶巴斯克',
     description: '蓝莓酸奶香气，清爽自然',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/yuanweilanmeisuannaibasike.JPG',
   },
   {
@@ -245,7 +245,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '原味香草酸奶巴斯克',
     description: '香草酸奶香气，经典绵密',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/yuanweixiangcaosuannaibasike.JPG',
   },
   {
@@ -253,7 +253,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '抹茶酸奶巴斯克',
     description: '宇治抹茶粉，香浓微苦',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/mochasuannaibasike.JPG',
   },
   {
@@ -261,7 +261,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '抹茶奶油巴斯克',
     description: '抹茶搭配奶香，回味悠长',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/mochanaiyoubasike.JPG',
   },
   {
@@ -269,7 +269,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '原味莓果奶油巴斯克',
     description: '混合莓果，香甜浓郁',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/yuanweimeiguonaiyoubasike.jpg',
   },
   {
@@ -277,7 +277,7 @@ export const cakes: Cake[] = [
     categoryId: 3,
     name: '柠檬巴斯克',
     description: '柠檬清香，酸甜平衡',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/ningmengbasike.JPG',
   },
 
@@ -290,7 +290,7 @@ export const cakes: Cake[] = [
     categoryId: 4,
     name: '红丝绒草莓裸蛋糕',
     description: '红丝绒蛋糕配新鲜草莓，经典搭配',
-    price6: 55, price8: 65,
+    price6: 55, price8: 75,
     image: '/hongsirongcaomeiluodangao.JPG',
   },
   {
@@ -298,7 +298,7 @@ export const cakes: Cake[] = [
     categoryId: 4,
     name: '原味奶油水果裸蛋糕',
     description: '时令水果搭配（不指定水果种类）',
-    price6: 55, price8: 65,
+    price6: 55, price8: 75,
     image: '/yuanweinaiyoushuiguoluodangao.JPG',
   },
 
@@ -314,7 +314,7 @@ export const cakes: Cake[] = [
     categoryId: 5,
     name: '蓝莓多多慕斯',
     description: '蓝莓慕斯，酸甜清爽',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/lanmeiduoduomusi.JPG',
   },
   {
@@ -322,7 +322,7 @@ export const cakes: Cake[] = [
     categoryId: 5,
     name: '巧克力慕斯',
     description: '浓郁巧克力慕斯，丝滑香浓',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/qiaokelimusi.JPG',
   },
   {
@@ -330,7 +330,7 @@ export const cakes: Cake[] = [
     categoryId: 5,
     name: '草莓奶酪慕斯',
     description: '草莓与奶酪完美融合',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/caomeinailaomusi.JPG',
   },
   {
@@ -338,7 +338,7 @@ export const cakes: Cake[] = [
     categoryId: 5,
     name: '柠檬酸奶慕斯',
     description: '柠檬清香，酸甜可口',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/ningmengsuannaimusi.jpg',
   },
 
@@ -370,7 +370,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '极简风格',
     description: '简约设计，干净利落',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/jijianfengge.JPG',
   },
   {
@@ -378,7 +378,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '丝带蝴蝶结蛋糕',
     description: '丝带蝴蝶结装饰，优雅大方',
-    price6: 70, price8: 85,
+    price6: 70, price8: 95,
     image: '/sidaihudiejiedangao.JPG',
   },
   {
@@ -386,7 +386,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '复古裱花蛋糕',
     description: '复古裱花工艺，精致典雅',
-    price6: 85, price8: 95,
+    price6: 85, price8: 105,
     image: '/fugubiaohuadangao.JPG',
     tag: '高价',
   },
@@ -395,7 +395,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '插件蛋糕',
     description: '插件装饰，造型多变',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/chajiandangao.JPG',
   },
   {
@@ -403,7 +403,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '花篮蛋糕',
     description: '花篮造型，精美别致',
-    price6: 70, price8: 80,
+    price6: 70, price8: 90,
     image: '/hualandangao.JPG',
   },
   {
@@ -411,7 +411,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '花瓣红粉',
     description: '自选应季水果夹心',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/huabanhongfen.jpg',
   },
   {
@@ -419,7 +419,7 @@ export const cakes: Cake[] = [
     categoryId: 6,
     name: '母亲节蛋糕',
     description: '温馨献礼，感恩母爱',
-    price6: 75, price8: 85,
+    price6: 75, price8: 95,
     image: '/muqinjiedangao.JPG',
   },
 
@@ -433,7 +433,7 @@ export const cakes: Cake[] = [
     categoryId: 7,
     name: '蛋壳',
     description: '蛋壳造型，创意十足',
-    price6: 80, price8: 90,
+    price6: 80, price8: 100,
     image: '/danke.JPG',
   },
   {
@@ -441,7 +441,7 @@ export const cakes: Cake[] = [
     categoryId: 7,
     name: '雪顶草莓',
     description: '雪顶造型配新鲜草莓，清新可爱',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/xuedingcaomei.JPG',
   },
   {
@@ -449,7 +449,7 @@ export const cakes: Cake[] = [
     categoryId: 7,
     name: '经典儿童彩针',
     description: '七彩彩针装饰，缤纷喜庆',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/jingdianertongcaizhen.JPG',
   },
   {
@@ -457,7 +457,7 @@ export const cakes: Cake[] = [
     categoryId: 7,
     name: '缤纷色彩',
     description: '多彩缤纷装饰，活泼生动',
-    price6: 65, price8: 75,
+    price6: 65, price8: 85,
     image: '/binfensecai.JPG',
   },
 
