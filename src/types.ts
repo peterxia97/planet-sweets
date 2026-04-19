@@ -7,6 +7,7 @@ export interface Cake {
   singlePrice?: number; // 不区分尺寸的单价（有此字段则隐藏尺寸选择）
   image: string;
   tag?: string;         // 如"热销"、"新品"等
+  hidden?: boolean;     // 设为 true 则前台不显示
   categoryId: number;
 }
 

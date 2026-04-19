@@ -96,6 +96,7 @@ export const cakes: Cake[] = [
     price6: 75, price8: 95,
     image: '/lizhi.JPG',
     tag: '人气',
+    hidden: true,
   },
   {
     id: 109,

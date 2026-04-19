@@ -15,7 +15,7 @@ function Main() {
   const { totalItems, totalPrice } = useCart();
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
-  const filteredCakes = cakes.filter(c => c.categoryId === activeCategoryId);
+  const filteredCakes = cakes.filter(c => c.categoryId === activeCategoryId && !c.hidden);
 
   const handleCategorySelect = (id: number) => {
     setActiveCategoryId(id);
