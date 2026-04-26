@@ -160,6 +160,7 @@ export const cakes: Cake[] = [
     description: '夹心：桂花酱+桂花奶冻',
     price6: 75, price8: 95,
     image: '/guihua.JPG',
+    alsoIn: [13],
   },
   {
     id: 204,
@@ -224,6 +225,7 @@ export const cakes: Cake[] = [
     description: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）',
     price6: 75, price8: 95,
     image: '/zishunidangao.JPG',
+    alsoIn: [13],
   },
   {
     id: 212,

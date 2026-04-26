@@ -14,7 +14,7 @@ function Main() {
   const { totalItems, totalPrice } = useCart();
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
-  const filteredCakes = cakes.filter(c => c.categoryId === activeCategoryId && !c.hidden);
+  const filteredCakes = cakes.filter(c => !c.hidden && (c.categoryId === activeCategoryId || c.alsoIn?.includes(activeCategoryId)));
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">

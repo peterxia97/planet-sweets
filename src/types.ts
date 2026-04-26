@@ -9,6 +9,7 @@ export interface Cake {
   tag?: string;         // 如"热销"、"新品"等
   hidden?: boolean;     // 设为 true 则前台不显示
   categoryId: number;
+  alsoIn?: number[];    // 同时归属的其他分类ID（如秋日推荐13）
 }
 
 export interface Category {
