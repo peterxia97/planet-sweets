@@ -4,26 +4,16 @@ import { useCart } from '../CartContext';
 interface HeaderProps {
   onCartOpen: () => void;
   onContactOpen: () => void;
-  onMenuOpen: () => void;
 }
 
-export default function Header({ onCartOpen, onContactOpen, onMenuOpen }: HeaderProps) {
+export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
   const { totalItems } = useCart();
 
   return (
-    <header className="fixed top-0 left-0 lg:left-52 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
-      <div className="flex items-center justify-between px-4 h-14">
-        {/* 左侧：菜单按钮 + Logo */}
+    <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
+      <div className="flex items-center justify-between px-4 h-14 ml-[72px] sm:ml-20">
+        {/* Logo */}
         <div className="flex items-center gap-2 min-w-0">
-          {/* 菜单按钮（手机端） */}
-          <button
-            onClick={onMenuOpen}
-            className="flex items-center justify-center px-2 h-9 rounded-full text-gray-600 hover:bg-gray-100 transition-colors lg:hidden text-sm font-medium"
-          >
-            分类
-          </button>
-
-          {/* Logo */}
           <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
           <div className="min-w-0">
             <h1 className="text-base font-bold text-rose-600 leading-tight truncate">多糖星球</h1>

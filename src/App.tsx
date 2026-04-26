@@ -11,154 +11,118 @@ function Main() {
   const [activeCategoryId, setActiveCategoryId] = useState(1);
   const [cartOpen, setCartOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const { totalItems, totalPrice } = useCart();
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
   const filteredCakes = cakes.filter(c => c.categoryId === activeCategoryId && !c.hidden);
 
-  const handleCategorySelect = (id: number) => {
-    setActiveCategoryId(id);
-    setMenuOpen(false); // 手机端选择后关闭侧边栏
-  };
-
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header
         onCartOpen={() => setCartOpen(true)}
         onContactOpen={() => setContactOpen(true)}
-        onMenuOpen={() => setMenuOpen(true)}
       />
 
-      {/* 左侧导航栏 - 手机隐藏，点击显示；桌面静态 */}
-      <aside
-        className={`
-          fixed top-0 left-0 h-full w-44 bg-white shadow-xl z-50 overflow-y-auto
-          transform transition-transform duration-300 ease-in-out
-          lg:static lg:shadow-none lg:border-r lg:border-gray-100 lg:transform-none
-          ${menuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        `}
-      >
-        {/* 手机端遮罩层 */}
-        {menuOpen && (
-          <div
-            className="fixed inset-0 bg-black/30 z-[-1] lg:hidden"
-            onClick={() => setMenuOpen(false)}
-          />
-        )}
-        {/* Logo区域 */}
-        <div className="flex items-center gap-2 px-3 py-4 border-b border-gray-100">
-          <img src="/logo.jpg" alt="Planet Sweets" className="w-9 h-9 object-contain" />
-          <div>
-            <h2 className="text-sm font-bold text-rose-600 leading-tight">多糖星球</h2>
-            <p className="text-[10px] text-gray-400">Planet Sweets</p>
+      {/* 主体：左侧分类栏 + 右侧内容区 */}
+      <div className="flex flex-1 pt-14">
+
+        {/* ── 左侧分类导航（固定，全端常驻） ── */}
+        <aside className="fixed top-14 left-0 bottom-0 w-[72px] sm:w-20 bg-white border-r border-gray-100 z-30 flex flex-col overflow-y-auto">
+          {/* 顶部标签 */}
+          <div className="py-2 text-center">
+            <span className="text-[10px] text-gray-400 font-semibold tracking-widest">分类</span>
           </div>
-        </div>
 
-        {/* 温馨提示（桌面端） */}
-        <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5 hidden lg:block">
-          <p className="text-amber-700 text-[11px] font-bold mb-2">📋 下单须知</p>
-          <div className="space-y-2">
-            <div className="flex gap-1.5">
-              <span className="text-[11px] mt-0.5 flex-shrink-0">🎂</span>
-              <p className="text-amber-700 text-[11px] leading-relaxed">
-                除指定款式外，口味自选，盲盒样式噢～
-              </p>
-            </div>
-            <div className="flex gap-1.5">
-              <span className="text-[11px] mt-0.5 flex-shrink-0">🎨</span>
-              <p className="text-amber-700 text-[11px] leading-relaxed">
-                来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
-              </p>
-            </div>
+          <nav className="flex flex-col gap-0.5 px-1 pb-4">
+            {categories.map(cat => {
+              const isActive = activeCategoryId === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategoryId(cat.id)}
+                  className={`
+                    relative flex flex-col items-center justify-center gap-0.5
+                    w-full py-2.5 px-1 rounded-xl transition-all duration-200
+                    ${isActive
+                      ? 'bg-rose-50 text-rose-600'
+                      : 'text-gray-500 hover:bg-gray-50 hover:text-gray-700'
+                    }
+                  `}
+                >
+                  {/* 激活指示条 */}
+                  {isActive && (
+                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-6 bg-rose-500 rounded-r-full" />
+                  )}
+                  <span className="text-xl leading-none">{cat.icon}</span>
+                  <span className="text-[10px] font-medium leading-tight text-center w-full px-0.5 break-words line-clamp-2">
+                    {cat.name}
+                  </span>
+                </button>
+              );
+            })}
+          </nav>
+        </aside>
+
+        {/* ── 右侧内容区 ── */}
+        <main className="flex-1 ml-[72px] sm:ml-20 min-w-0 flex flex-col">
+
+          {/* 横幅（手机端） */}
+          <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-pink-500 px-5 py-4 relative lg:hidden">
+            <img src="/logo.jpg" alt="" className="absolute right-3 bottom-2 w-16 h-16 object-contain opacity-20" />
+            <p className="text-white/60 text-xs mb-0.5">Welcome to</p>
+            <h2 className="text-xl font-bold text-white leading-tight">多糖星球</h2>
+            <p className="text-white/80 text-sm">Planet Sweets</p>
           </div>
-        </div>
 
-        {/* 分类列表 */}
-        <nav className="py-3">
-          <p className="px-4 text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-2">分类</p>
-          {categories.map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => handleCategorySelect(cat.id)}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors
-                ${activeCategoryId === cat.id
-                  ? 'bg-rose-50 text-rose-600 border-r-2 border-rose-500'
-                  : 'text-gray-600 hover:bg-gray-50 border-r-2 border-transparent'
-                }`}
-            >
-              <span className="text-lg flex-shrink-0">{cat.icon}</span>
-              <span className="text-sm font-medium truncate">{cat.name}</span>
-            </button>
-          ))}
-        </nav>
-
-        {/* 侧边栏底部（桌面端） */}
-        <div className="mt-auto px-4 py-4 border-t border-gray-100 hidden lg:block">
-          <p className="text-xs text-gray-400 text-center">支持澳币现金 / 支付宝汇率转账</p>
-        </div>
-      </aside>
-
-      {/* 主内容区 */}
-      <div className="pt-14 min-h-screen flex flex-col lg:ml-52">
-        {/* 横幅（仅手机端） */}
-        <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-pink-500 px-5 py-5 relative lg:hidden">
-          <img src="/logo.jpg" alt="" className="absolute right-3 bottom-3 w-20 h-20 object-contain opacity-20" />
-          <p className="text-white/60 text-xs mb-0.5">Welcome to</p>
-          <h2 className="text-2xl font-bold text-white leading-tight">多糖星球</h2>
-          <p className="text-white/80 text-sm">Planet Sweets</p>
-        </div>
-
-        {/* 温馨提示（仅手机端） */}
-        <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 lg:hidden">
-          <p className="text-amber-700 text-xs font-bold mb-2">📋 下单须知</p>
-          <div className="space-y-2">
-            <div className="flex gap-2">
-              <span className="text-xs mt-0.5 flex-shrink-0">🎂</span>
-              <p className="text-amber-700 text-xs leading-relaxed">
-                除指定款式外，口味自选，盲盒样式噢～
-              </p>
-            </div>
-            <div className="flex gap-2">
-              <span className="text-xs mt-0.5 flex-shrink-0">🎨</span>
-              <p className="text-amber-700 text-xs leading-relaxed">
-                来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
-              </p>
+          {/* 下单须知 */}
+          <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3">
+            <p className="text-amber-700 text-xs font-bold mb-1.5">📋 下单须知</p>
+            <div className="space-y-1.5">
+              <div className="flex gap-1.5">
+                <span className="text-xs mt-0.5 flex-shrink-0">🎂</span>
+                <p className="text-amber-700 text-xs leading-relaxed">除指定款式外，口味自选，盲盒样式噢～</p>
+              </div>
+              <div className="flex gap-1.5">
+                <span className="text-xs mt-0.5 flex-shrink-0">🎨</span>
+                <p className="text-amber-700 text-xs leading-relaxed">
+                  来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* 当前分类标题 */}
-        <div className="px-4 mt-4 mb-3 flex items-center gap-2">
-          <span className="text-2xl">{activeCategory?.icon}</span>
-          <div>
-            <h3 className="text-base font-bold text-gray-800 leading-tight">{activeCategory?.name}</h3>
-            <p className="text-xs text-gray-400">{activeCategory?.description}</p>
+          {/* 当前分类标题 */}
+          <div className="px-3 mt-4 mb-3 flex items-center gap-2">
+            <span className="text-2xl">{activeCategory?.icon}</span>
+            <div className="min-w-0">
+              <h3 className="text-base font-bold text-gray-800 leading-tight truncate">{activeCategory?.name}</h3>
+              <p className="text-xs text-gray-400 truncate">{activeCategory?.description}</p>
+            </div>
+            <span className="ml-auto text-xs text-gray-400 bg-white px-2.5 py-1 rounded-full border border-gray-100 flex-shrink-0">
+              {filteredCakes.length}款
+            </span>
           </div>
-          <span className="ml-auto text-xs text-gray-400 bg-white px-2.5 py-1 rounded-full border border-gray-100 flex-shrink-0">
-            {filteredCakes.length}款
-          </span>
-        </div>
 
-        {/* 蛋糕网格 */}
-        <div className="px-3 grid grid-cols-2 gap-2.5 pb-24">
-          {filteredCakes.map(cake => (
-            <CakeCard key={cake.id} cake={cake} />
-          ))}
-        </div>
-
-        {filteredCakes.length === 0 && (
-          <div className="text-center py-16 text-gray-400">
-            <p className="text-4xl mb-3">🍰</p>
-            <p className="text-sm">该分类暂无商品</p>
+          {/* 蛋糕网格 */}
+          <div className="px-3 grid grid-cols-2 gap-2.5 pb-28">
+            {filteredCakes.map(cake => (
+              <CakeCard key={cake.id} cake={cake} />
+            ))}
           </div>
-        )}
 
-        {/* Footer - 精简（仅手机端） */}
-        <footer className="bg-white border-t border-rose-50 py-5 px-4 text-center mt-auto lg:hidden">
-          <p className="text-rose-400 font-semibold text-sm">🍰 多糖星球 Planet Sweets</p>
-          <p className="text-gray-300 text-xs mt-1">新鲜手工 · 当日制作</p>
-        </footer>
+          {filteredCakes.length === 0 && (
+            <div className="text-center py-16 text-gray-400">
+              <p className="text-4xl mb-3">🍰</p>
+              <p className="text-sm">该分类暂无商品</p>
+            </div>
+          )}
+
+          {/* Footer */}
+          <footer className="bg-white border-t border-rose-50 py-5 px-4 text-center mt-auto">
+            <p className="text-rose-400 font-semibold text-sm">🍰 多糖星球 Planet Sweets</p>
+            <p className="text-gray-300 text-xs mt-1">新鲜手工 · 当日制作</p>
+          </footer>
+        </main>
       </div>
 
       {/* Bottom Cart FAB */}
