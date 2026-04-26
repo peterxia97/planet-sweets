@@ -1,10 +1,11 @@
 import type { Category, Cake } from './types';
 
 // ═══════════════════════════════════════════
-//  多糖星球 Planet Sweets — 12 大类
+//  多糖星球 Planet Sweets — 13 大类
 // ═══════════════════════════════════════════
 
 export const categories: Category[] = [
+  { id: 13, name: '秋日推荐',           icon: '🍂', description: '秋日限定 温暖治愈' },
   { id: 1,  name: '水果奶油裱花蛋糕', icon: '🍓', description: '新鲜水果搭配轻盈奶油' },
   { id: 2,  name: '口味蛋糕',          icon: '🍮', description: '多种口味 丰富夹心' },
   { id: 3,  name: '巴斯克',           icon: '🧀', description: '焦香浓郁 绵密丝滑' },
@@ -24,6 +25,28 @@ export const categories: Category[] = [
 // ═══════════════════════════════════════════
 
 export const cakes: Cake[] = [
+
+  // ──────────────────────────────────────
+  // 大类13：秋日推荐
+  // ──────────────────────────────────────
+  {
+    id: 1301,
+    categoryId: 13,
+    name: '焦糖南瓜蛋糕',
+    description: '南瓜奶酪泥+奶冻，搭配混合坚果，营养丰富口感层次高。',
+    price6: 80, price8: 100,
+    image: '/jiatang-nangua.jpg',
+    tag: '秋日限定',
+  },
+  {
+    id: 1302,
+    categoryId: 13,
+    name: '焦糖咖啡蛋糕',
+    description: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。',
+    price6: 75, price8: 95,
+    image: '/jiatang-coffee.jpg',
+    tag: '秋日限定',
+  },
 
   // ──────────────────────────────────────
   // 大类1：水果奶油裱花蛋糕

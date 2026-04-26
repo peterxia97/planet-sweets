@@ -8,7 +8,7 @@ import ContactModal from './components/ContactModal';
 import { ShoppingCart } from 'lucide-react';
 
 function Main() {
-  const [activeCategoryId, setActiveCategoryId] = useState(1);
+  const [activeCategoryId, setActiveCategoryId] = useState(categories[0]?.id ?? 1);
   const [cartOpen, setCartOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const { totalItems, totalPrice } = useCart();
