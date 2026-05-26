@@ -50,9 +50,11 @@ export const cakes: Cake[] = [
 
   // ──────────────────────────────────────
   // 大类1：水果奶油裱花蛋糕
-  // 常规：6寸=$65 / 8寸=$75
-  // 荔枝：6寸=$75 / 8寸=$85
-  // 榴莲：6寸=$85 / 8寸=$95
+  // 草莓/葡萄/青提/罐头芒果：6寸=$65 / 8寸=$85
+  // 黑莓果酱：6寸=$60 / 8寸=$80
+  // 树莓/荔枝：6寸=$75 / 8寸=$95
+  // 蓝莓：6寸=$80 / 8寸=$100
+  // 榴莲：6寸=$85 / 8寸=$105
   // ──────────────────────────────────────
   {
     id: 101,
@@ -68,13 +70,13 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '蓝莓奶油裱花蛋糕',
     description: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。',
-    price6: 65, price8: 85,
+    price6: 80, price8: 100,
     image: '/lanmei.PNG',
   },
   {
     id: 103,
     categoryId: 1,
-    name: '芒果奶油裱花蛋糕',
+    name: '罐头芒果奶油裱花蛋糕',
     description: '金黄芒果果肉铺满蛋糕，香甜浓郁，热带风情。',
     price6: 65, price8: 85,
     image: '/mangguo.PNG',
@@ -82,9 +84,9 @@ export const cakes: Cake[] = [
   {
     id: 104,
     categoryId: 1,
-    name: '黑莓奶油裱花蛋糕',
+    name: '黑莓果酱奶油裱花蛋糕',
     description: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。',
-    price6: 65, price8: 85,
+    price6: 60, price8: 80,
     image: '/heimei.PNG',
   },
   {
@@ -108,7 +110,7 @@ export const cakes: Cake[] = [
     categoryId: 1,
     name: '树莓奶油裱花蛋糕',
     description: '进口树莓点缀，小巧红艳，酸甜口感，精致优雅。',
-    price6: 65, price8: 85,
+    price6: 75, price8: 95,
     image: '/shumei.jpg',
   },
   {
