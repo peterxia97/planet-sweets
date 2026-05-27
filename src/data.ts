@@ -31,14 +31,14 @@ export const cakes: Cake[] = [
     id: 1301, categoryId: 13,
     name: '焦糖南瓜蛋糕', nameEn: 'Caramel Pumpkin Cake',
     description: '南瓜奶酪泥+奶冻，搭配混合坚果，营养丰富口感层次高。',
-    descriptionEn: 'Pumpkin cheesecake puree + panna cotta with mixed nuts, rich and layered.',
+    descriptionEn: 'Pumpkin cheesecake puree + milk pudding with mixed nuts, rich and layered.',
     price6: 80, price8: 100, image: '/jiatang-nangua.jpg', tag: '秋日限定', tagEn: 'Autumn Special',
   },
   {
     id: 1302, categoryId: 13,
     name: '焦糖咖啡蛋糕', nameEn: 'Caramel Coffee Cake',
     description: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。',
-    descriptionEn: 'Butter crunch + salted caramel cream + latte panna cotta + coffee chiffon. Rich coffee aroma, smooth cream layers, amber caramel glaze on top. A grown-up dessert.',
+    descriptionEn: 'Butter crunch + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma, smooth cream layers, amber caramel glaze on top. A grown-up dessert.',
     price6: 75, price8: 95, image: '/jiatang-coffee.jpg', tag: '秋日限定', tagEn: 'Autumn Special',
   },
 
@@ -112,21 +112,21 @@ export const cakes: Cake[] = [
     id: 201, categoryId: 2,
     name: '伯爵红茶', nameEn: 'Earl Grey Tea',
     description: '夹心：特调红茶奶油+红茶奶冻',
-    descriptionEn: 'Filling: Earl Grey cream + tea panna cotta',
+    descriptionEn: 'Filling: Earl Grey cream + tea milk pudding',
     price6: 75, price8: 95, image: '/bojuehongcha.JPG',
   },
   {
     id: 202, categoryId: 2,
     name: '抹茶', nameEn: 'Matcha',
     description: '夹心：抹茶奶油+抹茶奶冻',
-    descriptionEn: 'Filling: matcha cream + matcha panna cotta',
+    descriptionEn: 'Filling: matcha cream + matcha milk pudding',
     price6: 75, price8: 95, image: '/mocha.JPG',
   },
   {
     id: 203, categoryId: 2,
     name: '桂花', nameEn: 'Osmanthus',
     description: '夹心：桂花酱+桂花奶冻',
-    descriptionEn: 'Filling: osmanthus syrup + osmanthus panna cotta',
+    descriptionEn: 'Filling: osmanthus syrup + osmanthus milk pudding',
     price6: 75, price8: 95, image: '/guihua.JPG', alsoIn: [13],
   },
   {
@@ -154,14 +154,14 @@ export const cakes: Cake[] = [
     id: 207, categoryId: 2,
     name: '焦糖香蕉', nameEn: 'Caramel Banana',
     description: '夹心：香蕉泥+焦糖奶冻',
-    descriptionEn: 'Filling: banana puree + caramel panna cotta',
+    descriptionEn: 'Filling: banana puree + caramel milk pudding',
     price6: 70, price8: 90, image: '/jiaotangxiangjiao.JPG',
   },
   {
     id: 208, categoryId: 2,
     name: '开心果', nameEn: 'Pistachio',
     description: '夹心：奶冻+开心果碎',
-    descriptionEn: 'Filling: panna cotta + crushed pistachios',
+    descriptionEn: 'Filling: milk pudding + crushed pistachios',
     price6: 75, price8: 95, image: '/kaixinguo.jpg',
   },
   {
@@ -175,7 +175,7 @@ export const cakes: Cake[] = [
     id: 210, categoryId: 2,
     name: '巧克力可可', nameEn: 'Chocolate Cocoa',
     description: '夹心：巧克力奶冻+黄油薄脆',
-    descriptionEn: 'Filling: chocolate panna cotta + butter crunch',
+    descriptionEn: 'Filling: chocolate milk pudding + butter crunch',
     price6: 75, price8: 95, image: '/qiaokelikeke.JPG',
   },
   {
@@ -389,12 +389,12 @@ export const cakes: Cake[] = [
 
   // ─── Cat 8: Extra Fillings ───
   { id: 801, categoryId: 8, name: '时令水果', nameEn: 'Seasonal Fruit', description: '当季新鲜水果夹心', descriptionEn: 'Fresh seasonal fruit filling', price6: 0, price8: 0, singlePrice: 5, image: '/shilingshuiguo.JPG' },
-  { id: 802, categoryId: 8, name: '各式奶冻', nameEn: 'Assorted Panna Cotta', description: '细腻奶冻夹心', descriptionEn: 'Silky panna cotta filling', price6: 0, price8: 0, singlePrice: 5, image: '/geshinaidong.JPG' },
+  { id: 802, categoryId: 8, name: '各式奶冻', nameEn: 'Assorted Milk Pudding', description: '细腻奶冻夹心', descriptionEn: 'Silky milk pudding filling', price6: 0, price8: 0, singlePrice: 5, image: '/geshinaidong.JPG' },
   { id: 803, categoryId: 8, name: '紫薯泥夹心', nameEn: 'Purple Sweet Potato Paste', description: '奶香紫薯泥夹心', descriptionEn: 'Creamy purple sweet potato paste', price6: 0, price8: 0, singlePrice: 10, image: '/zishuyunijiaxin.JPG' },
   { id: 804, categoryId: 8, name: '奥利奥碎', nameEn: 'Oreo Crumbles', description: '酥脆奥利奥碎夹心', descriptionEn: 'Crunchy Oreo crumble filling', price6: 0, price8: 0, singlePrice: 5, image: '/aoliaosui.JPG' },
   { id: 805, categoryId: 8, name: '黄油薄脆', nameEn: 'Butter Crunch', description: '香脆黄油薄脆夹心', descriptionEn: 'Crispy butter crunch filling', price6: 0, price8: 0, singlePrice: 5, image: '/huangyoubaocui.JPG' },
   { id: 806, categoryId: 8, name: '黑糖珍珠', nameEn: 'Brown Sugar Boba', description: '4小时内食用完', descriptionEn: 'Consume within 4 hours', price6: 0, price8: 0, singlePrice: 10, image: '/heitangzhenzhu.JPG' },
-  { id: 807, categoryId: 8, name: '伯爵红茶奶冻', nameEn: 'Earl Grey Panna Cotta', description: '伯爵红茶口味奶冻', descriptionEn: 'Earl Grey flavoured panna cotta', price6: 0, price8: 0, singlePrice: 5, image: '/bojuehongchanaidong.JPG' },
+  { id: 807, categoryId: 8, name: '伯爵红茶奶冻', nameEn: 'Earl Grey Milk Pudding', description: '伯爵红茶口味奶冻', descriptionEn: 'Earl Grey flavoured milk pudding', price6: 0, price8: 0, singlePrice: 5, image: '/bojuehongchanaidong.JPG' },
 
   // ─── Cat 9: Novelty Shapes ───
   { id: 901, categoryId: 9, name: '爱心', nameEn: 'Heart', description: '爱心造型', descriptionEn: 'Heart-shaped', price6: 0, price8: 0, singlePrice: 5, image: '/aixin.JPG' },
