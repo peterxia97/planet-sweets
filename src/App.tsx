@@ -70,7 +70,7 @@ function Main() {
 
           {/* 横幅（手机端） */}
           <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-pink-500 px-5 py-4 relative lg:hidden">
-            <img src="/logo.png" alt="" className="absolute right-3 bottom-2 w-16 h-16 object-contain opacity-20" />
+            <img src="/logo.png" alt="" className="absolute right-3 bottom-2 w-16 h-16 object-contain opacity-25 z-10" />
             <p className="text-white/60 text-xs mb-0.5">{t('banner.welcome')}</p>
             <h2 className="text-xl font-bold text-white leading-tight">{t('banner.brand')}</h2>
             <p className="text-white/80 text-sm">{t('banner.tagline')}</p>
