@@ -240,7 +240,7 @@ export const UI: Record<string, { zh: string; en: string }> = {
   'cart.remark_placeholder': { zh: '添加备注（如：忌口、配送时间、贺卡内容等）', en: 'Add a note (e.g. dietary needs, pickup time, card message)' },
   'cart.order': { zh: '订单', en: 'Order' },
   'cart.copy_confirm': { zh: '请扫描上方二维码或搜索微信号添加客服确认订单 ❤️', en: 'Please scan the QR code above or search the WeChat ID to confirm your order ❤️' },
-  'cart.checkout': { zh: '立即下单 · 复制订单信息', en: 'Place Order · Copy Order Info' },
+  'cart.checkout': { zh: '复制订单信息', en: 'Copy Order Info' },
   'cart.copied': { zh: '已复制订单信息！', en: 'Order info copied!' },
   'cart.footer': { zh: '点击后自动复制订单信息，请打开微信联系客服粘贴确认', en: 'Order info will be copied. Please paste it to our WeChat customer service to confirm.' },
   'cart.note': { zh: '备注', en: 'Note' },
