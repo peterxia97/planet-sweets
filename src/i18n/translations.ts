@@ -86,7 +86,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 特定造型
   601: { zh: '极简风格', en: 'Minimalist Style' },
   602: { zh: '丝带蝴蝶结蛋糕', en: 'Ribbon Bow Cake' },
-  603: { zh: '复古裱花蛋糕', en: 'Vintage Piped Cake' },
+  603: { zh: '复古裱花蛋糕', en: 'Vintage Decorated Cake' },
   604: { zh: '插件蛋糕', en: 'Topper Cake' },
   605: { zh: '花篮蛋糕', en: 'Flower Basket Cake' },
   606: { zh: '花瓣红粉', en: 'Petal Pink' },
