@@ -61,7 +61,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   207: { zh: '岩烧焦糖香蕉蛋糕', en: 'Caramel Banana Cake' },
   208: { zh: '开心果', en: 'Pistachio' },
   209: { zh: '黑糖珍珠奶茶蛋糕', en: 'Brown Sugar Bubble Tea Cake' },
-  210: { zh: '巧克力可可', en: 'Chocolate Cocoa' },
+  210: { zh: '厚巧克力蛋糕', en: 'Thick Chocolate Cake' },
   211: { zh: '紫薯芋泥蛋糕', en: 'Purple Yam & Taro Cake' },
   212: { zh: '焦糖杏仁草莓', en: 'Caramel Almond Strawberry' },
   // 巴斯克
@@ -142,7 +142,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   207: { zh: '夹心：香蕉泥+焦糖奶冻', en: 'Filling: banana puree + caramel milk pudding' },
   208: { zh: '夹心：奶冻+开心果碎', en: 'Filling: milk pudding + crushed pistachios' },
   209: { zh: '因珍珠特性建议当天食用完', en: 'Best consumed on the day due to pearls' },
-  210: { zh: '夹心：巧克力奶冻+黄油薄脆', en: 'Filling: chocolate milk pudding + butter crisp' },
+  210: { zh: '可可戚风+特调可可奶油+醇厚干纳许，白巧/黑巧可选', en: 'Cocoa chiffon + special cocoa cream + rich ganache. White/dark chocolate options' },
   211: { zh: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）', en: 'Filling: creamy purple yam & taro (limited, order 5 days ahead)' },
   212: { zh: '甜中带咸的焦糖与草莓完美搭配', en: 'Sweet & salty caramel perfectly paired with strawberries' },
   301: { zh: '芒果酸奶香气，焦香外皮', en: 'Mango yogurt aroma with caramelized crust' },

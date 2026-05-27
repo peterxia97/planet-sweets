@@ -173,9 +173,9 @@ export const cakes: Cake[] = [
   },
   {
     id: 210, categoryId: 2,
-    name: '巧克力可可', nameEn: 'Chocolate Cocoa',
-    description: '夹心：巧克力奶冻+黄油薄脆',
-    descriptionEn: 'Filling: chocolate milk pudding + butter crunch',
+    name: '厚巧克力蛋糕', nameEn: 'Thick Chocolate Cake',
+    description: '可可戚风+特调可可奶油+醇厚干纳许，白巧/黑巧可选',
+    descriptionEn: 'Cocoa chiffon + special cocoa cream + rich ganache. White/dark chocolate options',
     price6: 75, price8: 95, image: '/qiaokelikeke.JPG',
   },
   {
