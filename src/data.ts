@@ -44,6 +44,13 @@ export const cakes: Cake[] = [
 
   // ─── Cat 1: Fruit Cream Piped Cakes ───
   {
+    id: 109, categoryId: 1,
+    name: '榴莲奶油裱花蛋糕', nameEn: 'Durian Cream Piped Cake',
+    description: '泰国金枕榴莲果肉，浓郁香气，爱榴莲人士不可错过。',
+    descriptionEn: 'Thai Monthong durian flesh, intensely aromatic — a must for durian lovers.',
+    price6: 85, price8: 105, image: '/liulian.JPG', tag: '爆款', tagEn: 'Best Seller',
+  },
+  {
     id: 101, categoryId: 1,
     name: '草莓奶油裱花蛋糕', nameEn: 'Strawberry Cream Piped Cake',
     description: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。',
@@ -99,14 +106,6 @@ export const cakes: Cake[] = [
     descriptionEn: 'Canned lychee flesh, sweet and juicy with a unique flavour.',
     price6: 75, price8: 95, image: '/lizhi.JPG', tag: '人气', tagEn: 'Popular', hidden: true,
   },
-  {
-    id: 109, categoryId: 1,
-    name: '榴莲奶油裱花蛋糕', nameEn: 'Durian Cream Piped Cake',
-    description: '泰国金枕榴莲果肉，浓郁香气，爱榴莲人士不可错过。',
-    descriptionEn: 'Thai Monthong durian flesh, intensely aromatic — a must for durian lovers.',
-    price6: 85, price8: 105, image: '/liulian.JPG', tag: '爆款', tagEn: 'Best Seller',
-  },
-
   // ─── Cat 2: Flavoured Cakes ───
   {
     id: 201, categoryId: 2,
