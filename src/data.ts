@@ -39,7 +39,7 @@ export const cakes: Cake[] = [
     name: '焦糖咖啡蛋糕', nameEn: 'Caramel Coffee Cake',
     description: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。',
     descriptionEn: 'Butter crunch + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma, smooth cream layers, amber caramel glaze on top. A grown-up dessert.',
-    price6: 75, price8: 95, image: '/jiatang-coffee.jpg', tag: '秋日限定', tagEn: 'Autumn Special',
+    price6: 75, price8: 95, image: '/jiatang-coffee.jpg',
   },
 
   // ─── Cat 1: Fruit Cream Piped Cakes ───
