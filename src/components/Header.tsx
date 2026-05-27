@@ -1,7 +1,6 @@
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, PenLine } from 'lucide-react';
 import { useCart } from '../CartContext';
 import { useLanguage } from '../i18n/LanguageContext';
-import { MessageSquare } from 'lucide-react';
 
 interface HeaderProps {
   onCartOpen: () => void;
@@ -38,7 +37,7 @@ export default function Header({ onCartOpen, onContactOpen, onGuestbookOpen }: H
             className="flex items-center justify-center w-9 h-9 rounded-full text-rose-500 hover:bg-rose-50 transition-colors"
             title={t('guestbook.title')}
           >
-            <MessageSquare className="w-4 h-4" />
+            <PenLine className="w-4 h-4" />
           </button>
           <button
             onClick={onContactOpen}
