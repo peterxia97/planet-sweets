@@ -322,7 +322,7 @@ export const cakes: Cake[] = [
   },
   {
     id: 603, categoryId: 6,
-    name: '复古裱花蛋糕', nameEn: 'Vintage Decorated Cake',
+    name: '复古裱花蛋糕', nameEn: 'Lambeth Cake',
     description: '复古裱花工艺，精致典雅',
     descriptionEn: 'Vintage piping technique, exquisite and refined',
     price6: 85, price8: 105, image: '/fugubiaohuadangao.JPG', tag: '高价', tagEn: 'Premium',
