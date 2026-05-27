@@ -58,7 +58,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   204: { zh: '原味奥利奥', en: 'Original Oreo' },
   205: { zh: '海盐奥利奥', en: 'Sea Salt Oreo' },
   206: { zh: '玫瑰荔枝', en: 'Rose Lychee' },
-  207: { zh: '岩烧焦糖香蕉蛋糕', en: 'Rock-Grilled Caramel Banana Cake' },
+  207: { zh: '岩烧焦糖香蕉蛋糕', en: 'Caramel Banana Cake' },
   208: { zh: '开心果', en: 'Pistachio' },
   209: { zh: '黑糖珍珠奶茶蛋糕', en: 'Brown Sugar Bubble Tea Cake' },
   210: { zh: '巧克力可可', en: 'Chocolate Cocoa' },
