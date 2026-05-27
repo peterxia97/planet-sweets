@@ -87,6 +87,12 @@ function Main() {
                 <span className="text-xs mt-0.5 flex-shrink-0">🎂</span>
                 <p className="text-amber-700 text-xs leading-relaxed">{t('notice.blind_box')}</p>
               </div>
+              <div className="flex gap-1.5">
+                <span className="text-xs mt-0.5 flex-shrink-0">🎨</span>
+                <p className="text-amber-700 text-xs leading-relaxed">
+                  {t('notice.custom')}
+                </p>
+              </div>
             </div>
           </div>
 
