@@ -1,5 +1,6 @@
 import { X, MessageCircle, MapPin, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
+import { useI18n } from '../i18n/I18nContext';
 
 interface ContactModalProps {
   open: boolean;
@@ -10,6 +11,7 @@ const WECHAT_ID = 'TayloveTay';
 
 export default function ContactModal({ open, onClose }: ContactModalProps) {
   const [idCopied, setIdCopied] = useState(false);
+  const { t } = useI18n();
 
   const copyWechatId = async () => {
     try {
@@ -36,8 +38,8 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
         <div className="bg-gradient-to-r from-rose-500 to-rose-400 px-6 py-5 text-white flex-shrink-0 rounded-t-3xl sm:rounded-t-3xl">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold">联系我们</h2>
-              <p className="text-rose-100 text-sm mt-0.5">仅支持上门自提，请提前联系</p>
+              <h2 className="text-xl font-bold">{t('contact.title')}</h2>
+              <p className="text-rose-100 text-sm mt-0.5">{t('contact.subtitle')}</p>
             </div>
             <button
               onClick={onClose}
@@ -56,14 +58,14 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 <MessageCircle className="w-4 h-4 text-white" />
               </div>
               <div>
-                <p className="text-xs text-gray-400">扫码添加客服微信</p>
-                <p className="text-sm font-semibold text-gray-800">长按识别二维码</p>
+                <p className="text-xs text-gray-400">{t('contact.scanQR')}</p>
+                <p className="text-sm font-semibold text-gray-800">{t('contact.longPress')}</p>
               </div>
             </div>
             <div className="bg-white rounded-xl p-3 flex justify-center">
               <img
                 src="/wechat-qr.jpg"
-                alt="微信二维码"
+                alt="WeChat QR Code"
                 className="w-48 h-48 object-contain rounded-xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
@@ -76,7 +78,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                           <circle cx="9" cy="9" r="2"/>
                           <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
                         </svg>
-                        <p class="text-xs mt-2">请上传微信二维码</p>
+                        <p class="text-xs mt-2">Please upload WeChat QR code</p>
                       </div>
                     `;
                   }
@@ -86,7 +88,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
             {/* Copy WeChat ID */}
             <div className="mt-3 bg-white rounded-xl p-3 flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-xs text-gray-400">或搜索微信号</p>
+                <p className="text-xs text-gray-400">{t('contact.orSearch')}</p>
                 <p className="text-base font-bold text-gray-800 truncate">{WECHAT_ID}</p>
               </div>
               <button
@@ -100,12 +102,12 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 {idCopied ? (
                   <>
                     <CheckCircle className="w-4 h-4" />
-                    已复制
+                    {t('contact.copied')}
                   </>
                 ) : (
                   <>
                     <Copy className="w-4 h-4" />
-                    复制
+                    {t('contact.copy')}
                   </>
                 )}
               </button>
@@ -119,7 +121,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 <MapPin className="w-4 h-4 text-white" />
               </div>
               <div>
-                <p className="text-xs text-gray-400">门店地址</p>
+                <p className="text-xs text-gray-400">{t('contact.storeAddress')}</p>
                 <p className="text-sm font-semibold text-gray-800">46 Lanigan Street, Wandal</p>
               </div>
             </div>

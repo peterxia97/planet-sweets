@@ -1,22 +1,27 @@
 export interface Cake {
   id: number;
   name: string;
+  nameEn?: string;
   description: string;
-  price6: number;       // 6寸价格
-  price8: number;       // 8寸价格（0表示无此规格）
-  singlePrice?: number; // 不区分尺寸的单价（有此字段则隐藏尺寸选择）
+  descriptionEn?: string;
+  price6: number;       // 6 inch price
+  price8: number;       // 8 inch price (0 = not available)
+  singlePrice?: number; // single price (hides size selector)
   image: string;
-  tag?: string;         // 如"热销"、"新品"等
-  hidden?: boolean;     // 设为 true 则前台不显示
+  tag?: string;         // e.g. "热销", "新品"
+  tagEn?: string;       // e.g. "Hot", "New"
+  hidden?: boolean;     // set true to hide from frontend
   categoryId: number;
-  alsoIn?: number[];    // 同时归属的其他分类ID（如秋日推荐13）
+  alsoIn?: number[];    // additional category IDs
 }
 
 export interface Category {
   id: number;
   name: string;
+  nameEn?: string;
   icon: string;
   description: string;
+  descriptionEn?: string;
 }
 
 export interface CartItem {

@@ -1,6 +1,7 @@
 import { X, Plus, Minus, Trash2, ShoppingBag, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../CartContext';
+import { useI18n } from '../i18n/I18nContext';
 
 interface CartDrawerProps {
   open: boolean;
@@ -11,29 +12,29 @@ interface CartDrawerProps {
 export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps) {
   const { items, updateQuantity, removeFromCart, clearCart, totalPrice, totalItems, remark, setRemark } = useCart();
   const [copied, setCopied] = useState(false);
+  const { t } = useI18n();
 
   const handleCheckout = async () => {
     if (items.length === 0) return;
 
-    // 生成订单文本
     const orderLines = items.map(item => {
       if (item.cake.singlePrice) {
         return `${item.cake.name} x${item.quantity} - $${item.cake.singlePrice * item.quantity}`;
       }
       const size = item.cake.selectedSize || '6';
       const price = size === '8' ? item.cake.price8 : item.cake.price6;
-      return `${item.cake.name} ${size}寸 x${item.quantity} - $${price * item.quantity}`;
+      return `${item.cake.name} ${size}\u{5BF8} x${item.quantity} - $${price * item.quantity}`;
     });
 
     const orderText = [
-      '🍰 多糖星球 Planet Sweets 订单',
-      '━━━━━━━━━━━━━━━━',
+      `\u{1F370} ${t('order.title')}`,
+      '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501',
       ...orderLines,
-      '━━━━━━━━━━━━━━━━',
-      `💰 合计：$${totalPrice.toFixed(2)}`,
-      remark ? `📝 备注：${remark}` : '',
-      '━━━━━━━━━━━━━━━━',
-      '请扫描上方二维码或搜索微信号添加客服确认订单 ❤️',
+      '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501',
+      `\u{1F4B0} ${t('order.total')}：$${totalPrice.toFixed(2)}`,
+      remark ? `\u{1F4DD} ${t('order.note')}：${remark}` : '',
+      '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501',
+      `\u2764\uFE0F ${t('order.prompt')}`,
     ].filter(Boolean).join('\n');
 
     try {
@@ -41,7 +42,6 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // fallback: 打开联系我们
       onClose();
       onContact();
     }
@@ -54,7 +54,6 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
 
   return (
     <>
-      {/* Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm"
@@ -62,7 +61,6 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
         />
       )}
 
-      {/* Drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
@@ -72,10 +70,10 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <div className="flex items-center gap-2">
             <ShoppingBag className="w-5 h-5 text-rose-500" />
-            <h2 className="text-lg font-bold text-gray-800">购物车</h2>
+            <h2 className="text-lg font-bold text-gray-800">{t('cart.title')}</h2>
             {totalItems > 0 && (
               <span className="bg-rose-100 text-rose-600 text-xs font-bold px-2 py-0.5 rounded-full">
-                {totalItems}件
+                {totalItems}{t('cart.itemUnit')}
               </span>
             )}
           </div>
@@ -85,7 +83,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
                 onClick={clearCart}
                 className="text-xs text-gray-400 hover:text-rose-500 transition-colors"
               >
-                清空
+                {t('cart.clear')}
               </button>
             )}
             <button onClick={onClose} className="p-1.5 hover:bg-gray-100 rounded-full transition-colors">
@@ -99,12 +97,12 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full gap-4 text-gray-400">
               <ShoppingBag className="w-16 h-16 text-rose-100" />
-              <p className="text-sm">购物车空空如也</p>
+              <p className="text-sm">{t('cart.empty')}</p>
               <button
                 onClick={onClose}
                 className="text-rose-500 text-sm font-medium hover:underline"
               >
-                去挑选蛋糕 →
+                {t('cart.browse')}
               </button>
             </div>
           ) : (
@@ -134,7 +132,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
                     </div>
                     <div className="flex items-center gap-2 mt-0.5">
                       {!isSingle && (
-                        <span className="text-xs bg-rose-100 text-rose-600 px-1.5 py-0.5 rounded">{size}寸</span>
+                        <span className="text-xs bg-rose-100 text-rose-600 px-1.5 py-0.5 rounded">{size}{t('cart.sizeLabel')}</span>
                       )}
                       <span className="text-rose-500 font-bold text-sm">${price}</span>
                     </div>
@@ -165,10 +163,9 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-gray-100 px-6 py-4 space-y-3">
-            {/* 备注输入 */}
             <div>
               <textarea
-                placeholder="添加备注（如：忌口、配送时间、贺卡内容等）"
+                placeholder={t('cart.note')}
                 value={remark}
                 onChange={e => setRemark(e.target.value)}
                 rows={2}
@@ -177,7 +174,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
             </div>
 
             <div className="flex justify-between items-center">
-              <span className="text-gray-600">合计</span>
+              <span className="text-gray-600">{t('cart.total')}</span>
               <span className="text-2xl font-bold text-rose-500">${totalPrice.toFixed(2)}</span>
             </div>
 
@@ -188,17 +185,17 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
               {copied ? (
                 <>
                   <CheckCircle className="w-5 h-5" />
-                  <span>已复制订单信息！</span>
+                  <span>{t('cart.copied')}</span>
                 </>
               ) : (
                 <>
                   <Copy className="w-5 h-5" />
-                  <span>立即下单 · 复制订单信息</span>
+                  <span>{t('cart.checkout')}</span>
                 </>
               )}
             </button>
 
-            <p className="text-center text-xs text-gray-400">点击后自动复制订单信息，请打开微信联系客服粘贴确认</p>
+            <p className="text-center text-xs text-gray-400">{t('cart.copyHint')}</p>
           </div>
         )}
       </div>
