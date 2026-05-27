@@ -215,7 +215,7 @@ export const UI: Record<string, { zh: string; en: string }> = {
   // Banner
   'banner.welcome': { zh: 'Welcome to', en: 'Welcome to' },
   'banner.brand': { zh: '多糖星球', en: 'Planet Sweets' },
-  'banner.tagline': { zh: 'Planet Sweets', en: 'Better For Asians You' },
+  'banner.tagline': { zh: 'Planet Sweets', en: 'Your Asian Style, Less Sugars' },
 
   // Order Notice
   'notice.title': { zh: '下单须知', en: 'Order Notice' },
