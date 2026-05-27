@@ -152,7 +152,7 @@ export const cakes: Cake[] = [
   },
   {
     id: 207, categoryId: 2,
-    name: '焦糖香蕉', nameEn: 'Caramel Banana',
+    name: '岩烧焦糖香蕉蛋糕', nameEn: 'Rock-Grilled Caramel Banana Cake',
     description: '夹心：香蕉泥+焦糖奶冻',
     descriptionEn: 'Filling: banana puree + caramel milk pudding',
     price6: 70, price8: 90, image: '/jiaotangxiangjiao.JPG',
