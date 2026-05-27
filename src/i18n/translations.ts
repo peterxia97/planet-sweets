@@ -10,7 +10,7 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
   4:  { zh: '裸蛋糕', en: 'Naked Cakes' },
   5:  { zh: '慕斯蛋糕', en: 'Mousse Cakes' },
-  12: { zh: '来图定制', en: 'Custom Orders' },
+  12: { zh: '图样定制', en: 'Custom Design' },
   6:  { zh: '特定造型', en: 'Special Designs' },
   7:  { zh: '童趣款', en: "Kids' Favorites" },
   8:  { zh: '夹心加料（一层）', en: 'Extra Filling (1 Layer)' },

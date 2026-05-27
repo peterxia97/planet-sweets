@@ -11,7 +11,7 @@ export const categories: Category[] = [
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
   { id: 4,  name: '裸蛋糕', nameEn: 'Naked Cakes', icon: '\u{1F353}', description: '简约清新 水果本味', descriptionEn: 'Minimalist with fresh fruit' },
   { id: 5,  name: '慕斯蛋糕', nameEn: 'Mousse Cakes', icon: '\u{1F368}', description: '丝滑慕斯 入口即化', descriptionEn: 'Silky mousse, melts in your mouth' },
-  { id: 12, name: '来图定制', nameEn: 'Custom by Photo', icon: '\u{1F4F7}', description: '请把你喜欢的网图发给我哦~', descriptionEn: 'Send us your inspo pic!' },
+  { id: 12, name: '图样定制', nameEn: 'Custom Design', icon: '\u{1F4F7}', description: '请把你喜欢的网图发给我哦~', descriptionEn: 'Send us your inspo pic!' },
   { id: 6,  name: '特定造型', nameEn: 'Special Shapes', icon: '\u{1F382}', description: '定制造型 独一无二', descriptionEn: 'Custom shapes, one of a kind' },
   { id: 7,  name: '童趣款', nameEn: 'Kids Cakes', icon: '\u{1F9B8}', description: '可爱有趣 儿童最爱', descriptionEn: 'Fun & cute, kids love them' },
   { id: 8,  name: '夹心加料（一层）', nameEn: 'Extra Filling (1 layer)', icon: '\u{1F36E}', description: '自选夹心 增添风味', descriptionEn: 'Add a layer of filling' },
