@@ -5,15 +5,15 @@ import Header from './components/Header';
 import CakeCard from './components/CakeCard';
 import CartDrawer from './components/CartDrawer';
 import ContactModal from './components/ContactModal';
-import { useI18n } from './i18n/I18nContext';
 import { ShoppingCart } from 'lucide-react';
+import { useLanguage } from './i18n/LanguageContext';
 
 function Main() {
   const [activeCategoryId, setActiveCategoryId] = useState(categories[0]?.id ?? 1);
   const [cartOpen, setCartOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const { totalItems, totalPrice } = useCart();
-  const { lang, t } = useI18n();
+  const { tCatName, tCatDesc, t } = useLanguage();
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
   const filteredCakes = cakes.filter(c => !c.hidden && (c.categoryId === activeCategoryId || c.alsoIn?.includes(activeCategoryId)));
@@ -25,14 +25,14 @@ function Main() {
         onContactOpen={() => setContactOpen(true)}
       />
 
-      {/* Main: left sidebar + right content */}
+      {/* 主体：左侧分类栏 + 右侧内容区 */}
       <div className="flex flex-1 pt-14">
 
-        {/* ── Left category nav (fixed, always visible) ── */}
+        {/* ── 左侧分类导航（固定，全端常驻） ── */}
         <aside className="fixed top-14 left-0 bottom-0 w-[72px] sm:w-20 bg-white border-r border-gray-100 z-30 flex flex-col overflow-y-auto">
-          {/* Top label */}
+          {/* 顶部标签 */}
           <div className="py-2 text-center">
-            <span className="text-[10px] text-gray-400 font-semibold tracking-widest">{t('sidebar.categories')}</span>
+            <span className="text-[10px] text-gray-400 font-semibold tracking-widest">{t('sidebar.category')}</span>
           </div>
 
           <nav className="flex flex-col gap-0.5 px-1 pb-4">
@@ -51,12 +51,13 @@ function Main() {
                     }
                   `}
                 >
+                  {/* 激活指示条 */}
                   {isActive && (
                     <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-6 bg-rose-500 rounded-r-full" />
                   )}
                   <span className="text-xl leading-none">{cat.icon}</span>
                   <span className="text-[10px] font-medium leading-tight text-center w-full px-0.5 break-words line-clamp-2">
-                    {lang === 'zh' ? cat.name : (cat.nameEn || cat.name)}
+                    {tCatName(cat.id)}
                   </span>
                 </button>
               );
@@ -64,53 +65,47 @@ function Main() {
           </nav>
         </aside>
 
-        {/* ── Right content area ── */}
+        {/* ── 右侧内容区 ── */}
         <main className="flex-1 ml-[72px] sm:ml-20 min-w-0 flex flex-col">
 
-          {/* Banner (mobile) */}
+          {/* 横幅（手机端） */}
           <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-pink-500 px-5 py-4 relative lg:hidden">
             <img src="/logo.jpg" alt="" className="absolute right-3 bottom-2 w-16 h-16 object-contain opacity-20" />
             <p className="text-white/60 text-xs mb-0.5">{t('banner.welcome')}</p>
-            <h2 className="text-xl font-bold text-white leading-tight">
-              {lang === 'zh' ? '多糖星球' : 'Planet Sweets'}
-            </h2>
+            <h2 className="text-xl font-bold text-white leading-tight">{t('banner.brand')}</h2>
             <p className="text-white/80 text-sm">{t('banner.tagline')}</p>
           </div>
 
-          {/* Order Notes */}
+          {/* 下单须知 */}
           <div className="mx-3 mt-3 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3">
-            <p className="text-amber-700 text-xs font-bold mb-1.5">{'\u{1F4CB}'} {t('sidebar.orderNotes')}</p>
+            <p className="text-amber-700 text-xs font-bold mb-1.5">📋 {t('notice.title')}</p>
             <div className="space-y-1.5">
               <div className="flex gap-1.5">
-                <span className="text-xs mt-0.5 flex-shrink-0">{'\u{1F382}'}</span>
-                <p className="text-amber-700 text-xs leading-relaxed">{t('sidebar.orderNotes1')}</p>
+                <span className="text-xs mt-0.5 flex-shrink-0">🎂</span>
+                <p className="text-amber-700 text-xs leading-relaxed">{t('notice.blind_box')}</p>
               </div>
               <div className="flex gap-1.5">
-                <span className="text-xs mt-0.5 flex-shrink-0">{'\u{1F3A8}'}</span>
-                <p className="text-amber-700 text-xs leading-relaxed">{t('sidebar.orderNotes2')}</p>
+                <span className="text-xs mt-0.5 flex-shrink-0">🎨</span>
+                <p className="text-amber-700 text-xs leading-relaxed">
+                  {t('notice.custom')}
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Current category title */}
-          {activeCategory && (
-            <div className="px-3 mt-4 mb-3 flex items-center gap-2">
-              <span className="text-2xl">{activeCategory.icon}</span>
-              <div className="min-w-0">
-                <h3 className="text-base font-bold text-gray-800 leading-tight truncate">
-                  {lang === 'zh' ? activeCategory.name : (activeCategory.nameEn || activeCategory.name)}
-                </h3>
-                <p className="text-xs text-gray-400 truncate">
-                  {lang === 'zh' ? activeCategory.description : (activeCategory.descriptionEn || activeCategory.description)}
-                </p>
-              </div>
-              <span className="ml-auto text-xs text-gray-400 bg-white px-2.5 py-1 rounded-full border border-gray-100 flex-shrink-0">
-                {filteredCakes.length}{t('category.items')}
-              </span>
+          {/* 当前分类标题 */}
+          <div className="px-3 mt-4 mb-3 flex items-center gap-2">
+            <span className="text-2xl">{activeCategory?.icon}</span>
+            <div className="min-w-0">
+              <h3 className="text-base font-bold text-gray-800 leading-tight truncate">{activeCategory ? tCatName(activeCategory.id) : ''}</h3>
+              <p className="text-xs text-gray-400 truncate">{activeCategory ? tCatDesc(activeCategory.id) : ''}</p>
             </div>
-          )}
+            <span className="ml-auto text-xs text-gray-400 bg-white px-2.5 py-1 rounded-full border border-gray-100 flex-shrink-0">
+              {filteredCakes.length}{t('category.items')}
+            </span>
+          </div>
 
-          {/* Cake grid */}
+          {/* 蛋糕网格 */}
           <div className="px-3 grid grid-cols-2 gap-2.5 pb-28">
             {filteredCakes.map(cake => (
               <CakeCard key={cake.id} cake={cake} />
@@ -119,14 +114,14 @@ function Main() {
 
           {filteredCakes.length === 0 && (
             <div className="text-center py-16 text-gray-400">
-              <p className="text-4xl mb-3">{'\u{1F370}'}</p>
-              <p className="text-sm">{t('cake.empty')}</p>
+              <p className="text-4xl mb-3">🍰</p>
+              <p className="text-sm">{t('category.empty')}</p>
             </div>
           )}
 
           {/* Footer */}
           <footer className="bg-white border-t border-rose-50 py-5 px-4 text-center mt-auto">
-            <p className="text-rose-400 font-semibold text-sm">{'\u{1F370}'} {t('header.planetSweets')}</p>
+            <p className="text-rose-400 font-semibold text-sm">🍰 {t('footer.brand')}</p>
             <p className="text-gray-300 text-xs mt-1">{t('footer.tagline')}</p>
           </footer>
         </main>
@@ -139,10 +134,8 @@ function Main() {
           className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-rose-500 text-white px-5 py-3 rounded-full shadow-lg shadow-rose-300 flex items-center gap-2 font-semibold text-sm active:scale-95 transition-transform"
         >
           <ShoppingCart className="w-4 h-4" />
-          <span>{totalItems}{t('cart.itemUnit')} · ${totalPrice.toFixed(0)}</span>
-          <span className="bg-white/20 px-1.5 py-0.5 rounded-full text-xs">
-            {lang === 'zh' ? '查看' : 'View'}
-          </span>
+          <span>{totalItems}{t('cart.items')} · ${totalPrice.toFixed(0)}</span>
+          <span className="bg-white/20 px-1.5 py-0.5 rounded-full text-xs">{t('fab.view')}</span>
         </button>
       )}
 

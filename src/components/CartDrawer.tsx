@@ -1,7 +1,7 @@
 import { X, Plus, Minus, Trash2, ShoppingBag, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../CartContext';
-import { useI18n } from '../i18n/I18nContext';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface CartDrawerProps {
   open: boolean;
@@ -12,29 +12,32 @@ interface CartDrawerProps {
 export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps) {
   const { items, updateQuantity, removeFromCart, clearCart, totalPrice, totalItems, remark, setRemark } = useCart();
   const [copied, setCopied] = useState(false);
-  const { t } = useI18n();
+  const { tCakeName, t, lang } = useLanguage();
 
   const handleCheckout = async () => {
     if (items.length === 0) return;
 
+    // 生成订单文本
     const orderLines = items.map(item => {
+      const name = tCakeName(item.cake.id);
       if (item.cake.singlePrice) {
-        return `${item.cake.name} x${item.quantity} - $${item.cake.singlePrice * item.quantity}`;
+        return `${name} x${item.quantity} - $${item.cake.singlePrice * item.quantity}`;
       }
       const size = item.cake.selectedSize || '6';
       const price = size === '8' ? item.cake.price8 : item.cake.price6;
-      return `${item.cake.name} ${size}\u{5BF8} x${item.quantity} - $${price * item.quantity}`;
+      const sizeLabel = lang === 'en' ? (size === '8' ? '8 inch' : '6 inch') : `${size}寸`;
+      return `${name} ${sizeLabel} x${item.quantity} - $${price * item.quantity}`;
     });
 
     const orderText = [
-      `\u{1F370} ${t('order.title')}`,
-      '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501',
+      lang === 'en' ? '🍰 Planet Sweets Order' : '🍰 多糖星球 Planet Sweets 订单',
+      '━━━━━━━━━━━━━━━━',
       ...orderLines,
-      '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501',
-      `\u{1F4B0} ${t('order.total')}：$${totalPrice.toFixed(2)}`,
-      remark ? `\u{1F4DD} ${t('order.note')}：${remark}` : '',
-      '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501',
-      `\u2764\uFE0F ${t('order.prompt')}`,
+      '━━━━━━━━━━━━━━━━',
+      `${lang === 'en' ? '💰 Total' : '💰 合计'}：$${totalPrice.toFixed(2)}`,
+      remark ? `${lang === 'en' ? '📝 Note' : '📝 备注'}：${remark}` : '',
+      '━━━━━━━━━━━━━━━━',
+      lang === 'en' ? 'Please scan the QR code or search WeChat ID to confirm your order ❤️' : '请扫描上方二维码或搜索微信号添加客服确认订单 ❤️',
     ].filter(Boolean).join('\n');
 
     try {
@@ -42,6 +45,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
+      // fallback: 打开联系我们
       onClose();
       onContact();
     }
@@ -54,6 +58,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
 
   return (
     <>
+      {/* Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm"
@@ -61,6 +66,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
         />
       )}
 
+      {/* Drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
@@ -73,7 +79,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
             <h2 className="text-lg font-bold text-gray-800">{t('cart.title')}</h2>
             {totalItems > 0 && (
               <span className="bg-rose-100 text-rose-600 text-xs font-bold px-2 py-0.5 rounded-full">
-                {totalItems}{t('cart.itemUnit')}
+                {totalItems}{t('cart.items')}
               </span>
             )}
           </div>
@@ -102,7 +108,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
                 onClick={onClose}
                 className="text-rose-500 text-sm font-medium hover:underline"
               >
-                {t('cart.browse')}
+                {t('cart.go_shop')}
               </button>
             </div>
           ) : (
@@ -122,7 +128,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
                   />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-1">
-                      <h4 className="font-semibold text-gray-800 text-sm leading-snug">{item.cake.name}</h4>
+                      <h4 className="font-semibold text-gray-800 text-sm leading-snug">{tCakeName(item.cake.id)}</h4>
                       <button
                         onClick={() => removeFromCart(item.cake.id, size)}
                         className="p-1 hover:bg-rose-100 rounded-full transition-colors flex-shrink-0"
@@ -132,7 +138,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
                     </div>
                     <div className="flex items-center gap-2 mt-0.5">
                       {!isSingle && (
-                        <span className="text-xs bg-rose-100 text-rose-600 px-1.5 py-0.5 rounded">{size}{t('cart.sizeLabel')}</span>
+                        <span className="text-xs bg-rose-100 text-rose-600 px-1.5 py-0.5 rounded">{size === '8' ? t('cake.size8') : t('cake.size6')}</span>
                       )}
                       <span className="text-rose-500 font-bold text-sm">${price}</span>
                     </div>
@@ -163,9 +169,10 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
         {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-gray-100 px-6 py-4 space-y-3">
+            {/* 备注输入 */}
             <div>
               <textarea
-                placeholder={t('cart.note')}
+                placeholder={t('cart.remark_placeholder')}
                 value={remark}
                 onChange={e => setRemark(e.target.value)}
                 rows={2}
@@ -195,7 +202,7 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
               )}
             </button>
 
-            <p className="text-center text-xs text-gray-400">{t('cart.copyHint')}</p>
+            <p className="text-center text-xs text-gray-400">{t('cart.footer')}</p>
           </div>
         )}
       </div>

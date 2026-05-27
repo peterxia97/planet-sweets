@@ -1,6 +1,6 @@
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../CartContext';
-import { useI18n } from '../i18n/I18nContext';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface HeaderProps {
   onCartOpen: () => void;
@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
   const { totalItems } = useCart();
-  const { lang, setLang, t } = useI18n();
+  const { lang, toggleLang, t } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
@@ -18,39 +18,19 @@ export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
         <div className="flex items-center gap-2 min-w-0">
           <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
           <div className="min-w-0">
-            <h1 className="text-base font-bold text-rose-600 leading-tight truncate">
-              {lang === 'zh' ? '多糖星球' : t('header.planetSweets')}
-            </h1>
-            <p className="text-[10px] text-gray-400 leading-tight">Planet Sweets</p>
+            <h1 className="text-base font-bold text-rose-600 leading-tight truncate">{t('header.brand')}</h1>
+            <p className="text-[10px] text-gray-400 leading-tight">{t('header.tagline')}</p>
           </div>
         </div>
 
         {/* Actions */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          {/* Language Toggle */}
-          <div className="flex bg-gray-100 rounded-full p-0.5">
-            <button
-              onClick={() => setLang('zh')}
-              className={`px-2 py-0.5 rounded-full text-[11px] font-semibold transition-all ${
-                lang === 'zh'
-                  ? 'bg-white text-rose-600 shadow-sm'
-                  : 'text-gray-400 hover:text-gray-600'
-              }`}
-            >
-              中
-            </button>
-            <button
-              onClick={() => setLang('en')}
-              className={`px-2 py-0.5 rounded-full text-[11px] font-semibold transition-all ${
-                lang === 'en'
-                  ? 'bg-white text-rose-600 shadow-sm'
-                  : 'text-gray-400 hover:text-gray-600'
-              }`}
-            >
-              EN
-            </button>
-          </div>
-
+          <button
+            onClick={toggleLang}
+            className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 text-xs font-bold transition-colors"
+          >
+            {lang === 'zh' ? 'EN' : '中'}
+          </button>
           <button
             onClick={onContactOpen}
             className="flex items-center justify-center w-9 h-9 rounded-full text-rose-600 hover:bg-rose-50 transition-colors"

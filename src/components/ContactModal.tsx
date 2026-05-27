@@ -1,6 +1,6 @@
 import { X, MessageCircle, MapPin, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
-import { useI18n } from '../i18n/I18nContext';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface ContactModalProps {
   open: boolean;
@@ -11,7 +11,7 @@ const WECHAT_ID = 'TayloveTay';
 
 export default function ContactModal({ open, onClose }: ContactModalProps) {
   const [idCopied, setIdCopied] = useState(false);
-  const { t } = useI18n();
+  const { t } = useLanguage();
 
   const copyWechatId = async () => {
     try {
@@ -58,14 +58,14 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 <MessageCircle className="w-4 h-4 text-white" />
               </div>
               <div>
-                <p className="text-xs text-gray-400">{t('contact.scanQR')}</p>
-                <p className="text-sm font-semibold text-gray-800">{t('contact.longPress')}</p>
+                <p className="text-xs text-gray-400">{t('contact.qr_title')}</p>
+                <p className="text-sm font-semibold text-gray-800">{t('contact.qr_hint')}</p>
               </div>
             </div>
             <div className="bg-white rounded-xl p-3 flex justify-center">
               <img
                 src="/wechat-qr.jpg"
-                alt="WeChat QR Code"
+                alt="微信二维码"
                 className="w-48 h-48 object-contain rounded-xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
@@ -78,7 +78,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                           <circle cx="9" cy="9" r="2"/>
                           <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
                         </svg>
-                        <p class="text-xs mt-2">Please upload WeChat QR code</p>
+                        <p class="text-xs mt-2">${t('contact.qr_placeholder')}</p>
                       </div>
                     `;
                   }
@@ -88,7 +88,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
             {/* Copy WeChat ID */}
             <div className="mt-3 bg-white rounded-xl p-3 flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-xs text-gray-400">{t('contact.orSearch')}</p>
+                <p className="text-xs text-gray-400">{t('contact.search_id')}</p>
                 <p className="text-base font-bold text-gray-800 truncate">{WECHAT_ID}</p>
               </div>
               <button
@@ -121,7 +121,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 <MapPin className="w-4 h-4 text-white" />
               </div>
               <div>
-                <p className="text-xs text-gray-400">{t('contact.storeAddress')}</p>
+                <p className="text-xs text-gray-400">{t('contact.address')}</p>
                 <p className="text-sm font-semibold text-gray-800">46 Lanigan Street, Wandal</p>
               </div>
             </div>
