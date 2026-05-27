@@ -240,9 +240,9 @@ export const UI: Record<string, { zh: string; en: string }> = {
   'cart.remark_placeholder': { zh: '添加备注（如：忌口、配送时间、贺卡内容等）', en: 'Add a note (e.g. dietary needs, pickup time, card message)' },
   'cart.order': { zh: '订单', en: 'Order' },
   'cart.copy_confirm': { zh: '请扫描上方二维码或搜索微信号添加客服确认订单 ❤️', en: 'Please scan the QR code above or search the WeChat ID to confirm your order ❤️' },
-  'cart.checkout': { zh: '复制订单信息', en: 'Copy Order Info' },
-  'cart.copied': { zh: '已复制订单信息！', en: 'Order info copied!' },
-  'cart.footer': { zh: '点击后自动复制订单信息，请打开微信联系客服粘贴确认', en: 'Order info will be copied. Please paste it to our WeChat customer service to confirm.' },
+  'cart.checkout': { zh: '复制订单 · 发微信确认', en: 'Copy & Send to WeChat' },
+  'cart.copied': { zh: '已复制！请打开微信粘贴发送', en: 'Copied! Paste to WeChat now' },
+  'cart.footer': { zh: '本网站不提供在线付款。点击按钮复制订单信息后，请打开微信粘贴给客服确认订单、沟通付款和取货时间。', en: 'No online payment on this site. After copying, paste your order to our WeChat customer service to confirm, arrange payment, and schedule pickup.' },
   'cart.note': { zh: '备注', en: 'Note' },
 
   // GuestbookModal

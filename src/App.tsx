@@ -145,7 +145,6 @@ function Main() {
       <CartDrawer
         open={cartOpen}
         onClose={() => setCartOpen(false)}
-        onContact={() => setContactOpen(true)}
       />
 
       <ContactModal

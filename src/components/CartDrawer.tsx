@@ -6,10 +6,9 @@ import { useLanguage } from '../i18n/LanguageContext';
 interface CartDrawerProps {
   open: boolean;
   onClose: () => void;
-  onContact: () => void;
 }
 
-export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps) {
+export default function CartDrawer({ open, onClose }: CartDrawerProps) {
   const { items, updateQuantity, removeFromCart, clearCart, totalPrice, totalItems, remark, setRemark } = useCart();
   const [copied, setCopied] = useState(false);
   const { tCakeName, t, lang } = useLanguage();
@@ -43,17 +42,11 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
     try {
       await navigator.clipboard.writeText(orderText);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 3000);
     } catch {
-      // fallback: 打开联系我们
-      onClose();
-      onContact();
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
     }
-
-    setTimeout(() => {
-      onClose();
-      onContact();
-    }, 500);
   };
 
   return (
@@ -201,6 +194,19 @@ export default function CartDrawer({ open, onClose, onContact }: CartDrawerProps
                 </>
               )}
             </button>
+
+            {/* 复制成功后的醒目引导 */}
+            {copied && (
+              <div className="bg-rose-50 border border-rose-200 rounded-xl p-3 animate-in">
+                <p className="text-sm font-semibold text-rose-600 text-center mb-2">
+                  ✅ {lang === 'en' ? 'Order info copied to clipboard!' : '订单信息已复制到剪贴板！'}
+                </p>
+                <div className="flex items-center gap-2 text-xs text-gray-600">
+                  <span className="text-lg">📱</span>
+                  <span>{lang === 'en' ? 'Open WeChat → paste to JJ → confirm & pay' : '打开微信 → 粘贴发给 JJ → 确认付款'}</span>
+                </div>
+              </div>
+            )}
 
             <p className="text-center text-xs text-gray-400">{t('cart.footer')}</p>
           </div>
