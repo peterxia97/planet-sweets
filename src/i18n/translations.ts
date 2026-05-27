@@ -256,6 +256,8 @@ export const UI: Record<string, { zh: string; en: string }> = {
   'contact.search_id': { zh: '或搜索微信号', en: 'or search WeChat ID' },
   'contact.copy': { zh: '复制', en: 'Copy' },
   'contact.copied': { zh: '已复制', en: 'Copied!' },
+  'contact.phone': { zh: '手机联系 (JJ)', en: 'Phone (JJ)' },
+  'contact.phone_sms': { zh: '仅接短信，暂不方便接听电话，请短信留言', en: 'SMS only please — unable to take calls at the moment. Text us!' },
   'contact.address': { zh: '门店地址', en: 'Store Address' },
 
   // Footer

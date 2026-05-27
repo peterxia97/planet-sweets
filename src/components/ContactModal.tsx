@@ -1,4 +1,4 @@
-import { X, MessageCircle, MapPin, Copy, CheckCircle } from 'lucide-react';
+import { X, MessageCircle, MapPin, Copy, CheckCircle, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -8,6 +8,7 @@ interface ContactModalProps {
 }
 
 const WECHAT_ID = 'TayloveTay';
+const PHONE_NUMBER = '0481 991 196';
 
 export default function ContactModal({ open, onClose }: ContactModalProps) {
   const [idCopied, setIdCopied] = useState(false);
@@ -112,6 +113,20 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 )}
               </button>
             </div>
+          </div>
+
+          {/* Phone - SMS only */}
+          <div className="bg-amber-50 rounded-2xl p-4">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-9 h-9 bg-amber-400 rounded-full flex items-center justify-center flex-shrink-0">
+                <Phone className="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">{t('contact.phone')}</p>
+                <p className="text-sm font-bold text-gray-800">{PHONE_NUMBER}</p>
+              </div>
+            </div>
+            <p className="text-xs text-amber-600 ml-12">{t('contact.phone_sms')}</p>
           </div>
 
           {/* Address */}
