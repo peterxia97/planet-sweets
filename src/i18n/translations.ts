@@ -5,7 +5,7 @@
 // ── 分类名称 ──
 export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
   13: { zh: '秋日推荐', en: 'Autumn Picks' },
-  1:  { zh: '水果奶油裱花蛋糕', en: 'Fruit Cream Flower Cakes' },
+  1:  { zh: '水果奶油裱花蛋糕', en: 'Fresh Cream Decorated Cakes' },
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
   4:  { zh: '裸蛋糕', en: 'Naked Cakes' },
@@ -42,15 +42,15 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   1301: { zh: '焦糖南瓜蛋糕', en: 'Caramel Pumpkin Cake' },
   1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
   // 水果奶油裱花蛋糕
-  101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Cream Flower Cake' },
-  102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Cream Flower Cake' },
-  103: { zh: '罐头芒果奶油裱花蛋糕', en: 'Canned Mango Cream Flower Cake' },
-  104: { zh: '黑莓果酱奶油裱花蛋糕', en: 'Blackberry Jam Cream Flower Cake' },
-  105: { zh: '葡萄奶油裱花蛋糕', en: 'Grape Cream Flower Cake' },
-  106: { zh: '青提奶油裱花蛋糕', en: 'Green Grape Cream Flower Cake' },
-  107: { zh: '树莓奶油裱花蛋糕', en: 'Raspberry Cream Flower Cake' },
-  108: { zh: '荔枝奶油裱花蛋糕', en: 'Lychee Cream Flower Cake' },
-  109: { zh: '榴莲奶油裱花蛋糕', en: 'Durian Cream Flower Cake' },
+  101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
+  102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
+  103: { zh: '罐头芒果奶油裱花蛋糕', en: 'Canned Mango Fresh Cream Decorated Cake' },
+  104: { zh: '黑莓果酱奶油裱花蛋糕', en: 'Blackberry Jam Fresh Cream Decorated Cake' },
+  105: { zh: '葡萄奶油裱花蛋糕', en: 'Grape Fresh Cream Decorated Cake' },
+  106: { zh: '青提奶油裱花蛋糕', en: 'Green Grape Fresh Cream Decorated Cake' },
+  107: { zh: '树莓奶油裱花蛋糕', en: 'Raspberry Fresh Cream Decorated Cake' },
+  108: { zh: '荔枝奶油裱花蛋糕', en: 'Lychee Fresh Cream Decorated Cake' },
+  109: { zh: '榴莲奶油裱花蛋糕', en: 'Durian Fresh Cream Decorated Cake' },
   // 口味蛋糕
   201: { zh: '伯爵红茶', en: 'Earl Grey Tea' },
   202: { zh: '抹茶', en: 'Matcha' },
