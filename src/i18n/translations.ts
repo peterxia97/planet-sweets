@@ -80,7 +80,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   503: { zh: '草莓奶酪慕斯', en: 'Strawberry Cheese Mousse' },
   504: { zh: '柠檬酸奶慕斯', en: 'Lemon Yogurt Mousse' },
   // 来图定制
-  1201: { zh: '来图定制', en: 'Custom Order' },
+  1201: { zh: '网图', en: 'Reference Photo' },
   // 特定造型
   601: { zh: '极简风格', en: 'Minimalist Style' },
   602: { zh: '丝带蝴蝶结蛋糕', en: 'Ribbon Bow Cake' },

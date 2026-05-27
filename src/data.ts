@@ -298,7 +298,7 @@ export const cakes: Cake[] = [
   // ─── Cat 6: 来图定制 (merged into 特定图样定制) ───
   {
     id: 1201, categoryId: 6,
-    name: '来图定制', nameEn: 'Custom by Photo',
+    name: '网图', nameEn: 'Reference Photo',
     description: '请把你喜欢的网图发给我哦~',
     descriptionEn: 'Send us your favourite cake photo!',
     price6: 0, price8: 0, singlePrice: 0, image: '/laitudingzhi.jpg',
