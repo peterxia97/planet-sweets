@@ -1,13 +1,15 @@
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../CartContext';
 import { useLanguage } from '../i18n/LanguageContext';
+import { MessageSquare } from 'lucide-react';
 
 interface HeaderProps {
   onCartOpen: () => void;
   onContactOpen: () => void;
+  onGuestbookOpen: () => void;
 }
 
-export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
+export default function Header({ onCartOpen, onContactOpen, onGuestbookOpen }: HeaderProps) {
   const { totalItems } = useCart();
   const { lang, toggleLang, t } = useLanguage();
 
@@ -30,6 +32,13 @@ export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
             className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 text-xs font-bold transition-colors"
           >
             {lang === 'zh' ? 'EN' : '中'}
+          </button>
+          <button
+            onClick={onGuestbookOpen}
+            className="flex items-center justify-center w-9 h-9 rounded-full text-rose-500 hover:bg-rose-50 transition-colors"
+            title={t('guestbook.title')}
+          >
+            <MessageSquare className="w-4 h-4" />
           </button>
           <button
             onClick={onContactOpen}

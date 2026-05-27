@@ -5,6 +5,7 @@ import Header from './components/Header';
 import CakeCard from './components/CakeCard';
 import CartDrawer from './components/CartDrawer';
 import ContactModal from './components/ContactModal';
+import GuestbookModal from './components/GuestbookModal';
 import { ShoppingCart } from 'lucide-react';
 import { useLanguage } from './i18n/LanguageContext';
 
@@ -12,6 +13,7 @@ function Main() {
   const [activeCategoryId, setActiveCategoryId] = useState(categories[0]?.id ?? 1);
   const [cartOpen, setCartOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const [guestbookOpen, setGuestbookOpen] = useState(false);
   const { totalItems, totalPrice } = useCart();
   const { tCatName, tCatDesc, t } = useLanguage();
 
@@ -23,6 +25,7 @@ function Main() {
       <Header
         onCartOpen={() => setCartOpen(true)}
         onContactOpen={() => setContactOpen(true)}
+        onGuestbookOpen={() => setGuestbookOpen(true)}
       />
 
       {/* 主体：左侧分类栏 + 右侧内容区 */}
@@ -148,6 +151,11 @@ function Main() {
       <ContactModal
         open={contactOpen}
         onClose={() => setContactOpen(false)}
+      />
+
+      <GuestbookModal
+        open={guestbookOpen}
+        onClose={() => setGuestbookOpen(false)}
       />
     </div>
   );
