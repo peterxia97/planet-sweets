@@ -16,7 +16,7 @@ export default function Header({ onCartOpen, onContactOpen }: HeaderProps) {
       <div className="flex items-center justify-between px-4 h-14 ml-[72px] sm:ml-20">
         {/* Logo */}
         <div className="flex items-center gap-2 min-w-0">
-          <img src="/logo.jpg" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
+          <img src="/logo.png" alt="Planet Sweets" className="w-8 h-8 object-contain flex-shrink-0" />
           <div className="min-w-0">
             <h1 className="text-base font-bold text-rose-600 leading-tight truncate">{t('header.brand')}</h1>
             <p className="text-[10px] text-gray-400 leading-tight">{t('header.tagline')}</p>
