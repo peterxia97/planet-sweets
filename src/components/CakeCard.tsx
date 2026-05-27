@@ -2,6 +2,8 @@ import { Plus } from 'lucide-react';
 import type { Cake } from '../types';
 import { useCart } from '../CartContext';
 import { useLanguage } from '../i18n/LanguageContext';
+import { useState } from 'react';
+import ImageLightbox from './ImageLightbox';
 
 interface CakeCardProps {
   cake: Cake;
@@ -29,6 +31,7 @@ const tagColors: Record<string, string> = {
 export default function CakeCard({ cake }: CakeCardProps) {
   const { addToCart, items } = useCart();
   const { tCakeName, tCakeDesc, tTag, t } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const cartItem = items.find(i => i.cake.id === cake.id);
   const isSinglePrice = !!cake.singlePrice;
   const defaultSize = isSinglePrice ? 'single' : (cartItem ? (cartItem.cake.selectedSize as '6' | '8') || '6' : '6');
@@ -39,17 +42,26 @@ export default function CakeCard({ cake }: CakeCardProps) {
   };
 
   return (
+    <>
     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col">
-      {/* Image - 方形容器，图片完整显示 */}
-      <div className="relative bg-gray-50" style={{ aspectRatio: '1 / 1' }}>
+      {/* Image - 方形容器，图片完整显示，点击放大 */}
+      <div className="relative bg-gray-50 cursor-zoom-in group" style={{ aspectRatio: '1 / 1' }} onClick={() => setLightboxOpen(true)}>
         <img
           src={cake.image}
           alt={cake.name}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-105"
           onError={(e) => {
             (e.target as HTMLImageElement).src = `https://via.placeholder.com/400/fda4af/ffffff?text=${encodeURIComponent(cake.name)}`;
           }}
         />
+        {/* 放大图标提示 */}
+        <div className="absolute bottom-2 right-2 w-7 h-7 flex items-center justify-center bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+          <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+            <path d="M11 8v6M8 11h6" />
+          </svg>
+        </div>
         {cake.tag && (
           <span className={`absolute top-2 left-2 text-[10px] font-bold px-1.5 py-0.5 rounded-full ${tagColors[tTag(cake.tag)] || 'bg-gray-500 text-white'}`}>
             {tTag(cake.tag)}
@@ -109,6 +121,14 @@ export default function CakeCard({ cake }: CakeCardProps) {
         </button>
       </div>
     </div>
+    {lightboxOpen && (
+      <ImageLightbox
+        src={cake.image}
+        alt={tCakeName(cake.id)}
+        onClose={() => setLightboxOpen(false)}
+      />
+    )}
+    </>
   );
 }
 
