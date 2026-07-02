@@ -160,7 +160,7 @@ export const cakes: Cake[] = [
     name: '开心果', nameEn: 'Pistachio',
     description: '夹心：奶冻+开心果碎',
     descriptionEn: 'Filling: milk pudding + crushed pistachios',
-    price6: 75, price8: 95, image: '/kaixinguo.jpg',
+    price6: 80, price8: 100, image: '/kaixinguo.jpg',
   },
   {
     id: 209, categoryId: 2,
