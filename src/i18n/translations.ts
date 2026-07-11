@@ -9,7 +9,6 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
   4:  { zh: '裸蛋糕', en: 'Naked Cakes' },
-  6:  { zh: '特定图样定制', en: 'Custom Designs' },
   7:  { zh: '童趣款', en: "Kids' Favorites" },
   8:  { zh: '夹心加料（一层）', en: 'Extra Filling (1 Layer)' },
   9:  { zh: '异形加收', en: 'Special Shapes' },
@@ -24,7 +23,6 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
   2:  { zh: '多种口味 丰富夹心', en: 'Multiple flavors, rich fillings' },
   3:  { zh: '焦香浓郁 绵密丝滑', en: 'Rich caramelized, velvety smooth' },
   4:  { zh: '简约清新 水果本味', en: 'Simple & fresh, natural fruit taste' },
-  6:  { zh: '定制造型 独一无二', en: 'Custom shapes, one of a kind' },
   7:  { zh: '可爱有趣 儿童最爱', en: 'Cute & fun, kids love them' },
   8:  { zh: '自选夹心 增添风味', en: 'Choose your filling, extra flavor' },
   9:  { zh: '特殊造型 额外加收', en: 'Special shapes, additional charge' },
@@ -35,7 +33,6 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 // ── 蛋糕名称 ──
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 冬日推荐
-  1301: { zh: '焦糖南瓜蛋糕', en: 'Caramel Pumpkin Cake' },
   1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
   // 水果奶油裱花蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
@@ -71,16 +68,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 裸蛋糕
   401: { zh: '红丝绒草莓裸蛋糕', en: 'Red Velvet Strawberry Naked Cake' },
   402: { zh: '原味奶油水果裸蛋糕', en: 'Original Cream Fruit Naked Cake' },
-  // 来图定制
-  1201: { zh: '网图', en: 'Reference Photo' },
-  // 特定造型
-  601: { zh: '极简风格', en: 'Minimalist Style' },
-  602: { zh: '丝带蝴蝶结蛋糕', en: 'Ribbon Bow Cake' },
-  603: { zh: '复古裱花蛋糕', en: 'Lambeth Cake' },
-  604: { zh: '插件蛋糕', en: 'Topper Cake' },
-  605: { zh: '花篮蛋糕', en: 'Flower Basket Cake' },
-  606: { zh: '花瓣红粉', en: 'Petal Pink' },
-  607: { zh: '母亲节蛋糕', en: "Mother's Day Cake" },
   // 童趣款
   701: { zh: '蛋壳', en: 'Eggshell' },
   702: { zh: '雪顶草莓', en: 'Snowcap Strawberry' },
@@ -112,7 +99,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
 
 // ── 蛋糕描述 ──
 export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
-  1301: { zh: '南瓜奶酪泥+奶冻，搭配混合坚果，营养丰富口感层次高。', en: 'Pumpkin cheese paste + milk pudding with mixed nuts, rich in nutrition and texture.' },
   1302: { zh: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。', en: 'Butter crisp + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma infused in soft cake layers with silky cream, topped with amber caramel sauce.' },
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
   102: { zh: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。', en: 'Plump blueberries, refreshingly sweet and tangy with rich texture.' },
@@ -144,14 +130,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   308: { zh: '柠檬清香，酸甜平衡', en: 'Lemon fragrance, perfectly balanced sweet & sour' },
   401: { zh: '红丝绒蛋糕配新鲜草莓，经典搭配', en: 'Red velvet cake with fresh strawberries, a classic match' },
   402: { zh: '时令水果搭配（不指定水果种类）', en: 'Seasonal fruit mix (variety not specified)' },
-  1201: { zh: '请把你喜欢的网图发给我哦~', en: 'Send us your favorite cake pics~' },
-  601: { zh: '简约设计，干净利落', en: 'Minimalist design, clean and crisp' },
-  602: { zh: '丝带蝴蝶结装饰，优雅大方', en: 'Ribbon bow decoration, elegant and graceful' },
-  603: { zh: '复古裱花工艺，精致典雅', en: 'Vintage piping technique, exquisite and classic' },
-  604: { zh: '插件装饰，造型多变', en: 'Topper decoration, versatile designs' },
-  605: { zh: '花篮造型，精美别致', en: 'Flower basket design, exquisitely charming' },
-  606: { zh: '自选应季水果夹心', en: 'Your choice of seasonal fruit filling' },
-  607: { zh: '温馨献礼，感恩母爱', en: 'Heartfelt gift, celebrating motherly love' },
   701: { zh: '蛋壳造型，创意十足', en: 'Eggshell design, super creative' },
   702: { zh: '雪顶造型配新鲜草莓，清新可爱', en: 'Snowcap design with fresh strawberries, fresh and cute' },
   703: { zh: '七彩彩针装饰，缤纷喜庆', en: 'Rainbow sprinkle decoration, colorful and festive' },
@@ -173,7 +151,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   1003: { zh: '闪耀生日皇冠', en: 'Sparkling birthday crown' },
   1101: { zh: '按图定制，每图$15', en: 'Custom per design, $15 each' },
   1102: { zh: '翻糖装饰，每件$15', en: 'Fondant decoration, $15 each' },
-  1103: { zh: '可爱奶油霜小动物，每件$10', en: 'Cute buttercream animals, $10 each' },
+  1103: { zh: '可爱奶油霜小动物，每件$15', en: 'Cute buttercream animals, $15 each' },
 };
 
 // ── 标签 ──
@@ -205,7 +183,7 @@ export const UI: Record<string, { zh: string; en: string }> = {
   // Order Notice
   'notice.title': { zh: '下单须知', en: 'Order Notice' },
   'notice.blind_box': { zh: '除指定款式外，口味自选，盲盒样式噢～', en: 'Aside from specified designs, flavors are chef\'s choice — it\'s a surprise box~' },
-  'notice.custom': { zh: '来图定制因材料色彩会有些许差别，非100%还原。提前三天预定，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。', en: 'Custom orders may vary slightly in color due to ingredients — not a 100% replica. Please order 3 days in advance, no rush orders. Pickup at Wandal. Cash or RMB real-time rate transfer only. Colors use food coloring — request natural color if preferred.' },
+  'notice.custom': { zh: '来图定制因材料色彩会有些许差别，非100%还原。提前一周预约，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。', en: 'Custom orders may vary slightly in color due to ingredients — not a 100% replica. Please order 1 week in advance, no rush orders. Pickup at Wandal. Cash or RMB real-time rate transfer only. Colors use food coloring — request natural color if preferred.' },
 
   // Category header
   'category.items': { zh: '款', en: ' items' },

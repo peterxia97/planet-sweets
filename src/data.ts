@@ -10,7 +10,6 @@ export const categories: Category[] = [
   { id: 2,  name: '口味蛋糕', nameEn: 'Flavoured Cakes', icon: '\u{1F36E}', description: '多种口味 丰富夹心', descriptionEn: 'Assorted flavours with layered fillings' },
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
   { id: 4,  name: '裸蛋糕', nameEn: 'Naked Cakes', icon: '\u{1F353}', description: '简约清新 水果本味', descriptionEn: 'Minimalist with fresh fruit' },
-  { id: 6,  name: '特定图样定制', nameEn: 'Custom Designs', icon: '\u{1F382}', description: '定制造型 独一无二', descriptionEn: 'Custom shapes, one of a kind' },
   { id: 7,  name: '童趣款', nameEn: 'Kids Cakes', icon: '\u{1F9B8}', description: '可爱有趣 儿童最爱', descriptionEn: 'Fun & cute, kids love them' },
   { id: 8,  name: '夹心加料（一层）', nameEn: 'Extra Filling (1 layer)', icon: '\u{1F36E}', description: '自选夹心 增添风味', descriptionEn: 'Add a layer of filling' },
   { id: 9,  name: '异形加收', nameEn: 'Novelty Shapes', icon: '\u2728', description: '特殊造型 额外加收', descriptionEn: 'Special shapes, extra charge' },
@@ -25,13 +24,6 @@ export const categories: Category[] = [
 export const cakes: Cake[] = [
 
   // ─── Cat 13: Winter Picks ───
-  {
-    id: 1301, categoryId: 13,
-    name: '焦糖南瓜蛋糕', nameEn: 'Caramel Pumpkin Cake',
-    description: '南瓜奶酪泥+奶冻，搭配混合坚果，营养丰富口感层次高。',
-    descriptionEn: 'Pumpkin cheesecake puree + milk pudding with mixed nuts, rich and layered.',
-    price6: 80, price8: 100, image: '/jiatang-nangua.jpg', tag: '冬日限定', tagEn: 'Winter Special',
-  },
   {
     id: 1302, categoryId: 13,
     name: '焦糖咖啡蛋糕', nameEn: 'Caramel Coffee Cake',
@@ -117,7 +109,7 @@ export const cakes: Cake[] = [
     name: '桂花', nameEn: 'Osmanthus',
     description: '夹心：桂花酱+桂花奶冻',
     descriptionEn: 'Filling: osmanthus syrup + osmanthus milk pudding',
-    price6: 75, price8: 95, image: '/guihua.JPG', alsoIn: [13],
+    price6: 75, price8: 95, image: '/guihua.JPG',
   },
   {
     id: 204, categoryId: 2,
@@ -257,66 +249,6 @@ export const cakes: Cake[] = [
     price6: 55, price8: 75, image: '/yuanweinaiyoushuiguoluodangao.JPG',
   },
 
-  // ─── Cat 6: 来图定制 (merged into 特定图样定制) ───
-  {
-    id: 1201, categoryId: 6,
-    name: '网图', nameEn: 'Reference Photo',
-    description: '请把你喜欢的网图发给我哦~',
-    descriptionEn: 'Send us your favourite cake photo!',
-    price6: 0, price8: 0, singlePrice: 0, image: '/laitudingzhi.jpg',
-  },
-
-  // ─── Cat 6: Special Shapes ───
-  {
-    id: 601, categoryId: 6,
-    name: '极简风格', nameEn: 'Minimalist Style',
-    description: '简约设计，干净利落',
-    descriptionEn: 'Minimalist design, clean and crisp',
-    price6: 65, price8: 85, image: '/jijianfengge.JPG',
-  },
-  {
-    id: 602, categoryId: 6,
-    name: '丝带蝴蝶结蛋糕', nameEn: 'Ribbon Bow Cake',
-    description: '丝带蝴蝶结装饰，优雅大方',
-    descriptionEn: 'Ribbon bow decoration, elegant and graceful',
-    price6: 70, price8: 95, image: '/sidaihudiejiedangao.JPG',
-  },
-  {
-    id: 603, categoryId: 6,
-    name: '复古裱花蛋糕', nameEn: 'Lambeth Cake',
-    description: '复古裱花工艺，精致典雅',
-    descriptionEn: 'Vintage piping technique, exquisite and refined',
-    price6: 85, price8: 105, image: '/fugubiaohuadangao.JPG', tag: '高价', tagEn: 'Premium',
-  },
-  {
-    id: 604, categoryId: 6,
-    name: '插件蛋糕', nameEn: 'Topper Cake',
-    description: '插件装饰，造型多变',
-    descriptionEn: 'Decorative toppers for versatile styling',
-    price6: 70, price8: 90, image: '/chajiandangao.JPG',
-  },
-  {
-    id: 605, categoryId: 6,
-    name: '花篮蛋糕', nameEn: 'Flower Basket Cake',
-    description: '花篮造型，精美别致',
-    descriptionEn: 'Basket-shaped design, exquisitely crafted',
-    price6: 70, price8: 90, image: '/hualandangao.JPG',
-  },
-  {
-    id: 606, categoryId: 6,
-    name: '花瓣红粉', nameEn: 'Petal Pink Cake',
-    description: '自选应季水果夹心',
-    descriptionEn: 'Your choice of seasonal fruit filling',
-    price6: 65, price8: 85, image: '/huabanhongfen.jpg',
-  },
-  {
-    id: 607, categoryId: 6,
-    name: '母亲节蛋糕', nameEn: 'Mother\'s Day Cake',
-    description: '温馨献礼，感恩母爱',
-    descriptionEn: 'A heartfelt gift to celebrate mum',
-    price6: 75, price8: 95, image: '/muqinjiedangao.JPG',
-  },
-
   // ─── Cat 7: Kids Cakes ───
   {
     id: 701, categoryId: 7,
@@ -371,5 +303,5 @@ export const cakes: Cake[] = [
   // ─── Cat 11: Special Techniques ───
   { id: 1101, categoryId: 11, name: '芝士转印', nameEn: 'Cheese Transfer', description: '按图定制，每图$15', descriptionEn: 'Custom per design, $15 each', price6: 0, price8: 0, singlePrice: 15, image: '/zhishizhuanyin.JPG' },
   { id: 1102, categoryId: 11, name: '翻糖', nameEn: 'Fondant', description: '翻糖装饰，每件$15', descriptionEn: 'Fondant decoration, $15 per piece', price6: 0, price8: 0, singlePrice: 15, image: '/fantang.jpg' },
-  { id: 1103, categoryId: 11, name: '奶油霜小动物', nameEn: 'Buttercream Animals', description: '可爱奶油霜小动物，每件$10', descriptionEn: 'Cute buttercream animals, $10 each', price6: 0, price8: 0, singlePrice: 10, image: '/naiyoushuangxiaodongwu.JPG' },
+  { id: 1103, categoryId: 11, name: '奶油霜小动物', nameEn: 'Buttercream Animals', description: '可爱奶油霜小动物，每件$15', descriptionEn: 'Cute buttercream animals, $15 each', price6: 0, price8: 0, singlePrice: 15, image: '/naiyoushuangxiaodongwu.JPG' },
 ];
