@@ -24,8 +24,8 @@ const tagColors: Record<string, string> = {
   'Pick': 'bg-blue-500 text-white',
   '高价': 'bg-purple-500 text-white',
   'Premium': 'bg-purple-500 text-white',
-  '秋日限定': 'bg-amber-600 text-white',
-  'Autumn': 'bg-amber-600 text-white',
+  '冬日限定': 'bg-blue-500 text-white',
+  'Winter': 'bg-blue-500 text-white',
 };
 
 export default function CakeCard({ cake }: CakeCardProps) {

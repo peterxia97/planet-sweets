@@ -5,12 +5,11 @@ import type { Category, Cake } from './types';
 // ═══════════════════════════════════════════
 
 export const categories: Category[] = [
-  { id: 13, name: '秋日推荐', nameEn: 'Autumn Picks', icon: '\u{1F342}', description: '秋日限定 温暖治愈', descriptionEn: 'Autumn exclusive, warm & cozy' },
+  { id: 13, name: '冬日推荐', nameEn: 'Winter Picks', icon: '\u{2744}', description: '冬日限定 温暖治愈', descriptionEn: 'Winter exclusive, warm & cozy' },
   { id: 1,  name: '水果奶油裱花蛋糕', nameEn: 'Fruit Cream Piped Cakes', icon: '\u{1F353}', description: '新鲜水果搭配轻盈奶油', descriptionEn: 'Fresh fruit with light whipped cream' },
   { id: 2,  name: '口味蛋糕', nameEn: 'Flavoured Cakes', icon: '\u{1F36E}', description: '多种口味 丰富夹心', descriptionEn: 'Assorted flavours with layered fillings' },
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
   { id: 4,  name: '裸蛋糕', nameEn: 'Naked Cakes', icon: '\u{1F353}', description: '简约清新 水果本味', descriptionEn: 'Minimalist with fresh fruit' },
-  { id: 5,  name: '慕斯蛋糕', nameEn: 'Mousse Cakes', icon: '\u{1F368}', description: '丝滑慕斯 入口即化', descriptionEn: 'Silky mousse, melts in your mouth' },
   { id: 6,  name: '特定图样定制', nameEn: 'Custom Designs', icon: '\u{1F382}', description: '定制造型 独一无二', descriptionEn: 'Custom shapes, one of a kind' },
   { id: 7,  name: '童趣款', nameEn: 'Kids Cakes', icon: '\u{1F9B8}', description: '可爱有趣 儿童最爱', descriptionEn: 'Fun & cute, kids love them' },
   { id: 8,  name: '夹心加料（一层）', nameEn: 'Extra Filling (1 layer)', icon: '\u{1F36E}', description: '自选夹心 增添风味', descriptionEn: 'Add a layer of filling' },
@@ -25,13 +24,13 @@ export const categories: Category[] = [
 
 export const cakes: Cake[] = [
 
-  // ─── Cat 13: Autumn Picks ───
+  // ─── Cat 13: Winter Picks ───
   {
     id: 1301, categoryId: 13,
     name: '焦糖南瓜蛋糕', nameEn: 'Caramel Pumpkin Cake',
     description: '南瓜奶酪泥+奶冻，搭配混合坚果，营养丰富口感层次高。',
     descriptionEn: 'Pumpkin cheesecake puree + milk pudding with mixed nuts, rich and layered.',
-    price6: 80, price8: 100, image: '/jiatang-nangua.jpg', tag: '秋日限定', tagEn: 'Autumn Special',
+    price6: 80, price8: 100, image: '/jiatang-nangua.jpg', tag: '冬日限定', tagEn: 'Winter Special',
   },
   {
     id: 1302, categoryId: 13,
@@ -62,13 +61,6 @@ export const cakes: Cake[] = [
     description: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。',
     descriptionEn: 'Plump blueberries, refreshing sweet-tart flavour with rich texture.',
     price6: 80, price8: 100, image: '/lanmei.PNG',
-  },
-  {
-    id: 103, categoryId: 1,
-    name: '罐头芒果奶油裱花蛋糕', nameEn: 'Mango Cream Piped Cake',
-    description: '金黄芒果果肉铺满蛋糕，香甜浓郁，热带风情。',
-    descriptionEn: 'Golden mango slices topping the cake, sweet and tropically fragrant.',
-    price6: 65, price8: 85, image: '/mangguo.PNG',
   },
   {
     id: 104, categoryId: 1,
@@ -263,36 +255,6 @@ export const cakes: Cake[] = [
     description: '时令水果搭配（不指定水果种类）',
     descriptionEn: 'Seasonal fruit mix (fruit selection may vary)',
     price6: 55, price8: 75, image: '/yuanweinaiyoushuiguoluodangao.JPG',
-  },
-
-  // ─── Cat 5: Mousse Cakes ───
-  {
-    id: 501, categoryId: 5,
-    name: '蓝莓多多慕斯', nameEn: 'Blueberry Yoghurt Mousse',
-    description: '蓝莓慕斯，酸甜清爽',
-    descriptionEn: 'Blueberry mousse, refreshingly sweet and tangy',
-    price6: 65, price8: 85, image: '/lanmeiduoduomusi.JPG',
-  },
-  {
-    id: 502, categoryId: 5,
-    name: '巧克力慕斯', nameEn: 'Chocolate Mousse',
-    description: '浓郁巧克力慕斯，丝滑香浓',
-    descriptionEn: 'Rich chocolate mousse, silky and indulgent',
-    price6: 70, price8: 90, image: '/qiaokelimusi.JPG',
-  },
-  {
-    id: 503, categoryId: 5,
-    name: '草莓奶酪慕斯', nameEn: 'Strawberry Cheesecake Mousse',
-    description: '草莓与奶酪完美融合',
-    descriptionEn: 'Strawberry and cheesecake in perfect harmony',
-    price6: 65, price8: 85, image: '/caomeinailaomusi.JPG',
-  },
-  {
-    id: 504, categoryId: 5,
-    name: '柠檬酸奶慕斯', nameEn: 'Lemon Yoghurt Mousse',
-    description: '柠檬清香，酸甜可口',
-    descriptionEn: 'Zesty lemon with tangy yoghurt',
-    price6: 65, price8: 85, image: '/ningmengsuannaimusi.jpg',
   },
 
   // ─── Cat 6: 来图定制 (merged into 特定图样定制) ───

@@ -4,12 +4,11 @@
 
 // ── 分类名称 ──
 export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
-  13: { zh: '秋日推荐', en: 'Autumn Picks' },
+  13: { zh: '冬日推荐', en: 'Winter Picks' },
   1:  { zh: '水果奶油裱花蛋糕', en: 'Fresh Cream Decorated Cakes' },
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
   4:  { zh: '裸蛋糕', en: 'Naked Cakes' },
-  5:  { zh: '慕斯蛋糕', en: 'Mousse Cakes' },
   6:  { zh: '特定图样定制', en: 'Custom Designs' },
   7:  { zh: '童趣款', en: "Kids' Favorites" },
   8:  { zh: '夹心加料（一层）', en: 'Extra Filling (1 Layer)' },
@@ -20,12 +19,11 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
 
 // ── 分类描述 ──
 export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
-  13: { zh: '秋日限定 温暖治愈', en: 'Autumn limited, warm & comforting' },
+  13: { zh: '冬日限定 温暖治愈', en: 'Winter limited, warm & comforting' },
   1:  { zh: '新鲜水果搭配轻盈奶油', en: 'Fresh fruit with light cream' },
   2:  { zh: '多种口味 丰富夹心', en: 'Multiple flavors, rich fillings' },
   3:  { zh: '焦香浓郁 绵密丝滑', en: 'Rich caramelized, velvety smooth' },
   4:  { zh: '简约清新 水果本味', en: 'Simple & fresh, natural fruit taste' },
-  5:  { zh: '丝滑慕斯 入口即化', en: 'Silky mousse, melts in your mouth' },
   6:  { zh: '定制造型 独一无二', en: 'Custom shapes, one of a kind' },
   7:  { zh: '可爱有趣 儿童最爱', en: 'Cute & fun, kids love them' },
   8:  { zh: '自选夹心 增添风味', en: 'Choose your filling, extra flavor' },
@@ -36,13 +34,12 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 
 // ── 蛋糕名称 ──
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
-  // 秋日推荐
+  // 冬日推荐
   1301: { zh: '焦糖南瓜蛋糕', en: 'Caramel Pumpkin Cake' },
   1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
   // 水果奶油裱花蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
   102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
-  103: { zh: '罐头芒果奶油裱花蛋糕', en: 'Canned Mango Fresh Cream Decorated Cake' },
   104: { zh: '黑莓果酱奶油裱花蛋糕', en: 'Blackberry Jam Fresh Cream Decorated Cake' },
   105: { zh: '葡萄奶油裱花蛋糕', en: 'Grape Fresh Cream Decorated Cake' },
   106: { zh: '青提奶油裱花蛋糕', en: 'Green Grape Fresh Cream Decorated Cake' },
@@ -74,11 +71,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 裸蛋糕
   401: { zh: '红丝绒草莓裸蛋糕', en: 'Red Velvet Strawberry Naked Cake' },
   402: { zh: '原味奶油水果裸蛋糕', en: 'Original Cream Fruit Naked Cake' },
-  // 慕斯蛋糕
-  501: { zh: '蓝莓多多慕斯', en: 'Blueberry Yakult Mousse' },
-  502: { zh: '巧克力慕斯', en: 'Chocolate Mousse' },
-  503: { zh: '草莓奶酪慕斯', en: 'Strawberry Cheese Mousse' },
-  504: { zh: '柠檬酸奶慕斯', en: 'Lemon Yogurt Mousse' },
   // 来图定制
   1201: { zh: '网图', en: 'Reference Photo' },
   // 特定造型
@@ -124,7 +116,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   1302: { zh: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。', en: 'Butter crisp + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma infused in soft cake layers with silky cream, topped with amber caramel sauce.' },
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
   102: { zh: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。', en: 'Plump blueberries, refreshingly sweet and tangy with rich texture.' },
-  103: { zh: '金黄芒果果肉铺满蛋糕，香甜浓郁，热带风情。', en: 'Golden mango pulp spread across the cake, sweet and rich tropical vibe.' },
   104: { zh: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。', en: 'Imported blackberries, deep purple-red color, tangy and appetizing.' },
   105: { zh: '饱满葡萄果肉均匀铺陈，清甜多汁，精致美观。', en: 'Plump grapes evenly arranged, sweet and juicy, exquisitely beautiful.' },
   106: { zh: '清爽青提果肉，翠绿悦目，清甜不腻，夏日首选。', en: 'Fresh green grapes, vibrant green, sweet and refreshing, summer favorite.' },
@@ -153,10 +144,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   308: { zh: '柠檬清香，酸甜平衡', en: 'Lemon fragrance, perfectly balanced sweet & sour' },
   401: { zh: '红丝绒蛋糕配新鲜草莓，经典搭配', en: 'Red velvet cake with fresh strawberries, a classic match' },
   402: { zh: '时令水果搭配（不指定水果种类）', en: 'Seasonal fruit mix (variety not specified)' },
-  501: { zh: '蓝莓慕斯，酸甜清爽', en: 'Blueberry mousse, tangy and refreshing' },
-  502: { zh: '浓郁巧克力慕斯，丝滑香浓', en: 'Rich chocolate mousse, silky and decadent' },
-  503: { zh: '草莓与奶酪完美融合', en: 'Perfect fusion of strawberry and cheese' },
-  504: { zh: '柠檬清香，酸甜可口', en: 'Lemon fragrance, sweet and tangy' },
   1201: { zh: '请把你喜欢的网图发给我哦~', en: 'Send us your favorite cake pics~' },
   601: { zh: '简约设计，干净利落', en: 'Minimalist design, clean and crisp' },
   602: { zh: '丝带蝴蝶结装饰，优雅大方', en: 'Ribbon bow decoration, elegant and graceful' },
@@ -198,7 +185,7 @@ export const TAGS: Record<string, { zh: string; en: string }> = {
   '爆款': { zh: '爆款', en: 'Bestseller' },
   '推荐': { zh: '推荐', en: 'Pick' },
   '高价': { zh: '高价', en: 'Premium' },
-  '秋日限定': { zh: '秋日限定', en: 'Autumn' },
+  '冬日限定': { zh: '冬日限定', en: 'Winter' },
 };
 
 // ── UI 界面文字 (按 key 索引) ──
