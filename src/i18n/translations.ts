@@ -9,7 +9,7 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
   4:  { zh: '裸蛋糕', en: 'Naked Cakes' },
-  7:  { zh: '童趣款', en: "Kids' Favorites" },
+  7:  { zh: '特定主题样式', en: 'Special Themes' },
   8:  { zh: '夹心加料（一层）', en: 'Extra Filling (1 Layer)' },
   9:  { zh: '异形加收', en: 'Special Shapes' },
   10: { zh: '蛋糕配件', en: 'Cake Accessories' },
@@ -23,7 +23,7 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
   2:  { zh: '多种口味 丰富夹心', en: 'Multiple flavors, rich fillings' },
   3:  { zh: '焦香浓郁 绵密丝滑', en: 'Rich caramelized, velvety smooth' },
   4:  { zh: '简约清新 水果本味', en: 'Simple & fresh, natural fruit taste' },
-  7:  { zh: '可爱有趣 儿童最爱', en: 'Cute & fun, kids love them' },
+  7:  { zh: '专属主题 独特风格', en: 'Unique themed cake designs' },
   8:  { zh: '自选夹心 增添风味', en: 'Choose your filling, extra flavor' },
   9:  { zh: '特殊造型 额外加收', en: 'Special shapes, additional charge' },
   10: { zh: '精致配件 生日必备', en: 'Delicate accessories, birthday essentials' },
@@ -68,11 +68,12 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 裸蛋糕
   401: { zh: '红丝绒草莓裸蛋糕', en: 'Red Velvet Strawberry Naked Cake' },
   402: { zh: '原味奶油水果裸蛋糕', en: 'Original Cream Fruit Naked Cake' },
-  // 童趣款
+  // 特定主题样式
   701: { zh: '蛋壳', en: 'Eggshell' },
   702: { zh: '雪顶草莓', en: 'Snowcap Strawberry' },
   703: { zh: '经典儿童彩针', en: 'Classic Kids Sprinkle' },
-  704: { zh: '缤纷色彩', en: 'Colorful Delight' },
+  705: { zh: '蝴蝶款式', en: 'Butterfly Style' },
+  706: { zh: '日月同辉', en: 'Sun & Moon' },
   // 夹心加料
   801: { zh: '时令水果', en: 'Seasonal Fruit' },
   802: { zh: '各式奶冻', en: 'Assorted Milk Pudding' },
@@ -132,7 +133,8 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   701: { zh: '蛋壳造型，创意十足', en: 'Eggshell design, super creative' },
   702: { zh: '雪顶造型配新鲜草莓，清新可爱', en: 'Snowcap design with fresh strawberries, fresh and cute' },
   703: { zh: '七彩彩针装饰，缤纷喜庆', en: 'Rainbow sprinkle decoration, colorful and festive' },
-  704: { zh: '多彩缤纷装饰，活泼生动', en: 'Colorful decoration, lively and vibrant' },
+  705: { zh: '轻盈蝴蝶造型，浪漫精致', en: 'Delicate butterfly design, romantic and elegant' },
+  706: { zh: '日月星辰造型，梦幻特别款', en: 'Sun, moon and stars design, dreamy and special' },
   801: { zh: '当季新鲜水果夹心', en: 'Fresh seasonal fruit filling' },
   802: { zh: '细腻奶冻夹心', en: 'Delicate milk pudding filling' },
   803: { zh: '奶香紫薯泥夹心', en: 'Creamy purple yam paste filling' },

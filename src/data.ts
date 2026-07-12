@@ -10,7 +10,7 @@ export const categories: Category[] = [
   { id: 2,  name: '口味蛋糕', nameEn: 'Flavoured Cakes', icon: '\u{1F36E}', description: '多种口味 丰富夹心', descriptionEn: 'Assorted flavours with layered fillings' },
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
   { id: 4,  name: '裸蛋糕', nameEn: 'Naked Cakes', icon: '\u{1F353}', description: '简约清新 水果本味', descriptionEn: 'Minimalist with fresh fruit' },
-  { id: 7,  name: '童趣款', nameEn: 'Kids Cakes', icon: '\u{1F9B8}', description: '可爱有趣 儿童最爱', descriptionEn: 'Fun & cute, kids love them' },
+  { id: 7,  name: '特定主题样式', nameEn: 'Special Themes', icon: '\u{1F9B8}', description: '专属主题 独特风格', descriptionEn: 'Unique themed cake designs' },
   { id: 8,  name: '夹心加料（一层）', nameEn: 'Extra Filling (1 layer)', icon: '\u{1F36E}', description: '自选夹心 增添风味', descriptionEn: 'Add a layer of filling' },
   { id: 9,  name: '异形加收', nameEn: 'Novelty Shapes', icon: '\u2728', description: '特殊造型 额外加收', descriptionEn: 'Special shapes, extra charge' },
   { id: 10, name: '蛋糕配件', nameEn: 'Cake Accessories', icon: '\u{1F381}', description: '精致配件 生日必备', descriptionEn: 'Birthday party essentials' },
@@ -249,7 +249,7 @@ export const cakes: Cake[] = [
     price6: 55, price8: 75, image: '/yuanweinaiyoushuiguoluodangao.JPG',
   },
 
-  // ─── Cat 7: Kids Cakes ───
+  // ─── Cat 7: Special Themes ───
   {
     id: 701, categoryId: 7,
     name: '蛋壳', nameEn: 'Egg Shell',
@@ -272,11 +272,18 @@ export const cakes: Cake[] = [
     price6: 65, price8: 85, image: '/jingdianertongcaizhen.JPG',
   },
   {
-    id: 704, categoryId: 7,
-    name: '缤纷色彩', nameEn: 'Colourful Splash',
-    description: '多彩缤纷装饰，活泼生动',
-    descriptionEn: 'Vibrant decorations, lively and fun',
-    price6: 65, price8: 85, image: '/binfensecai.JPG',
+    id: 705, categoryId: 7,
+    name: '蝴蝶款式', nameEn: 'Butterfly Style',
+    description: '轻盈蝴蝶造型，浪漫精致',
+    descriptionEn: 'Delicate butterfly design, romantic and elegant',
+    price6: 80, price8: 100, image: '/hudie.jpg',
+  },
+  {
+    id: 706, categoryId: 7,
+    name: '日月同辉', nameEn: 'Sun & Moon',
+    description: '日月星辰造型，梦幻特别款',
+    descriptionEn: 'Sun, moon and stars design, dreamy and special',
+    price6: 80, price8: 100, image: '/riyuetonghui.jpg',
   },
 
   // ─── Cat 8: Extra Fillings ───
