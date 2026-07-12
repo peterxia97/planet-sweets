@@ -95,14 +95,14 @@ export const cakes: Cake[] = [
     name: '伯爵红茶', nameEn: 'Earl Grey Tea',
     description: '夹心：特调红茶奶油+红茶奶冻',
     descriptionEn: 'Filling: Earl Grey cream + tea milk pudding',
-    price6: 75, price8: 95, image: '/bojuehongcha.JPG',
+    price6: 80, price8: 100, image: '/bojuehongcha.JPG',
   },
   {
     id: 202, categoryId: 2,
     name: '抹茶', nameEn: 'Matcha',
     description: '夹心：抹茶奶油+抹茶奶冻',
     descriptionEn: 'Filling: matcha cream + matcha milk pudding',
-    price6: 75, price8: 95, image: '/mocha.JPG',
+    price6: 80, price8: 100, image: '/mocha.JPG',
   },
   {
     id: 203, categoryId: 2,
@@ -145,13 +145,6 @@ export const cakes: Cake[] = [
     description: '夹心：奶冻+开心果碎',
     descriptionEn: 'Filling: milk pudding + crushed pistachios',
     price6: 80, price8: 100, image: '/kaixinguo.jpg',
-  },
-  {
-    id: 209, categoryId: 2,
-    name: '黑糖珍珠奶茶蛋糕', nameEn: 'Brown Sugar Bubble Tea Cake',
-    description: '因珍珠特性建议当天食用完',
-    descriptionEn: 'Best consumed same day due to boba texture',
-    price6: 70, price8: 90, image: '/heitangbobo.JPG',
   },
   {
     id: 210, categoryId: 2,
