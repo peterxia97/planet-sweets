@@ -174,6 +174,13 @@ export const cakes: Cake[] = [
     descriptionEn: 'Sweet-salty caramel perfectly paired with strawberries',
     price6: 75, price8: 95, image: '/jiaotangxingrencaomei.JPG',
   },
+  {
+    id: 213, categoryId: 2,
+    name: '黑森林蛋糕', nameEn: 'Black Forest Cake',
+    description: '可可戚风+特调奶油+糖渍樱桃',
+    descriptionEn: 'Cocoa chiffon + special cream + candied cherries',
+    price6: 75, price8: 95, image: '/heisenlin.jpg', alsoIn: [13],
+  },
 
   // ─── Cat 3: Basque Cheesecakes ───
   {
