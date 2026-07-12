@@ -183,7 +183,7 @@ export const UI: Record<string, { zh: string; en: string }> = {
   // Order Notice
   'notice.title': { zh: '下单须知', en: 'Order Notice' },
   'notice.blind_box': { zh: '除指定款式外，口味自选，盲盒样式噢～', en: 'Aside from specified designs, flavors are chef\'s choice — it\'s a surprise box~' },
-  'notice.custom': { zh: '来图定制因材料色彩会有些许差别，非100%还原。提前一周预约，无法接急单。上门自取Wandal，仅现金或人民币实时汇率转账。颜色为食用色素，介意请要求原色。', en: 'Custom orders may vary slightly in color due to ingredients — not a 100% replica. Please order 1 week in advance, no rush orders. Pickup at Wandal. Cash or RMB real-time rate transfer only. Colors use food coloring — request natural color if preferred.' },
+  'notice.custom': { zh: '提前一周预约。南边上门自取，仅收现金和人民币转账。蛋糕确定口味后默认做盲盒款式。', en: 'Please order 1 week in advance. Pickup at South side. Cash or RMB transfer only. Once the flavor is chosen, the cake design defaults to a blind box style.' },
 
   // Category header
   'category.items': { zh: '款', en: ' items' },
