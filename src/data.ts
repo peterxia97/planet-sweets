@@ -52,7 +52,7 @@ export const cakes: Cake[] = [
     name: '蓝莓奶油裱花蛋糕', nameEn: 'Blueberry Cream Piped Cake',
     description: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。',
     descriptionEn: 'Plump blueberries, refreshing sweet-tart flavour with rich texture.',
-    price6: 80, price8: 100, image: '/lanmei.PNG',
+    price6: 80, price8: 100, image: '/lanmei.jpg',
   },
   {
     id: 104, categoryId: 1,
