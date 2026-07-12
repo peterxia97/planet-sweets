@@ -88,7 +88,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   904: { zh: '椭圆', en: 'Oval' },
   905: { zh: '加高', en: 'Extra Tall' },
   // 蛋糕配件
-  1001: { zh: '刀叉盘（5人份）', en: 'Cutlery Set (5 pcs)' },
   1002: { zh: '铅笔蜡烛', en: 'Pencil Candles' },
   1003: { zh: '生日皇冠', en: 'Birthday Crown' },
   // 特殊工艺
@@ -146,7 +145,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   903: { zh: '不规则蝴蝶造型', en: 'Irregular butterfly shape' },
   904: { zh: '椭圆造型', en: 'Oval shape' },
   905: { zh: '一层蛋糕胚', en: 'One extra cake layer' },
-  1001: { zh: '精致刀叉餐具套装', en: 'Delicate cutlery set' },
   1002: { zh: '彩色铅笔蜡烛', en: 'Colorful pencil candles' },
   1003: { zh: '闪耀生日皇冠', en: 'Sparkling birthday crown' },
   1101: { zh: '按图定制，每图$15', en: 'Custom per design, $15 each' },
