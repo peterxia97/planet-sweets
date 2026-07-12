@@ -151,7 +151,7 @@ export const cakes: Cake[] = [
     name: '纯巧克力蛋糕', nameEn: 'Pure Chocolate Cake',
     description: '可可戚风+特调奶油+薄脆夹心+混合坚果',
     descriptionEn: 'Cocoa chiffon + special cream + crispy filling + mixed nuts',
-    price6: 75, price8: 95, image: '/qiaokelikeke.jpg',
+    price6: 75, price8: 95, image: '/qiaokelikeke.jpg', alsoIn: [13],
   },
   {
     id: 211, categoryId: 2,
