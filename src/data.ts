@@ -45,7 +45,7 @@ export const cakes: Cake[] = [
     name: '草莓奶油裱花蛋糕', nameEn: 'Strawberry Cream Piped Cake',
     description: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。',
     descriptionEn: 'Fresh strawberries with light piped cream, sweet and perfect for birthdays.',
-    price6: 65, price8: 85, image: '/caomei.JPG', tag: '热销', tagEn: 'Hot',
+    price6: 65, price8: 85, image: '/caomei.jpg', tag: '热销', tagEn: 'Hot',
   },
   {
     id: 102, categoryId: 1,
