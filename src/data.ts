@@ -296,7 +296,7 @@ export const cakes: Cake[] = [
   { id: 905, categoryId: 9, name: '加高', nameEn: 'Tall (Extra Layer)', description: '一层蛋糕胚', descriptionEn: 'One extra cake layer', price6: 0, price8: 0, singlePrice: 5, image: '/jiagao.jpg' },
 
   // ─── Cat 10: Cake Accessories ───
-  { id: 1001, categoryId: 10, name: '刀叉盘（5人份）', nameEn: 'Cutlery Set (5 people)', description: '精致刀叉餐具套装', descriptionEn: 'Deluxe cutlery set', price6: 0, price8: 0, singlePrice: 2, image: '/daochapaipan.JPG' },
+  { id: 1001, categoryId: 10, name: '刀叉盘（5人份）', nameEn: 'Cutlery Set (5 people)', description: '精致刀叉餐具套装', descriptionEn: 'Deluxe cutlery set', price6: 0, price8: 0, singlePrice: 2, image: '/daochapaipan.JPG', outOfStock: true },
   { id: 1002, categoryId: 10, name: '铅笔蜡烛', nameEn: 'Pencil Candles', description: '彩色铅笔蜡烛', descriptionEn: 'Colourful pencil candles', price6: 0, price8: 0, singlePrice: 2, image: '/qianbilazhu.JPG' },
   { id: 1003, categoryId: 10, name: '生日皇冠', nameEn: 'Birthday Crown', description: '闪耀生日皇冠', descriptionEn: 'Sparkly birthday crown', price6: 0, price8: 0, singlePrice: 2, image: '/shengrihuangguan.JPG' },
 

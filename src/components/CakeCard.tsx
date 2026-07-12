@@ -62,9 +62,14 @@ export default function CakeCard({ cake }: CakeCardProps) {
             <path d="M11 8v6M8 11h6" />
           </svg>
         </div>
-        {cake.tag && (
+        {cake.tag && !cake.outOfStock && (
           <span className={`absolute top-2 left-2 text-[10px] font-bold px-1.5 py-0.5 rounded-full ${tagColors[tTag(cake.tag)] || 'bg-gray-500 text-white'}`}>
             {tTag(cake.tag)}
+          </span>
+        )}
+        {cake.outOfStock && (
+          <span className="absolute top-2 left-2 text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-gray-500 text-white">
+            {t('cake.soldOut')}
           </span>
         )}
         {cartItem && (
@@ -81,7 +86,12 @@ export default function CakeCard({ cake }: CakeCardProps) {
           <p className="text-[10px] text-gray-400 mt-0.5 leading-tight line-clamp-2">{tCakeDesc(cake.id)}</p>
         )}
 
-        {isSinglePrice ? (
+        {cake.outOfStock ? (
+          /* 缺货状态 */
+          <div className="mt-2 w-full flex items-center justify-center gap-1 bg-gray-300 text-gray-500 text-xs font-medium py-2 rounded-xl cursor-not-allowed">
+            {t('cake.soldOut')}
+          </div>
+        ) : isSinglePrice ? (
           /* 单一价格：直接显示价格，无尺寸选择 */
           <div className="mt-2 flex items-center justify-between">
             <span className="text-rose-600 font-bold text-sm">${cake.singlePrice}</span>
@@ -114,10 +124,15 @@ export default function CakeCard({ cake }: CakeCardProps) {
         {/* Add to Cart */}
         <button
           onClick={(e) => handleAdd(defaultSize as '6' | '8' | 'single', e)}
-          className="mt-2 w-full flex items-center justify-center gap-1 bg-rose-500 hover:bg-rose-600 active:scale-95 text-white text-xs font-medium py-2 rounded-xl transition-all"
+          disabled={cake.outOfStock}
+          className={`mt-2 w-full flex items-center justify-center gap-1 text-xs font-medium py-2 rounded-xl transition-all ${
+            cake.outOfStock
+              ? 'bg-gray-300 text-gray-400 cursor-not-allowed'
+              : 'bg-rose-500 hover:bg-rose-600 active:scale-95 text-white'
+          }`}
         >
-          <Plus className="w-3 h-3" />
-          {t('cake.add')}
+          {!cake.outOfStock && <Plus className="w-3 h-3" />}
+          {cake.outOfStock ? t('cake.soldOut') : t('cake.add')}
         </button>
       </div>
     </div>

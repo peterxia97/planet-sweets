@@ -11,6 +11,7 @@ export interface Cake {
   tag?: string;         // e.g. "热销", "新品"
   tagEn?: string;       // e.g. "Hot", "New"
   hidden?: boolean;     // set true to hide from frontend
+  outOfStock?: boolean; // set true to show as sold out
   categoryId: number;
   alsoIn?: number[];    // additional category IDs
 }

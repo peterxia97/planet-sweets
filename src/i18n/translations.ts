@@ -194,6 +194,7 @@ export const UI: Record<string, { zh: string; en: string }> = {
   'cake.size8': { zh: '8寸', en: '8 inch' },
   'cake.each': { zh: '每份', en: 'each' },
   'cake.add': { zh: '加入购物车', en: 'Add to Cart' },
+  'cake.soldOut': { zh: '缺货', en: 'Sold Out' },
 
   // CartDrawer
   'cart.title': { zh: '购物车', en: 'Shopping Cart' },
