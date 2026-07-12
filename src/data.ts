@@ -276,14 +276,14 @@ export const cakes: Cake[] = [
     name: '蝴蝶款式', nameEn: 'Butterfly Style',
     description: '轻盈蝴蝶造型，浪漫精致',
     descriptionEn: 'Delicate butterfly design, romantic and elegant',
-    price6: 80, price8: 100, image: '/hudie.jpg',
+    price6: 70, price8: 90, image: '/hudie.jpg',
   },
   {
     id: 706, categoryId: 7,
     name: '日月同辉', nameEn: 'Sun & Moon',
     description: '日月星辰造型，梦幻特别款',
     descriptionEn: 'Sun, moon and stars design, dreamy and special',
-    price6: 80, price8: 100, image: '/riyuetonghui.jpg',
+    price6: 115, price8: 135, image: '/riyuetonghui.jpg',
   },
 
   // ─── Cat 8: Extra Fillings ───
