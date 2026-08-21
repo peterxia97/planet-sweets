@@ -177,13 +177,6 @@ export const cakes: Cake[] = [
 
   // ─── Cat 3: Basque Cheesecakes ───
   {
-    id: 301, categoryId: 3,
-    name: '原味芒果酸奶巴斯克', nameEn: 'Mango Yoghurt Basque',
-    description: '芒果酸奶香气，焦香外皮',
-    descriptionEn: 'Mango yoghurt fragrance with caramelised crust',
-    price6: 65, price8: 85, image: '/yuanweimangguosuannaibasike.JPG',
-  },
-  {
     id: 302, categoryId: 3,
     name: '原味草莓酸奶巴斯克', nameEn: 'Strawberry Yoghurt Basque',
     description: '草莓酸奶香气，酸甜可口',

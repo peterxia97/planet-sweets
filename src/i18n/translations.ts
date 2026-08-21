@@ -57,7 +57,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   212: { zh: '焦糖杏仁草莓', en: 'Caramel Almond Strawberry' },
   213: { zh: '黑森林蛋糕', en: 'Black Forest Cake' },
   // 巴斯克
-  301: { zh: '原味芒果酸奶巴斯克', en: 'Mango Yogurt Basque' },
   302: { zh: '原味草莓酸奶巴斯克', en: 'Strawberry Yogurt Basque' },
   303: { zh: '原味蓝莓酸奶巴斯克', en: 'Blueberry Yogurt Basque' },
   304: { zh: '原味香草酸奶巴斯克', en: 'Vanilla Yogurt Basque' },
@@ -120,7 +119,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   211: { zh: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）', en: 'Filling: creamy purple yam & taro (limited, order 5 days ahead)' },
   212: { zh: '甜中带咸的焦糖与草莓完美搭配', en: 'Sweet & salty caramel perfectly paired with strawberries' },
   213: { zh: '可可戚风+特调奶油+糖渍樱桃', en: 'Cocoa chiffon + special cream + candied cherries' },
-  301: { zh: '芒果酸奶香气，焦香外皮', en: 'Mango yogurt aroma with caramelized crust' },
   302: { zh: '草莓酸奶香气，酸甜可口', en: 'Strawberry yogurt aroma, sweet and tangy' },
   303: { zh: '蓝莓酸奶香气，清爽自然', en: 'Blueberry yogurt aroma, fresh and natural' },
   304: { zh: '香草酸奶香气，经典绵密', en: 'Vanilla yogurt aroma, classic and creamy' },
