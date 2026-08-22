@@ -34,7 +34,6 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 春日甄选
   1303: { zh: '龙井青梨蛋糕', en: 'Longjing Pear Cake' },
-  1304: { zh: '栗子蛋糕', en: 'Chestnut Cake' },
   1305: { zh: '薄荷曼波绿蛋糕', en: 'Mint Mambo Green Cake' },
   1306: { zh: '椰香菠萝蛋糕', en: 'Coconut Pineapple Cake' },
   // 水果蛋糕
@@ -58,6 +57,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   211: { zh: '紫薯芋泥蛋糕', en: 'Purple Yam & Taro Cake' },
   212: { zh: '焦糖杏仁草莓', en: 'Caramel Almond Strawberry' },
   213: { zh: '黑森林蛋糕', en: 'Black Forest Cake' },
+  1304: { zh: '栗子蛋糕', en: 'Chestnut Cake' },
   // 巴斯克
   302: { zh: '原味草莓酸奶巴斯克', en: 'Strawberry Yogurt Basque' },
   303: { zh: '原味蓝莓酸奶巴斯克', en: 'Blueberry Yogurt Basque' },
@@ -107,7 +107,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
 // ── 蛋糕描述 ──
 export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   1303: { zh: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。', en: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.' },
-  1304: { zh: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。', en: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.' },
   1305: { zh: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。', en: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.' },
   1306: { zh: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。', en: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.' },
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
@@ -129,6 +128,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   211: { zh: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）', en: 'Filling: creamy purple yam & taro (limited, order 5 days ahead)' },
   212: { zh: '甜中带咸的焦糖与草莓完美搭配', en: 'Sweet & salty caramel perfectly paired with strawberries' },
   213: { zh: '可可戚风+特调奶油+糖渍樱桃', en: 'Cocoa chiffon + special cream + candied cherries' },
+  1304: { zh: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。', en: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.' },
   302: { zh: '草莓酸奶香气，酸甜可口', en: 'Strawberry yogurt aroma, sweet and tangy' },
   303: { zh: '蓝莓酸奶香气，清爽自然', en: 'Blueberry yogurt aroma, fresh and natural' },
   304: { zh: '香草酸奶香气，经典绵密', en: 'Vanilla yogurt aroma, classic and creamy' },

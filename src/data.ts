@@ -32,13 +32,6 @@ export const cakes: Cake[] = [
     price6: 75, price8: 95, image: '/longjingqingli.jpg',
   },
   {
-    id: 1304, categoryId: 13,
-    name: '栗子蛋糕', nameEn: 'Chestnut Cake',
-    description: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。',
-    descriptionEn: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.',
-    price6: 75, price8: 95, image: '/lizi.jpg',
-  },
-  {
     id: 1305, categoryId: 13,
     name: '薄荷曼波绿蛋糕', nameEn: 'Mint Mambo Green Cake',
     description: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。',
@@ -187,6 +180,13 @@ export const cakes: Cake[] = [
     description: '可可戚风+特调奶油+糖渍樱桃',
     descriptionEn: 'Cocoa chiffon + special cream + candied cherries',
     price6: 75, price8: 95, image: '/heisenlin.jpg',
+  },
+  {
+    id: 1304, categoryId: 2,
+    name: '栗子蛋糕', nameEn: 'Chestnut Cake',
+    description: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。',
+    descriptionEn: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.',
+    price6: 75, price8: 95, image: '/lizi.jpg',
   },
 
   // ─── Cat 3: Basque Cheesecakes ───
