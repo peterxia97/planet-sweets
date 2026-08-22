@@ -31,6 +31,20 @@ export const cakes: Cake[] = [
     descriptionEn: 'Butter crunch + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma, smooth cream layers, amber caramel glaze on top. A grown-up dessert.',
     price6: 75, price8: 95, image: '/jiatang-coffee.jpg',
   },
+  {
+    id: 1303, categoryId: 13,
+    name: '龙井青梨蛋糕', nameEn: 'Longjing Pear Cake',
+    description: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。',
+    descriptionEn: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.',
+    price6: 75, price8: 95, image: '/longjingqingli.jpg',
+  },
+  {
+    id: 1304, categoryId: 13,
+    name: '栗子蛋糕', nameEn: 'Chestnut Cake',
+    description: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。',
+    descriptionEn: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.',
+    price6: 75, price8: 95, image: '/lizi.jpg',
+  },
 
   // ─── Cat 1: Fruit Cream Piped Cakes ───
   {
@@ -270,6 +284,13 @@ export const cakes: Cake[] = [
     description: '日月星辰造型，梦幻特别款',
     descriptionEn: 'Sun, moon and stars design, dreamy and special',
     price6: 115, price8: 135, image: '/riyuetonghui.jpg',
+  },
+  {
+    id: 707, categoryId: 7,
+    name: '许愿池', nameEn: 'Wishing Pool',
+    description: '三层水池蛋糕，自选口味夹心。可在下单时备注口味偏好（参见夹心加料类目）。',
+    descriptionEn: 'Three-tier pool design with customisable filling. Please specify your preferred flavour in the order notes (see Extra Filling category).',
+    price6: 85, price8: 105, image: '/xuyuanchi.jpg',
   },
 
   // ─── Cat 8: Extra Fillings ───

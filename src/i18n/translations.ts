@@ -34,6 +34,8 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 春日甄选
   1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
+  1303: { zh: '龙井青梨蛋糕', en: 'Longjing Pear Cake' },
+  1304: { zh: '栗子蛋糕', en: 'Chestnut Cake' },
   // 水果奶油裱花蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
   102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
@@ -72,6 +74,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   703: { zh: '经典儿童彩针', en: 'Classic Kids Sprinkle' },
   705: { zh: '蝴蝶款式', en: 'Butterfly Style' },
   706: { zh: '日月同辉', en: 'Sun & Moon' },
+  707: { zh: '许愿池', en: 'Wishing Pool' },
   // 夹心加料
   801: { zh: '时令水果', en: 'Seasonal Fruit' },
   802: { zh: '各式奶冻', en: 'Assorted Milk Pudding' },
@@ -98,6 +101,8 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
 // ── 蛋糕描述 ──
 export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   1302: { zh: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。', en: 'Butter crisp + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma infused in soft cake layers with silky cream, topped with amber caramel sauce.' },
+  1303: { zh: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。', en: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.' },
+  1304: { zh: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。', en: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.' },
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
   102: { zh: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。', en: 'Plump blueberries, refreshingly sweet and tangy with rich texture.' },
   104: { zh: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。', en: 'Imported blackberries, deep purple-red color, tangy and appetizing.' },
@@ -131,6 +136,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   703: { zh: '七彩彩针装饰，缤纷喜庆', en: 'Rainbow sprinkle decoration, colorful and festive' },
   705: { zh: '轻盈蝴蝶造型，浪漫精致', en: 'Delicate butterfly design, romantic and elegant' },
   706: { zh: '日月星辰造型，梦幻特别款', en: 'Sun, moon and stars design, dreamy and special' },
+  707: { zh: '三层水池蛋糕，自选口味夹心。可在下单时备注口味偏好（参见夹心加料类目）。', en: 'Three-tier pool design with customisable filling. Please specify your preferred flavour in the order notes (see Extra Filling category).' },
   801: { zh: '当季新鲜水果夹心', en: 'Fresh seasonal fruit filling' },
   802: { zh: '细腻奶冻夹心', en: 'Delicate milk pudding filling' },
   803: { zh: '奶香紫薯泥夹心', en: 'Creamy purple yam paste filling' },
