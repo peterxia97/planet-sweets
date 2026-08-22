@@ -6,11 +6,11 @@ import type { Category, Cake } from './types';
 
 export const categories: Category[] = [
   { id: 13, name: '春日甄选', nameEn: 'Spring Selection', icon: '\u{1F338}', description: '春日限定 清新治愈', descriptionEn: 'Spring exclusive, fresh & delightful' },
-  { id: 1,  name: '水果奶油裱花蛋糕', nameEn: 'Fruit Cream Piped Cakes', icon: '\u{1F353}', description: '新鲜水果搭配轻盈奶油', descriptionEn: 'Fresh fruit with light whipped cream' },
+  { id: 1,  name: '水果蛋糕', nameEn: 'Fresh Fruit Cakes', icon: '\u{1F353}', description: '新鲜水果 自然甜美', descriptionEn: 'Fresh fruit, naturally sweet' },
   { id: 2,  name: '口味蛋糕', nameEn: 'Flavoured Cakes', icon: '\u{1F36E}', description: '多种口味 丰富夹心', descriptionEn: 'Assorted flavours with layered fillings' },
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
   { id: 4,  name: '裸蛋糕', nameEn: 'Naked Cakes', icon: '\u{1F353}', description: '简约清新 水果本味', descriptionEn: 'Minimalist with fresh fruit' },
-  { id: 7,  name: '特定主题样式', nameEn: 'Special Themes', icon: '\u{1F9B8}', description: '专属主题 独特风格', descriptionEn: 'Unique themed cake designs' },
+  { id: 7,  name: '特定样式', nameEn: 'Special Themes', icon: '\u{1F9B8}', description: '专属主题 独特造型', descriptionEn: 'Unique themed cake designs' },
   { id: 8,  name: '夹心加料（一层）', nameEn: 'Extra Filling (1 layer)', icon: '\u{1F36E}', description: '自选夹心 增添风味', descriptionEn: 'Add a layer of filling' },
   { id: 9,  name: '异形加收', nameEn: 'Novelty Shapes', icon: '\u2728', description: '特殊造型 额外加收', descriptionEn: 'Special shapes, extra charge' },
   { id: 10, name: '蛋糕配件', nameEn: 'Cake Accessories', icon: '\u{1F381}', description: '精致配件 生日必备', descriptionEn: 'Birthday party essentials' },
@@ -24,13 +24,6 @@ export const categories: Category[] = [
 export const cakes: Cake[] = [
 
   // ─── Cat 13: Spring Selection ───
-  {
-    id: 1302, categoryId: 13,
-    name: '焦糖咖啡蛋糕', nameEn: 'Caramel Coffee Cake',
-    description: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。',
-    descriptionEn: 'Butter crunch + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma, smooth cream layers, amber caramel glaze on top. A grown-up dessert.',
-    price6: 75, price8: 95, image: '/jiatang-coffee.jpg',
-  },
   {
     id: 1303, categoryId: 13,
     name: '龙井青梨蛋糕', nameEn: 'Longjing Pear Cake',
@@ -123,7 +116,7 @@ export const cakes: Cake[] = [
     name: '抹茶', nameEn: 'Matcha',
     description: '夹心：抹茶奶油+抹茶奶冻',
     descriptionEn: 'Filling: matcha cream + matcha milk pudding',
-    price6: 80, price8: 100, image: '/mocha.JPG',
+    price6: 80, price8: 100, image: '/mocha.JPG', alsoIn: [13],
   },
   {
     id: 203, categoryId: 2,
@@ -172,7 +165,7 @@ export const cakes: Cake[] = [
     name: '纯巧克力蛋糕', nameEn: 'Pure Chocolate Cake',
     description: '可可戚风+特调奶油+薄脆夹心+混合坚果',
     descriptionEn: 'Cocoa chiffon + special cream + crispy filling + mixed nuts',
-    price6: 75, price8: 95, image: '/qiaokelikeke.jpg', alsoIn: [13],
+    price6: 75, price8: 95, image: '/qiaokelikeke.jpg',
   },
   {
     id: 211, categoryId: 2,
@@ -193,7 +186,7 @@ export const cakes: Cake[] = [
     name: '黑森林蛋糕', nameEn: 'Black Forest Cake',
     description: '可可戚风+特调奶油+糖渍樱桃',
     descriptionEn: 'Cocoa chiffon + special cream + candied cherries',
-    price6: 75, price8: 95, image: '/heisenlin.jpg', alsoIn: [13],
+    price6: 75, price8: 95, image: '/heisenlin.jpg',
   },
 
   // ─── Cat 3: Basque Cheesecakes ───
@@ -245,6 +238,13 @@ export const cakes: Cake[] = [
     description: '柠檬清香，酸甜平衡',
     descriptionEn: 'Zesty lemon aroma, perfectly balanced sweet and sour',
     price6: 70, price8: 90, image: '/ningmengbasike.JPG',
+  },
+  {
+    id: 309, categoryId: 3,
+    name: '榴莲巴斯克', nameEn: 'Durian Basque',
+    description: '泰国金枕榴莲果肉，香气浓郁霸道，榴莲爱好者的终极享受。',
+    descriptionEn: 'Thai Monthong durian flesh, intensely aromatic — the ultimate indulgence for durian lovers.',
+    price6: 85, price8: 105, image: '/liulian-basike.jpg',
   },
 
   // ─── Cat 4: Naked Cakes ───

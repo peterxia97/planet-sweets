@@ -5,11 +5,11 @@
 // ── 分类名称 ──
 export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
   13: { zh: '春日甄选', en: 'Spring Selection' },
-  1:  { zh: '水果奶油裱花蛋糕', en: 'Fresh Cream Decorated Cakes' },
+  1:  { zh: '水果蛋糕', en: 'Fresh Fruit Cakes' },
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
   4:  { zh: '裸蛋糕', en: 'Naked Cakes' },
-  7:  { zh: '特定主题样式', en: 'Special Themes' },
+  7:  { zh: '特定样式', en: 'Special Themes' },
   8:  { zh: '夹心加料（一层）', en: 'Extra Filling (1 Layer)' },
   9:  { zh: '异形加收', en: 'Special Shapes' },
   10: { zh: '蛋糕配件', en: 'Cake Accessories' },
@@ -19,11 +19,11 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
 // ── 分类描述 ──
 export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   13: { zh: '春日限定 清新治愈', en: 'Spring limited, fresh & delightful' },
-  1:  { zh: '新鲜水果搭配轻盈奶油', en: 'Fresh fruit with light cream' },
+  1:  { zh: '新鲜水果 自然甜美', en: 'Fresh fruit, naturally sweet' },
   2:  { zh: '多种口味 丰富夹心', en: 'Multiple flavors, rich fillings' },
   3:  { zh: '焦香浓郁 绵密丝滑', en: 'Rich caramelized, velvety smooth' },
   4:  { zh: '简约清新 水果本味', en: 'Simple & fresh, natural fruit taste' },
-  7:  { zh: '专属主题 独特风格', en: 'Unique themed cake designs' },
+  7:  { zh: '专属主题 独特造型', en: 'Unique themed designs' },
   8:  { zh: '自选夹心 增添风味', en: 'Choose your filling, extra flavor' },
   9:  { zh: '特殊造型 额外加收', en: 'Special shapes, additional charge' },
   10: { zh: '精致配件 生日必备', en: 'Delicate accessories, birthday essentials' },
@@ -33,12 +33,11 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 // ── 蛋糕名称 ──
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 春日甄选
-  1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
   1303: { zh: '龙井青梨蛋糕', en: 'Longjing Pear Cake' },
   1304: { zh: '栗子蛋糕', en: 'Chestnut Cake' },
   1305: { zh: '薄荷曼波绿蛋糕', en: 'Mint Mambo Green Cake' },
   1306: { zh: '椰香菠萝蛋糕', en: 'Coconut Pineapple Cake' },
-  // 水果奶油裱花蛋糕
+  // 水果蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
   102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
   104: { zh: '黑莓果酱奶油裱花蛋糕', en: 'Blackberry Jam Fresh Cream Decorated Cake' },
@@ -67,10 +66,11 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   306: { zh: '抹茶奶油巴斯克', en: 'Matcha Cream Basque' },
   307: { zh: '原味莓果奶油巴斯克', en: 'Mixed Berry Cream Basque' },
   308: { zh: '柠檬巴斯克', en: 'Lemon Basque' },
+  309: { zh: '榴莲巴斯克', en: 'Durian Basque' },
   // 裸蛋糕
   401: { zh: '红丝绒草莓裸蛋糕', en: 'Red Velvet Strawberry Naked Cake' },
   402: { zh: '原味奶油水果裸蛋糕', en: 'Original Cream Fruit Naked Cake' },
-  // 特定主题样式
+  // 特定样式
   701: { zh: '蛋壳', en: 'Eggshell' },
   702: { zh: '雪顶草莓', en: 'Snowcap Strawberry' },
   703: { zh: '经典儿童彩针', en: 'Classic Kids Sprinkle' },
@@ -106,7 +106,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
 
 // ── 蛋糕描述 ──
 export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
-  1302: { zh: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。', en: 'Butter crisp + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma infused in soft cake layers with silky cream, topped with amber caramel sauce.' },
   1303: { zh: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。', en: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.' },
   1304: { zh: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。', en: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.' },
   1305: { zh: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。', en: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.' },
@@ -137,6 +136,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   306: { zh: '抹茶搭配奶香，回味悠长', en: 'Matcha with creamy milk, long-lasting aftertaste' },
   307: { zh: '混合莓果，香甜浓郁', en: 'Mixed berries, sweet and rich' },
   308: { zh: '柠檬清香，酸甜平衡', en: 'Lemon fragrance, perfectly balanced sweet & sour' },
+  309: { zh: '泰国金枕榴莲果肉，香气浓郁霸道，榴莲爱好者的终极享受。', en: 'Thai Monthong durian flesh, intensely aromatic — the ultimate indulgence for durian lovers.' },
   401: { zh: '红丝绒蛋糕配新鲜草莓，经典搭配', en: 'Red velvet cake with fresh strawberries, a classic match' },
   402: { zh: '时令水果搭配（不指定水果种类）', en: 'Seasonal fruit mix (variety not specified)' },
   701: { zh: '蛋壳造型，创意十足', en: 'Eggshell design, super creative' },
