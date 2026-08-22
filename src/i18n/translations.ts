@@ -4,7 +4,7 @@
 
 // ── 分类名称 ──
 export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
-  13: { zh: '冬日推荐', en: 'Winter Picks' },
+  13: { zh: '春日甄选', en: 'Spring Selection' },
   1:  { zh: '水果奶油裱花蛋糕', en: 'Fresh Cream Decorated Cakes' },
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
@@ -18,7 +18,7 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
 
 // ── 分类描述 ──
 export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
-  13: { zh: '冬日限定 温暖治愈', en: 'Winter limited, warm & comforting' },
+  13: { zh: '春日限定 清新治愈', en: 'Spring limited, fresh & delightful' },
   1:  { zh: '新鲜水果搭配轻盈奶油', en: 'Fresh fruit with light cream' },
   2:  { zh: '多种口味 丰富夹心', en: 'Multiple flavors, rich fillings' },
   3:  { zh: '焦香浓郁 绵密丝滑', en: 'Rich caramelized, velvety smooth' },
@@ -32,13 +32,12 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 
 // ── 蛋糕名称 ──
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
-  // 冬日推荐
+  // 春日甄选
   1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
   // 水果奶油裱花蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
   102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
   104: { zh: '黑莓果酱奶油裱花蛋糕', en: 'Blackberry Jam Fresh Cream Decorated Cake' },
-  105: { zh: '葡萄奶油裱花蛋糕', en: 'Grape Fresh Cream Decorated Cake' },
   106: { zh: '青提奶油裱花蛋糕', en: 'Green Grape Fresh Cream Decorated Cake' },
   107: { zh: '树莓奶油裱花蛋糕', en: 'Raspberry Fresh Cream Decorated Cake' },
   108: { zh: '荔枝奶油裱花蛋糕', en: 'Lychee Fresh Cream Decorated Cake' },
@@ -102,7 +101,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
   102: { zh: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。', en: 'Plump blueberries, refreshingly sweet and tangy with rich texture.' },
   104: { zh: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。', en: 'Imported blackberries, deep purple-red color, tangy and appetizing.' },
-  105: { zh: '饱满葡萄果肉均匀铺陈，清甜多汁，精致美观。', en: 'Plump grapes evenly arranged, sweet and juicy, exquisitely beautiful.' },
   106: { zh: '清爽青提果肉，翠绿悦目，清甜不腻，夏日首选。', en: 'Fresh green grapes, vibrant green, sweet and refreshing, summer favorite.' },
   107: { zh: '进口树莓点缀，小巧红艳，酸甜口感，精致优雅。', en: 'Imported raspberries, petite and bright red, tangy and elegant.' },
   108: { zh: '罐头荔枝果肉，清甜水润，独特风味。', en: 'Canned lychee pulp, sweet and juicy with unique flavor.' },

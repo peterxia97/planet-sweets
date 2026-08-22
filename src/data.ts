@@ -5,7 +5,7 @@ import type { Category, Cake } from './types';
 // ═══════════════════════════════════════════
 
 export const categories: Category[] = [
-  { id: 13, name: '冬日推荐', nameEn: 'Winter Picks', icon: '\u{2744}', description: '冬日限定 温暖治愈', descriptionEn: 'Winter exclusive, warm & cozy' },
+  { id: 13, name: '春日甄选', nameEn: 'Spring Selection', icon: '\u{1F338}', description: '春日限定 清新治愈', descriptionEn: 'Spring exclusive, fresh & delightful' },
   { id: 1,  name: '水果奶油裱花蛋糕', nameEn: 'Fruit Cream Piped Cakes', icon: '\u{1F353}', description: '新鲜水果搭配轻盈奶油', descriptionEn: 'Fresh fruit with light whipped cream' },
   { id: 2,  name: '口味蛋糕', nameEn: 'Flavoured Cakes', icon: '\u{1F36E}', description: '多种口味 丰富夹心', descriptionEn: 'Assorted flavours with layered fillings' },
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
@@ -23,7 +23,7 @@ export const categories: Category[] = [
 
 export const cakes: Cake[] = [
 
-  // ─── Cat 13: Winter Picks ───
+  // ─── Cat 13: Spring Selection ───
   {
     id: 1302, categoryId: 13,
     name: '焦糖咖啡蛋糕', nameEn: 'Caramel Coffee Cake',
@@ -62,18 +62,11 @@ export const cakes: Cake[] = [
     price6: 60, price8: 80, image: '/heimei.PNG',
   },
   {
-    id: 105, categoryId: 1,
-    name: '葡萄奶油裱花蛋糕', nameEn: 'Grape Cream Piped Cake',
-    description: '饱满葡萄果肉均匀铺陈，清甜多汁，精致美观。',
-    descriptionEn: 'Juicy grapes evenly arranged, sweet and delicately beautiful.',
-    price6: 65, price8: 85, image: '/putao.JPG',
-  },
-  {
     id: 106, categoryId: 1,
     name: '青提奶油裱花蛋糕', nameEn: 'Green Grape Cream Piped Cake',
     description: '清爽青提果肉，翠绿悦目，清甜不腻，夏日首选。',
     descriptionEn: 'Crisp green grapes, refreshingly sweet, perfect summer choice.',
-    price6: 65, price8: 85, image: '/qingti.JPG',
+    price6: 85, price8: 105, image: '/qingti.JPG',
   },
   {
     id: 107, categoryId: 1,
