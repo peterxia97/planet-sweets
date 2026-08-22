@@ -45,6 +45,20 @@ export const cakes: Cake[] = [
     descriptionEn: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.',
     price6: 75, price8: 95, image: '/lizi.jpg',
   },
+  {
+    id: 1305, categoryId: 13,
+    name: '薄荷曼波绿蛋糕', nameEn: 'Mint Mambo Green Cake',
+    description: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。',
+    descriptionEn: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.',
+    price6: 70, price8: 90, image: '/bohe-manbolv.jpg', alsoIn: [2],
+  },
+  {
+    id: 1306, categoryId: 13,
+    name: '椰香菠萝蛋糕', nameEn: 'Coconut Pineapple Cake',
+    description: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。',
+    descriptionEn: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.',
+    price6: 75, price8: 95, image: '/yexiang-boluo.jpg', alsoIn: [1],
+  },
 
   // ─── Cat 1: Fruit Cream Piped Cakes ───
   {
@@ -292,6 +306,20 @@ export const cakes: Cake[] = [
     descriptionEn: 'Three-tier pool design with customisable filling. Please specify your preferred flavour in the order notes (see Extra Filling category).',
     price6: 85, price8: 105, image: '/xuyuanchi.jpg',
   },
+  {
+    id: 708, categoryId: 7,
+    name: '拼色蛋糕', nameEn: 'Color Block Cake',
+    description: '多色拼色造型，夹心可自选（价格需与自由星人确认）。下单请备注偏好口感和颜色搭配。',
+    descriptionEn: 'Multi-colour block design with customisable filling (price subject to final confirmation). Please leave your colour and flavour preferences in the order notes.',
+    price6: 80, price8: 100, image: '/pinse.jpg',
+  },
+  {
+    id: 709, categoryId: 7,
+    name: '小雏菊蛋糕', nameEn: 'Daisy Cake',
+    description: '清新小雏菊裱花造型，夹心可自选（价格需与自由星人确认）。下单请备注偏好口感和花色。',
+    descriptionEn: 'Fresh little-daisy piping design with customisable filling (price subject to final confirmation). Please leave your flavour and colour preferences in the order notes.',
+    price6: 75, price8: 95, image: '/xiaochuju.jpg',
+  },
 
   // ─── Cat 8: Extra Fillings ───
   { id: 801, categoryId: 8, name: '时令水果', nameEn: 'Seasonal Fruit', description: '当季新鲜水果夹心', descriptionEn: 'Fresh seasonal fruit filling', price6: 0, price8: 0, singlePrice: 5, image: '/shilingshuiguo.JPG' },
@@ -312,6 +340,8 @@ export const cakes: Cake[] = [
   // ─── Cat 10: Cake Accessories ───
   { id: 1002, categoryId: 10, name: '铅笔蜡烛', nameEn: 'Pencil Candles', description: '彩色铅笔蜡烛', descriptionEn: 'Colourful pencil candles', price6: 0, price8: 0, singlePrice: 2, image: '/qianbilazhu.JPG' },
   { id: 1003, categoryId: 10, name: '生日皇冠', nameEn: 'Birthday Crown', description: '闪耀生日皇冠', descriptionEn: 'Sparkly birthday crown', price6: 0, price8: 0, singlePrice: 2, image: '/shengrihuangguan.JPG' },
+  { id: 1004, categoryId: 10, name: '蛋糕餐具', nameEn: 'Cake Tableware Set', description: '一套5人份（含刀叉盘等）', descriptionEn: '5-piece set (plates, forks, etc.)', price6: 0, price8: 0, singlePrice: 2, image: '/dangaocanju.jpg' },
+  { id: 1005, categoryId: 10, name: '蝴蝶结蜡烛', nameEn: 'Bow Candles', description: '一盒6个', descriptionEn: '6 per box', price6: 0, price8: 0, singlePrice: 2, image: '/hudielazhu.jpg' },
 
   // ─── Cat 11: Special Techniques ───
   { id: 1101, categoryId: 11, name: '芝士转印', nameEn: 'Cheese Transfer', description: '按图定制，每图$15', descriptionEn: 'Custom per design, $15 each', price6: 0, price8: 0, singlePrice: 15, image: '/zhishizhuanyin.JPG' },

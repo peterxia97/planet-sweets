@@ -36,6 +36,8 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
   1303: { zh: '龙井青梨蛋糕', en: 'Longjing Pear Cake' },
   1304: { zh: '栗子蛋糕', en: 'Chestnut Cake' },
+  1305: { zh: '薄荷曼波绿蛋糕', en: 'Mint Mambo Green Cake' },
+  1306: { zh: '椰香菠萝蛋糕', en: 'Coconut Pineapple Cake' },
   // 水果奶油裱花蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
   102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
@@ -75,6 +77,8 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   705: { zh: '蝴蝶款式', en: 'Butterfly Style' },
   706: { zh: '日月同辉', en: 'Sun & Moon' },
   707: { zh: '许愿池', en: 'Wishing Pool' },
+  708: { zh: '拼色蛋糕', en: 'Color Block Cake' },
+  709: { zh: '小雏菊蛋糕', en: 'Daisy Cake' },
   // 夹心加料
   801: { zh: '时令水果', en: 'Seasonal Fruit' },
   802: { zh: '各式奶冻', en: 'Assorted Milk Pudding' },
@@ -92,6 +96,8 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 蛋糕配件
   1002: { zh: '铅笔蜡烛', en: 'Pencil Candles' },
   1003: { zh: '生日皇冠', en: 'Birthday Crown' },
+  1004: { zh: '蛋糕餐具', en: 'Cake Tableware Set' },
+  1005: { zh: '蝴蝶结蜡烛', en: 'Bow Candles' },
   // 特殊工艺
   1101: { zh: '芝士转印', en: 'Cheese Transfer' },
   1102: { zh: '翻糖', en: 'Fondant' },
@@ -103,6 +109,8 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   1302: { zh: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。', en: 'Butter crisp + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma infused in soft cake layers with silky cream, topped with amber caramel sauce.' },
   1303: { zh: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。', en: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.' },
   1304: { zh: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。', en: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.' },
+  1305: { zh: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。', en: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.' },
+  1306: { zh: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。', en: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.' },
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
   102: { zh: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。', en: 'Plump blueberries, refreshingly sweet and tangy with rich texture.' },
   104: { zh: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。', en: 'Imported blackberries, deep purple-red color, tangy and appetizing.' },
@@ -137,6 +145,8 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   705: { zh: '轻盈蝴蝶造型，浪漫精致', en: 'Delicate butterfly design, romantic and elegant' },
   706: { zh: '日月星辰造型，梦幻特别款', en: 'Sun, moon and stars design, dreamy and special' },
   707: { zh: '三层水池蛋糕，自选口味夹心。可在下单时备注口味偏好（参见夹心加料类目）。', en: 'Three-tier pool design with customisable filling. Please specify your preferred flavour in the order notes (see Extra Filling category).' },
+  708: { zh: '多色拼色造型，夹心可自选（价格需与自由星人确认）。下单请备注偏好口感和颜色搭配。', en: 'Multi-colour block design with customisable filling (price subject to final confirmation). Please leave your colour and flavour preferences in the order notes.' },
+  709: { zh: '清新小雏菊裱花造型，夹心可自选（价格需与自由星人确认）。下单请备注偏好口感和花色。', en: 'Fresh little-daisy piping design with customisable filling (price subject to final confirmation). Please leave your flavour and colour preferences in the order notes.' },
   801: { zh: '当季新鲜水果夹心', en: 'Fresh seasonal fruit filling' },
   802: { zh: '细腻奶冻夹心', en: 'Delicate milk pudding filling' },
   803: { zh: '奶香紫薯泥夹心', en: 'Creamy purple yam paste filling' },
@@ -151,6 +161,8 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   905: { zh: '一层蛋糕胚', en: 'One extra cake layer' },
   1002: { zh: '彩色铅笔蜡烛', en: 'Colorful pencil candles' },
   1003: { zh: '闪耀生日皇冠', en: 'Sparkling birthday crown' },
+  1004: { zh: '一套5人份（含刀叉盘等）', en: '5-piece set (plates, forks, etc.)' },
+  1005: { zh: '一盒6个', en: '6 per box' },
   1101: { zh: '按图定制，每图$15', en: 'Custom per design, $15 each' },
   1102: { zh: '翻糖装饰，每件$15', en: 'Fondant decoration, $15 each' },
   1103: { zh: '可爱奶油霜小动物，每件$15', en: 'Cute buttercream animals, $15 each' },
