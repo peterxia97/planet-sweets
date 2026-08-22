@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #fdf2f4;
+  background-color: #f3faf6;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
