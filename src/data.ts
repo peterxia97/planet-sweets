@@ -26,10 +26,10 @@ export const cakes: Cake[] = [
   // ─── Cat 13: Spring Selection ───
   {
     id: 1302, categoryId: 13,
-    name: '焦糖咖啡蛋糕', nameEn: 'Caramel Coffee Cake',
-    description: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。',
-    descriptionEn: 'Butter crunch + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma, smooth cream layers, amber caramel glaze on top. A grown-up dessert.',
-    price6: 75, price8: 95, image: '/jiatang-coffee.jpg',
+    name: '摩卡咖啡蛋糕', nameEn: 'Mocha Coffee Cake',
+    description: '摩卡咖啡蛋糕。咖啡戚风胚+巧克力奶冻+黄油薄脆+混合坚果干+摩卡奶油。',
+    descriptionEn: 'Mocha coffee cake. Coffee chiffon sponge + chocolate milk pudding + butter crunch + mixed nuts + mocha cream.',
+    price6: 75, price8: 95, image: '/moka-coffee.jpg',
   },
   {
     id: 1303, categoryId: 13,

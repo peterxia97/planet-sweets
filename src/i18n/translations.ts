@@ -33,7 +33,7 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 // ── 蛋糕名称 ──
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 春日甄选
-  1302: { zh: '焦糖咖啡蛋糕', en: 'Caramel Coffee Cake' },
+  1302: { zh: '摩卡咖啡蛋糕', en: 'Mocha Coffee Cake' },
   1303: { zh: '龙井青梨蛋糕', en: 'Longjing Pear Cake' },
   1305: { zh: '薄荷曼波绿蛋糕', en: 'Mint Mambo Green Cake' },
   1306: { zh: '椰香菠萝蛋糕', en: 'Coconut Pineapple Cake' },
@@ -107,7 +107,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
 
 // ── 蛋糕描述 ──
 export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
-  1302: { zh: '黄油薄脆+焦糖海盐奶油+拿铁奶冻+咖啡戚风。浓郁咖啡香融入绵密蛋糕体，层层夹入顺滑奶油，表面淋上琥珀色焦糖酱，是属于大人的温柔甜点。', en: 'Butter crisp + salted caramel cream + latte milk pudding + coffee chiffon. Rich coffee aroma infused in soft cake layers with silky cream, topped with amber caramel sauce.' },
+  1302: { zh: '摩卡咖啡蛋糕。咖啡戚风胚+巧克力奶冻+黄油薄脆+混合坚果干+摩卡奶油。', en: 'Mocha coffee cake. Coffee chiffon sponge + chocolate milk pudding + butter crunch + mixed nuts + mocha cream.' },
   1303: { zh: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。', en: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.' },
   1305: { zh: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。', en: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.' },
   1306: { zh: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。', en: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.' },
