@@ -25,13 +25,6 @@ export const cakes: Cake[] = [
 
   // ─── Cat 13: Spring Selection ───
   {
-    id: 1302, categoryId: 13,
-    name: '摩卡咖啡蛋糕', nameEn: 'Mocha Coffee Cake',
-    description: '摩卡咖啡蛋糕。咖啡戚风胚+巧克力奶冻+黄油薄脆+混合坚果干+摩卡奶油。',
-    descriptionEn: 'Mocha coffee cake. Coffee chiffon sponge + chocolate milk pudding + butter crunch + mixed nuts + mocha cream.',
-    price6: 75, price8: 95, image: '/moka-coffee.jpg',
-  },
-  {
     id: 1303, categoryId: 13,
     name: '龙井青梨蛋糕', nameEn: 'Longjing Pear Cake',
     description: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。',
@@ -104,6 +97,13 @@ export const cakes: Cake[] = [
     price6: 75, price8: 95, image: '/lizhi.JPG', tag: '人气', tagEn: 'Popular', hidden: true,
   },
   // ─── Cat 2: Flavoured Cakes ───
+  {
+    id: 1302, categoryId: 2,
+    name: '摩卡咖啡蛋糕', nameEn: 'Mocha Coffee Cake',
+    description: '摩卡咖啡蛋糕。咖啡戚风胚+巧克力奶冻+黄油薄脆+混合坚果干+摩卡奶油。',
+    descriptionEn: 'Mocha coffee cake. Coffee chiffon sponge + chocolate milk pudding + butter crunch + mixed nuts + mocha cream.',
+    price6: 75, price8: 95, image: '/moka-coffee.jpg',
+  },
   {
     id: 201, categoryId: 2,
     name: '伯爵红茶', nameEn: 'Earl Grey Tea',
