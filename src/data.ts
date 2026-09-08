@@ -96,6 +96,13 @@ export const cakes: Cake[] = [
     descriptionEn: 'Canned lychee flesh, sweet and juicy with a unique flavour.',
     price6: 75, price8: 95, image: '/lizhi.JPG', tag: '人气', tagEn: 'Popular', hidden: true,
   },
+  {
+    id: 110, categoryId: 1,
+    name: '芒果奶油裱花蛋糕', nameEn: 'Mango Cream Piped Cake',
+    description: '新鲜芒果果肉点缀，香甜浓郁，热带风情满满。',
+    descriptionEn: 'Fresh mango chunks, sweet and richly tropical in every bite.',
+    price6: 70, price8: 90, image: '/mangguo.jpg',
+  },
   // ─── Cat 2: Flavoured Cakes ───
   {
     id: 1302, categoryId: 2,

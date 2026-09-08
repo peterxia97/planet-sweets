@@ -45,6 +45,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   107: { zh: '树莓奶油裱花蛋糕', en: 'Raspberry Fresh Cream Decorated Cake' },
   108: { zh: '荔枝奶油裱花蛋糕', en: 'Lychee Fresh Cream Decorated Cake' },
   109: { zh: '榴莲奶油裱花蛋糕', en: 'Durian Fresh Cream Decorated Cake' },
+  110: { zh: '芒果奶油裱花蛋糕', en: 'Mango Fresh Cream Decorated Cake' },
   // 口味蛋糕
   201: { zh: '伯爵红茶', en: 'Earl Grey Tea' },
   202: { zh: '抹茶', en: 'Matcha' },
@@ -118,6 +119,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   107: { zh: '进口树莓点缀，小巧红艳，酸甜口感，精致优雅。', en: 'Imported raspberries, petite and bright red, tangy and elegant.' },
   108: { zh: '罐头荔枝果肉，清甜水润，独特风味。', en: 'Canned lychee pulp, sweet and juicy with unique flavor.' },
   109: { zh: '泰国金枕榴莲果肉，浓郁香气，爱榴莲人士不可错过。', en: 'Thai Monthong durian pulp, rich aroma, a must for durian lovers.' },
+  110: { zh: '新鲜芒果果肉点缀，香甜浓郁，热带风情满满。', en: 'Fresh mango chunks, sweet and richly tropical in every bite.' },
   201: { zh: '夹心：特调红茶奶油+红茶奶冻', en: 'Filling: black tea cream + tea milk pudding' },
   202: { zh: '夹心：抹茶奶油+抹茶奶冻', en: 'Filling: matcha cream + matcha milk pudding' },
   203: { zh: '夹心：桂花酱+桂花奶冻', en: 'Filling: osmanthus jam + osmanthus milk pudding' },
