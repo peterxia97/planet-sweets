@@ -66,7 +66,7 @@ export const cakes: Cake[] = [
     name: '蓝莓奶油裱花蛋糕', nameEn: 'Blueberry Cream Piped Cake',
     description: '颗颗饱满蓝莓点缀，清爽酸甜，口感层次丰富。',
     descriptionEn: 'Plump blueberries, refreshing sweet-tart flavour with rich texture.',
-    price6: 80, price8: 100, image: '/lanmei.jpg',
+    price6: 75, price8: 95, image: '/lanmei.jpg',
   },
   {
     id: 104, categoryId: 1,
@@ -80,7 +80,7 @@ export const cakes: Cake[] = [
     name: '青提奶油裱花蛋糕', nameEn: 'Green Grape Cream Piped Cake',
     description: '清爽青提果肉，翠绿悦目，清甜不腻，夏日首选。',
     descriptionEn: 'Crisp green grapes, refreshingly sweet, perfect summer choice.',
-    price6: 85, price8: 105, image: '/qingti.JPG',
+    price6: 85, price8: 105, image: '/qingti.JPG', hidden: true,
   },
   {
     id: 107, categoryId: 1,
