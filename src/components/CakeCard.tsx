@@ -30,8 +30,9 @@ const tagColors: Record<string, string> = {
 
 export default function CakeCard({ cake }: CakeCardProps) {
   const { addToCart, items } = useCart();
-  const { tCakeName, tCakeDesc, tTag, t } = useLanguage();
+  const { tCakeName, tCakeDesc, tTag, t, lang } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [sizeModalOpen, setSizeModalOpen] = useState(false);
   const cartItem = items.find(i => i.cake.id === cake.id);
   const isSinglePrice = !!cake.singlePrice;
   const defaultSize = isSinglePrice ? 'single' : (cartItem ? (cartItem.cake.selectedSize as '6' | '8') || '6' : '6');
@@ -40,6 +41,8 @@ export default function CakeCard({ cake }: CakeCardProps) {
     e.stopPropagation();
     addToCart({ ...cake, selectedSize: size });
   };
+
+  const closeSizeModal = () => setSizeModalOpen(false);
 
   return (
     <>
@@ -98,7 +101,7 @@ export default function CakeCard({ cake }: CakeCardProps) {
             <span className="text-[10px] text-gray-400">{t('cake.each')}</span>
           </div>
         ) : (
-          /* 双尺寸价格选择 */
+          /* 双尺寸价格选择：点击直接加入购物车（一键加购） */
           <div className="flex gap-1.5 mt-2">
             {cake.price6 > 0 && (
               <button
@@ -121,9 +124,17 @@ export default function CakeCard({ cake }: CakeCardProps) {
           </div>
         )}
 
-        {/* Add to Cart */}
+        {/* Add to Cart - 弹出尺寸选择弹窗 */}
         <button
-          onClick={(e) => handleAdd(defaultSize as '6' | '8' | 'single', e)}
+          onClick={(e) => {
+            e.stopPropagation();
+            if (cake.outOfStock) return;
+            if (isSinglePrice) {
+              handleAdd('single', e);
+            } else {
+              setSizeModalOpen(true);
+            }
+          }}
           disabled={cake.outOfStock}
           className={`mt-2 w-full flex items-center justify-center gap-1 text-xs font-medium py-2 rounded-xl transition-all ${
             cake.outOfStock
@@ -143,7 +154,50 @@ export default function CakeCard({ cake }: CakeCardProps) {
         onClose={() => setLightboxOpen(false)}
       />
     )}
+
+    {/* 尺寸选择弹窗 */}
+    {sizeModalOpen && !isSinglePrice && (
+      <div
+        className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4"
+        onClick={closeSizeModal}
+      >
+        <div
+          className="bg-white rounded-2xl p-6 max-w-xs w-full shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <h3 className="text-base font-bold text-gray-800">{tCakeName(cake.id)}</h3>
+          <p className="text-xs text-gray-400 mt-1 mb-4">
+            {lang === 'en' ? 'Please select a size' : '请选择尺寸'}
+          </p>
+          <div className="flex gap-2 mb-3">
+            {cake.price6 > 0 && (
+              <button
+                onClick={(e) => { handleAdd('6', e); closeSizeModal(); }}
+                className="flex-1 border-2 border-rose-200 rounded-xl py-3 hover:bg-rose-50 hover:border-rose-400 transition-colors active:scale-95"
+              >
+                <span className="text-[10px] text-gray-400 block">{t('cake.size6')}</span>
+                <span className="text-rose-600 font-bold text-base">${cake.price6}</span>
+              </button>
+            )}
+            {cake.price8 > 0 && (
+              <button
+                onClick={(e) => { handleAdd('8', e); closeSizeModal(); }}
+                className="flex-1 border-2 border-rose-200 rounded-xl py-3 hover:bg-rose-50 hover:border-rose-400 transition-colors active:scale-95"
+              >
+                <span className="text-[10px] text-gray-400 block">{t('cake.size8')}</span>
+                <span className="text-rose-600 font-bold text-base">${cake.price8}</span>
+              </button>
+            )}
+          </div>
+          <button
+            onClick={closeSizeModal}
+            className="w-full text-sm text-gray-400 py-2 hover:text-gray-600 transition-colors"
+          >
+            {lang === 'en' ? 'Cancel' : '取消'}
+          </button>
+        </div>
+      </div>
+    )}
     </>
   );
 }
-
