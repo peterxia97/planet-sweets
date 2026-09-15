@@ -123,7 +123,7 @@ export const cakes: Cake[] = [
     name: '抹茶', nameEn: 'Matcha',
     description: '夹心：抹茶奶油+抹茶奶冻',
     descriptionEn: 'Filling: matcha cream + matcha milk pudding',
-    price6: 80, price8: 100, image: '/mocha.JPG', alsoIn: [13],
+    price6: 75, price8: 95, image: '/mocha.JPG', alsoIn: [13],
   },
   {
     id: 203, categoryId: 2,
