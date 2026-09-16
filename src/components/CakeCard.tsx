@@ -35,7 +35,6 @@ export default function CakeCard({ cake }: CakeCardProps) {
   const [sizeModalOpen, setSizeModalOpen] = useState(false);
   const cartItem = items.find(i => i.cake.id === cake.id);
   const isSinglePrice = !!cake.singlePrice;
-  const defaultSize = isSinglePrice ? 'single' : (cartItem ? (cartItem.cake.selectedSize as '6' | '8') || '6' : '6');
 
   const handleAdd = (size: '6' | '8' | 'single', e: React.MouseEvent) => {
     e.stopPropagation();
