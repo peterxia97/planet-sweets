@@ -11,8 +11,8 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  /* 夏日彩虹渐变底色（柔和淡彩，随视口固定） */
-  background: linear-gradient(135deg, #fff0f3 0%, #fff8e1 25%, #f0fff4 50%, #e7f5ff 75%, #f3e8ff 100%);
+  /* 国风水彩晕染底色：柳绿 → 西子蓝 → 桃夭粉（随视口固定） */
+  background: linear-gradient(180deg, #eef6d8 0%, #e9f4e2 18%, #e6f2f4 45%, #f5eff3 68%, #fdeef2 100%);
   background-attachment: fixed;
 }
 

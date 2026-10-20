@@ -23,7 +23,7 @@ function Main() {
   const showHolidayNotice = new Date() < new Date('2026-11-04T00:00:00+10:00');
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#fff0f3_0%,#fff8e1_25%,#f0fff4_50%,#e7f5ff_75%,#f3e8ff_100%)] bg-fixed flex flex-col">
+    <div className="min-h-screen bg-[linear-gradient(180deg,#eef6d8_0%,#e9f4e2_18%,#e6f2f4_45%,#f5eff3_68%,#fdeef2_100%)] bg-fixed flex flex-col">
       <Header
         onCartOpen={() => setCartOpen(true)}
         onContactOpen={() => setContactOpen(true)}
@@ -75,13 +75,13 @@ function Main() {
 
           {/* 休假公告（11月4日后自动隐藏） */}
           {showHolidayNotice && (
-            <div className="mx-3 mt-3 rounded-2xl px-4 py-3 text-center bg-[linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd43b,#69db7c,#4dabf7,#9775fa)] shadow-md shadow-rose-200">
+            <div className="mx-3 mt-3 rounded-2xl px-4 py-3 text-center bg-[linear-gradient(90deg,#8cbf2e,#5fa8c0,#e884a4)] shadow-md shadow-rose-200">
               <p className="text-white text-sm font-bold leading-relaxed drop-shadow-sm">{t('notice.holiday')}</p>
             </div>
           )}
 
           {/* 横幅（手机端） */}
-          <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-[linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd43b,#69db7c,#4dabf7,#9775fa)] px-5 py-4 relative lg:hidden">
+          <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-[linear-gradient(90deg,#8cbf2e,#5fa8c0,#e884a4)] px-5 py-4 relative lg:hidden">
             <img src="/logo-white.png" alt="" className="absolute right-3 bottom-2 w-16 h-16 object-contain opacity-40 z-10" />
             <p className="text-white/60 text-xs mb-0.5">{t('banner.welcome')}</p>
             <h2 className="text-xl font-bold text-white leading-tight">{t('banner.brand')}</h2>
