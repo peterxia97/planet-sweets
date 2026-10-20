@@ -11,8 +11,8 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  /* 低明度彩虹渐变底色（莫兰迪淡彩，随视口固定） */
-  background: linear-gradient(135deg, #f4e3e2 0%, #f5ebd9 20%, #eaf0dd 40%, #dde9ec 60%, #e6e3ee 80%, #efe4ec 100%);
+  /* 彩虹渐变底色（淡彩柔和，随视口固定） */
+  background: linear-gradient(135deg, #fff0f3 0%, #fff8e1 25%, #f0fff4 50%, #e7f5ff 75%, #f3e8ff 100%);
   background-attachment: fixed;
 }
 
