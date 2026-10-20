@@ -34,7 +34,7 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   // 夏日推荐
   1302: { zh: '摩卡咖啡蛋糕', en: 'Mocha Coffee Cake' },
-  1303: { zh: '龙井白玉蜜瓜蛋糕', en: 'Longjing White Jade Melon Cake' },
+  1303: { zh: '龙井白玉蜜瓜蛋糕', en: 'Longjing Honeydew Cake' },
   1305: { zh: '薄荷曼波绿蛋糕', en: 'Mint Mambo Green Cake' },
   1306: { zh: '椰香菠萝蛋糕', en: 'Coconut Pineapple Cake' },
   // 水果蛋糕

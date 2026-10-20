@@ -151,7 +151,7 @@ export const cakes: Cake[] = [
     name: '玫瑰荔枝', nameEn: 'Rose Lychee',
     description: '夹心：荔枝果肉+荔枝特调奶油',
     descriptionEn: 'Filling: lychee flesh + lychee cream',
-    price6: 85, price8: 105, image: '/meiguilizhi.JPG', alsoIn: [13],
+    price6: 85, price8: 105, image: '/meigui-lizhi2.jpg', alsoIn: [13],
   },
   {
     id: 207, categoryId: 2,
