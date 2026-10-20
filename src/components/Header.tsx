@@ -15,7 +15,7 @@ export default function Header({ onCartOpen, onContactOpen, onGuestbookOpen }: H
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm">
       {/* 夏日彩虹渐变顶条 */}
-      <div className="h-1 w-full bg-[linear-gradient(90deg,#a9ce36,#87becd,#f6becd)]" />
+      <div className="h-1 w-full bg-[linear-gradient(90deg,#6fb0d8,#a1be8e,#e9dabd,#f1b3a5,#f4b15f)]" />
       <div className="border-b border-rose-100">
         <div className="flex items-center justify-between px-4 h-14 ml-[72px] sm:ml-20">
         {/* Logo */}

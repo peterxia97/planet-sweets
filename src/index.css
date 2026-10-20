@@ -11,8 +11,8 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  /* 国风水彩晕染底色：柳绿 → 西子蓝 → 桃夭粉（随视口固定） */
-  background: linear-gradient(180deg, #eef6d8 0%, #e9f4e2 18%, #e6f2f4 45%, #f5eff3 68%, #fdeef2 100%);
+  /* 海崖·柑橘日落：海湾蓝 → 岩壁米 → 暮光粉 → 柑橘橙，大面积铺满、多色标平滑过渡 */
+  background: linear-gradient(180deg, #b5d9f0 0%, #cfe3ef 20%, #e6e0cd 42%, #eed9bd 56%, #f3d3c2 74%, #f6c7a6 88%, #f7bd8d 100%);
   background-attachment: fixed;
 }
 
