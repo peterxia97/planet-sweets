@@ -11,7 +11,9 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #f3faf6;
+  /* 夏日彩虹渐变底色（柔和淡彩，随视口固定） */
+  background: linear-gradient(135deg, #fff0f3 0%, #fff8e1 25%, #f0fff4 50%, #e7f5ff 75%, #f3e8ff 100%);
+  background-attachment: fixed;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

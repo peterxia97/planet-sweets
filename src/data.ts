@@ -5,7 +5,7 @@ import type { Category, Cake } from './types';
 // ═══════════════════════════════════════════
 
 export const categories: Category[] = [
-  { id: 13, name: '春日甄选', nameEn: 'Spring Selection', icon: '\u{1F338}', description: '春日限定 清新治愈', descriptionEn: 'Spring exclusive, fresh & delightful' },
+  { id: 13, name: '夏日推荐', nameEn: 'Summer Picks', icon: '\u{1F338}', description: '夏日限定 清爽治愈', descriptionEn: 'Summer exclusive, fresh & delightful' },
   { id: 1,  name: '水果蛋糕', nameEn: 'Fresh Fruit Cakes', icon: '\u{1F353}', description: '新鲜水果 自然甜美', descriptionEn: 'Fresh fruit, naturally sweet' },
   { id: 2,  name: '口味蛋糕', nameEn: 'Flavoured Cakes', icon: '\u{1F36E}', description: '多种口味 丰富夹心', descriptionEn: 'Assorted flavours with layered fillings' },
   { id: 3,  name: '巴斯克', nameEn: 'Basque Cheesecakes', icon: '\u{1F9C0}', description: '焦香浓郁 绵密丝滑', descriptionEn: 'Rich caramelised top, silky texture' },
@@ -23,13 +23,13 @@ export const categories: Category[] = [
 
 export const cakes: Cake[] = [
 
-  // ─── Cat 13: Spring Selection ───
+  // ─── Cat 13: Summer Picks ───
   {
-    id: 1303, categoryId: 13,
-    name: '龙井青梨蛋糕', nameEn: 'Longjing Pear Cake',
-    description: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。',
-    descriptionEn: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.',
-    price6: 80, price8: 100, image: '/longjingqingli.jpg',
+    id: 1306, categoryId: 13,
+    name: '椰香菠萝蛋糕', nameEn: 'Coconut Pineapple Cake',
+    description: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。',
+    descriptionEn: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.',
+    price6: 80, price8: 100, image: '/yexiang-boluo.jpg', alsoIn: [1],
   },
   {
     id: 1305, categoryId: 13,
@@ -37,13 +37,6 @@ export const cakes: Cake[] = [
     description: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。',
     descriptionEn: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.',
     price6: 75, price8: 95, image: '/bohe-manbolv.jpg', alsoIn: [2],
-  },
-  {
-    id: 1306, categoryId: 13,
-    name: '椰香菠萝蛋糕', nameEn: 'Coconut Pineapple Cake',
-    description: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。',
-    descriptionEn: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.',
-    price6: 80, price8: 100, image: '/yexiang-boluo.jpg', alsoIn: [1],
   },
 
   // ─── Cat 1: Fruit Cream Piped Cakes ───
@@ -59,7 +52,7 @@ export const cakes: Cake[] = [
     name: '草莓奶油裱花蛋糕', nameEn: 'Strawberry Cream Piped Cake',
     description: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。',
     descriptionEn: 'Fresh strawberries with light piped cream, sweet and perfect for birthdays.',
-    price6: 70, price8: 90, image: '/caomei.jpg', tag: '热销', tagEn: 'Hot',
+    price6: 70, price8: 90, image: '/caomei.jpg', tag: '热销', tagEn: 'Hot', alsoIn: [13],
   },
   {
     id: 102, categoryId: 1,
@@ -70,7 +63,7 @@ export const cakes: Cake[] = [
   },
   {
     id: 104, categoryId: 1,
-    name: '黑莓果酱奶油裱花蛋糕', nameEn: 'Blackberry Jam Cream Piped Cake',
+    name: '新鲜黑莓蛋糕', nameEn: 'Fresh Blackberry Cake',
     description: '进口黑莓点缀，深邃紫红色泽，酸甜开胃。',
     descriptionEn: 'Imported blackberries, deep purple hue, tangy and appetising.',
     price6: 65, price8: 85, image: '/heimei.PNG',
@@ -101,15 +94,22 @@ export const cakes: Cake[] = [
     name: '芒果奶油裱花蛋糕', nameEn: 'Mango Cream Piped Cake',
     description: '新鲜芒果果肉点缀，香甜浓郁，热带风情满满。',
     descriptionEn: 'Fresh mango chunks, sweet and richly tropical in every bite.',
-    price6: 75, price8: 95, image: '/mangguo.jpg',
+    price6: 75, price8: 95, image: '/mangguo.jpg', alsoIn: [13],
   },
   // ─── Cat 2: Flavoured Cakes ───
+  {
+    id: 1303, categoryId: 2,
+    name: '龙井白玉蜜瓜蛋糕', nameEn: 'Longjing White Jade Melon Cake',
+    description: '夹心：清爽果肉冻+龙井特调奶油',
+    descriptionEn: 'Filling: refreshing fruit jelly + Longjing special cream',
+    price6: 80, price8: 100, image: '/longjing-migua.jpg',
+  },
   {
     id: 1302, categoryId: 2,
     name: '摩卡咖啡蛋糕', nameEn: 'Mocha Coffee Cake',
     description: '摩卡咖啡蛋糕。咖啡戚风胚+巧克力奶冻+黄油薄脆+混合坚果干+摩卡奶油。',
     descriptionEn: 'Mocha coffee cake. Coffee chiffon sponge + chocolate milk pudding + butter crunch + mixed nuts + mocha cream.',
-    price6: 80, price8: 100, image: '/moka-coffee.jpg',
+    price6: 80, price8: 100, image: '/moka-coffee2.jpg',
   },
   {
     id: 201, categoryId: 2,
@@ -123,7 +123,7 @@ export const cakes: Cake[] = [
     name: '抹茶', nameEn: 'Matcha',
     description: '夹心：抹茶奶油+抹茶奶冻',
     descriptionEn: 'Filling: matcha cream + matcha milk pudding',
-    price6: 80, price8: 100, image: '/mocha.JPG', alsoIn: [13],
+    price6: 80, price8: 100, image: '/mocha.JPG',
   },
   {
     id: 203, categoryId: 2,
@@ -151,7 +151,7 @@ export const cakes: Cake[] = [
     name: '玫瑰荔枝', nameEn: 'Rose Lychee',
     description: '夹心：荔枝果肉+荔枝特调奶油',
     descriptionEn: 'Filling: lychee flesh + lychee cream',
-    price6: 85, price8: 105, image: '/meiguilizhi.JPG',
+    price6: 85, price8: 105, image: '/meiguilizhi.JPG', alsoIn: [13],
   },
   {
     id: 207, categoryId: 2,
@@ -179,7 +179,7 @@ export const cakes: Cake[] = [
     name: '紫薯芋泥蛋糕', nameEn: 'Purple Sweet Potato & Taro Cake',
     description: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）',
     descriptionEn: 'Filling: creamy purple sweet potato taro paste (limited ingredient, please order 5 days ahead)',
-    price6: 80, price8: 100, image: '/zishunidangao.JPG', alsoIn: [13],
+    price6: 80, price8: 100, image: '/zishunidangao.JPG',
   },
   {
     id: 212, categoryId: 2,
@@ -197,10 +197,10 @@ export const cakes: Cake[] = [
   },
   {
     id: 1304, categoryId: 2,
-    name: '栗子蛋糕', nameEn: 'Chestnut Cake',
-    description: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。',
-    descriptionEn: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.',
-    price6: 80, price8: 100, image: '/lizi.jpg',
+    name: '红茶栗子', nameEn: 'Black Tea Chestnut',
+    description: '香浓红茶底胚+栗子',
+    descriptionEn: 'Rich black tea sponge + chestnut',
+    price6: 80, price8: 100, image: '/hongcha-lizi.jpg',
   },
 
   // ─── Cat 3: Basque Cheesecakes ───
@@ -341,7 +341,6 @@ export const cakes: Cake[] = [
   { id: 803, categoryId: 8, name: '紫薯泥夹心', nameEn: 'Purple Sweet Potato Paste', description: '奶香紫薯泥夹心', descriptionEn: 'Creamy purple sweet potato paste', price6: 0, price8: 0, singlePrice: 10, image: '/zishuyunijiaxin.JPG' },
   { id: 804, categoryId: 8, name: '奥利奥碎', nameEn: 'Oreo Crumbles', description: '酥脆奥利奥碎夹心', descriptionEn: 'Crunchy Oreo crumble filling', price6: 0, price8: 0, singlePrice: 5, image: '/aoliaosui.JPG' },
   { id: 805, categoryId: 8, name: '黄油薄脆', nameEn: 'Butter Crunch', description: '香脆黄油薄脆夹心', descriptionEn: 'Crispy butter crunch filling', price6: 0, price8: 0, singlePrice: 5, image: '/huangyoubaocui.JPG' },
-  { id: 806, categoryId: 8, name: '黑糖珍珠', nameEn: 'Brown Sugar Boba', description: '4小时内食用完', descriptionEn: 'Consume within 4 hours', price6: 0, price8: 0, singlePrice: 10, image: '/heitangzhenzhu.JPG' },
   { id: 807, categoryId: 8, name: '伯爵红茶奶冻', nameEn: 'Earl Grey Milk Pudding', description: '伯爵红茶口味奶冻', descriptionEn: 'Earl Grey flavoured milk pudding', price6: 0, price8: 0, singlePrice: 5, image: '/bojuehongchanaidong.JPG' },
 
   // ─── Cat 9: Novelty Shapes ───

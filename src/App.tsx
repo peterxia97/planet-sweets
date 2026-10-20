@@ -19,9 +19,11 @@ function Main() {
 
   const activeCategory = categories.find(c => c.id === activeCategoryId);
   const filteredCakes = cakes.filter(c => !c.hidden && (c.categoryId === activeCategoryId || c.alsoIn?.includes(activeCategoryId)));
+  // 休假公告：2026-11-04 起自动隐藏
+  const showHolidayNotice = new Date() < new Date('2026-11-04T00:00:00+10:00');
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#fff0f3_0%,#fff8e1_25%,#f0fff4_50%,#e7f5ff_75%,#f3e8ff_100%)] bg-fixed flex flex-col">
       <Header
         onCartOpen={() => setCartOpen(true)}
         onContactOpen={() => setContactOpen(true)}
@@ -29,10 +31,10 @@ function Main() {
       />
 
       {/* 主体：左侧分类栏 + 右侧内容区 */}
-      <div className="flex flex-1 pt-14">
+      <div className="flex flex-1 pt-[60px]">
 
         {/* ── 左侧分类导航（固定，全端常驻） ── */}
-        <aside className="fixed top-14 left-0 bottom-0 w-[72px] sm:w-20 bg-white border-r border-gray-100 z-30 flex flex-col overflow-y-auto">
+        <aside className="fixed top-[60px] left-0 bottom-0 w-[72px] sm:w-20 bg-white border-r border-gray-100 z-30 flex flex-col overflow-y-auto">
           {/* 顶部标签 */}
           <div className="py-2 text-center">
             <span className="text-[10px] text-gray-400 font-semibold tracking-widest">{t('sidebar.category')}</span>
@@ -71,8 +73,15 @@ function Main() {
         {/* ── 右侧内容区 ── */}
         <main className="flex-1 ml-[72px] sm:ml-20 min-w-0 flex flex-col">
 
+          {/* 休假公告（11月4日后自动隐藏） */}
+          {showHolidayNotice && (
+            <div className="mx-3 mt-3 rounded-2xl px-4 py-3 text-center bg-[linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd43b,#69db7c,#4dabf7,#9775fa)] shadow-md shadow-rose-200">
+              <p className="text-white text-sm font-bold leading-relaxed drop-shadow-sm">{t('notice.holiday')}</p>
+            </div>
+          )}
+
           {/* 横幅（手机端） */}
-          <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-400 to-rose-600 px-5 py-4 relative lg:hidden">
+          <div className="mx-3 mt-3 rounded-2xl overflow-hidden bg-[linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd43b,#69db7c,#4dabf7,#9775fa)] px-5 py-4 relative lg:hidden">
             <img src="/logo-white.png" alt="" className="absolute right-3 bottom-2 w-16 h-16 object-contain opacity-40 z-10" />
             <p className="text-white/60 text-xs mb-0.5">{t('banner.welcome')}</p>
             <h2 className="text-xl font-bold text-white leading-tight">{t('banner.brand')}</h2>

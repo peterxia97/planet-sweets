@@ -4,7 +4,7 @@
 
 // ── 分类名称 ──
 export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
-  13: { zh: '春日甄选', en: 'Spring Selection' },
+  13: { zh: '夏日推荐', en: 'Summer Picks' },
   1:  { zh: '水果蛋糕', en: 'Fresh Fruit Cakes' },
   2:  { zh: '口味蛋糕', en: 'Flavor Cakes' },
   3:  { zh: '巴斯克', en: 'Basque Cheesecakes' },
@@ -18,7 +18,7 @@ export const CATEGORY_NAMES: Record<number, { zh: string; en: string }> = {
 
 // ── 分类描述 ──
 export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
-  13: { zh: '春日限定 清新治愈', en: 'Spring limited, fresh & delightful' },
+  13: { zh: '夏日限定 清爽治愈', en: 'Summer exclusive, fresh & delightful' },
   1:  { zh: '新鲜水果 自然甜美', en: 'Fresh fruit, naturally sweet' },
   2:  { zh: '多种口味 丰富夹心', en: 'Multiple flavors, rich fillings' },
   3:  { zh: '焦香浓郁 绵密丝滑', en: 'Rich caramelized, velvety smooth' },
@@ -32,15 +32,15 @@ export const CATEGORY_DESCRIPTIONS: Record<number, { zh: string; en: string }> =
 
 // ── 蛋糕名称 ──
 export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
-  // 春日甄选
+  // 夏日推荐
   1302: { zh: '摩卡咖啡蛋糕', en: 'Mocha Coffee Cake' },
-  1303: { zh: '龙井青梨蛋糕', en: 'Longjing Pear Cake' },
+  1303: { zh: '龙井白玉蜜瓜蛋糕', en: 'Longjing White Jade Melon Cake' },
   1305: { zh: '薄荷曼波绿蛋糕', en: 'Mint Mambo Green Cake' },
   1306: { zh: '椰香菠萝蛋糕', en: 'Coconut Pineapple Cake' },
   // 水果蛋糕
   101: { zh: '草莓奶油裱花蛋糕', en: 'Strawberry Fresh Cream Decorated Cake' },
   102: { zh: '蓝莓奶油裱花蛋糕', en: 'Blueberry Fresh Cream Decorated Cake' },
-  104: { zh: '黑莓果酱奶油裱花蛋糕', en: 'Blackberry Jam Fresh Cream Decorated Cake' },
+  104: { zh: '新鲜黑莓蛋糕', en: 'Fresh Blackberry Cake' },
   106: { zh: '青提奶油裱花蛋糕', en: 'Green Grape Fresh Cream Decorated Cake' },
   107: { zh: '树莓奶油裱花蛋糕', en: 'Raspberry Fresh Cream Decorated Cake' },
   108: { zh: '荔枝奶油裱花蛋糕', en: 'Lychee Fresh Cream Decorated Cake' },
@@ -59,7 +59,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   211: { zh: '紫薯芋泥蛋糕', en: 'Purple Yam & Taro Cake' },
   212: { zh: '焦糖杏仁草莓', en: 'Caramel Almond Strawberry' },
   213: { zh: '黑森林蛋糕', en: 'Black Forest Cake' },
-  1304: { zh: '栗子蛋糕', en: 'Chestnut Cake' },
+  1304: { zh: '红茶栗子', en: 'Black Tea Chestnut' },
   // 巴斯克
   302: { zh: '原味草莓酸奶巴斯克', en: 'Strawberry Yogurt Basque' },
   303: { zh: '原味蓝莓酸奶巴斯克', en: 'Blueberry Yogurt Basque' },
@@ -87,7 +87,6 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
   803: { zh: '紫薯泥夹心', en: 'Purple Yam Paste' },
   804: { zh: '奥利奥碎', en: 'Oreo Crumbs' },
   805: { zh: '黄油薄脆', en: 'Butter Crisp' },
-  806: { zh: '黑糖珍珠', en: 'Brown Sugar Pearls' },
   807: { zh: '伯爵红茶奶冻', en: 'Earl Grey Milk Pudding' },
   // 异形加收
   901: { zh: '爱心', en: 'Heart' },
@@ -109,7 +108,7 @@ export const CAKE_NAMES: Record<number, { zh: string; en: string }> = {
 // ── 蛋糕描述 ──
 export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   1302: { zh: '摩卡咖啡蛋糕。咖啡戚风胚+巧克力奶冻+黄油薄脆+混合坚果干+摩卡奶油。', en: 'Mocha coffee cake. Coffee chiffon sponge + chocolate milk pudding + butter crunch + mixed nuts + mocha cream.' },
-  1303: { zh: '夹心：茉莉绿茶奶冻+新鲜梨块。淡淡龙井茶香搭配清甜梨肉，入口清雅，是属于春天的味道。', en: 'Filling: jasmine green tea milk pudding + fresh pear chunks. Subtle Longjing tea aroma paired with sweet pear, a refreshing springtime treat.' },
+  1303: { zh: '夹心：清爽果肉冻+龙井特调奶油', en: 'Filling: refreshing fruit jelly + Longjing special cream' },
   1305: { zh: '夹心：酸奶跳跳珠+薄荷奶冻。清新薄荷绿配酸甜跳跳珠，俏皮清新，夏日必试。', en: 'Filling: yoghurt popping boba + mint milk pudding. Refreshing minty green with tangy popping boba — playful, fresh, and a summer favourite.' },
   1306: { zh: '夹心：椰子奶冻+手作菠萝果酱。椰香清甜碰撞菠萝果香，热带风味十足。', en: 'Filling: coconut milk pudding + homemade pineapple jam. Sweet coconut meets tangy pineapple — a tropical escape in every bite.' },
   101: { zh: '新鲜草莓搭配轻盈奶油裱花，粉嫩甜美，适合生日、聚会。', en: 'Fresh strawberries with light cream piping, sweet and pink, perfect for birthdays and parties.' },
@@ -132,7 +131,7 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   211: { zh: '夹心：奶香紫薯芋泥（限定食材，建议提前5天预定）', en: 'Filling: creamy purple yam & taro (limited, order 5 days ahead)' },
   212: { zh: '甜中带咸的焦糖与草莓完美搭配', en: 'Sweet & salty caramel perfectly paired with strawberries' },
   213: { zh: '可可戚风+特调奶油+糖渍樱桃', en: 'Cocoa chiffon + special cream + candied cherries' },
-  1304: { zh: '夹心：栗子蓉+黄油薄脆。绵密栗子蓉层叠黄油薄脆，秋意浓香与酥脆交融，温润回甘。', en: 'Filling: chestnut puree + butter crunch. Silky chestnut paste layered with crispy butter crunch, autumnal warmth in every bite.' },
+  1304: { zh: '香浓红茶底胚+栗子', en: 'Rich black tea sponge + chestnut' },
   302: { zh: '草莓酸奶香气，酸甜可口', en: 'Strawberry yogurt aroma, sweet and tangy' },
   303: { zh: '蓝莓酸奶香气，清爽自然', en: 'Blueberry yogurt aroma, fresh and natural' },
   304: { zh: '香草酸奶香气，经典绵密', en: 'Vanilla yogurt aroma, classic and creamy' },
@@ -156,7 +155,6 @@ export const CAKE_DESCRIPTIONS: Record<number, { zh: string; en: string }> = {
   803: { zh: '奶香紫薯泥夹心', en: 'Creamy purple yam paste filling' },
   804: { zh: '酥脆奥利奥碎夹心', en: 'Crunchy Oreo crumb filling' },
   805: { zh: '香脆黄油薄脆夹心', en: 'Crispy butter crisp filling' },
-  806: { zh: '4小时内食用完', en: 'Consume within 4 hours' },
   807: { zh: '伯爵红茶口味奶冻', en: 'Earl Grey flavored milk pudding' },
   901: { zh: '爱心造型', en: 'Heart shape' },
   902: { zh: '方形造型', en: 'Square shape' },
@@ -200,6 +198,7 @@ export const UI: Record<string, { zh: string; en: string }> = {
 
   // Order Notice
   'notice.title': { zh: '下单须知', en: 'Order Notice' },
+  'notice.holiday': { zh: '🌞 休假公告：10月26日 – 11月3日 休假暂停接单，11月4日恢复，欢迎提前预定！', en: '🌞 Holiday Notice: Closed Oct 26 – Nov 3, no orders during this period. Back on Nov 4 — pre-orders welcome!' },
   'notice.blind_box': { zh: '除指定款式外，口味自选，盲盒样式噢～', en: 'Except for specified designs, choose your favorite flavor and leave the design to us — it\'ll be a surprise!' },
   'notice.custom': { zh: '提前一周预约。南边Wandal上门自取，仅收现金或人民币转账。', en: 'Please order 1 week in advance. Pickup at Wandal (South side). Cash or RMB transfer only.' },
 
