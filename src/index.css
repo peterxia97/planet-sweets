@@ -11,8 +11,8 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  /* 海崖·柑橘日落：海湾蓝 → 岩壁米 → 暮光粉 → 柑橘橙，大面积铺满、多色标平滑过渡 */
-  background: linear-gradient(180deg, #b5d9f0 0%, #cfe3ef 20%, #e6e0cd 42%, #eed9bd 56%, #f3d3c2 74%, #f6c7a6 88%, #f7bd8d 100%);
+  /* 低明度彩虹渐变底色（莫兰迪淡彩，随视口固定） */
+  background: linear-gradient(135deg, #f4e3e2 0%, #f5ebd9 20%, #eaf0dd 40%, #dde9ec 60%, #e6e3ee 80%, #efe4ec 100%);
   background-attachment: fixed;
 }
 
